@@ -42,14 +42,24 @@
 =rb
 	font-family: 'RobotoSlab-Bold', Arial, sans-serif
 
+// extends
 .in
 	margin: 0 auto
-	padding: 0 5px
-	max-width: 1080px
+	padding: 0 15px
+	max-width: 1180px
 	+clr
 
 %in
 	@extend .in
+
+.center-sm
+	margin: 0 auto
+	max-width: 630px
+	padding: 0 15px
+	+clr
+
+%cent
+	@extend .center-sm
 
 // body style
 body

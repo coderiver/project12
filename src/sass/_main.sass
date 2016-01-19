@@ -1,3 +1,19 @@
 // top
 .top
+	padding-bottom: 50px
+	background: url(../img/svg/top-bg-right.svg) no-repeat 96% 73%, url(../img/svg/top-bg-left.svg) no-repeat 10% 77%, $yellow
+	&__in
+		position: relative
+		margin: 4.2% auto 0
+		max-width: 790px
+		text-align: center
+		.mouse
+			margin-top: 64px
+
+// price
+.price
+	position: relative
+	text-align: center
 	background: $yellow
+	&__in
+		@extend %cent

@@ -1,30 +1,52 @@
 // header
 .header
+	position: relative
+	padding: 92px 0 316px
+	overflow: hidden
+	&.is-home
+		&:before
+			position: absolute
+			content: ''
+			top: 0
+			left: 50%
+			margin: -325px 0 0 -325px
+			width: 650px 
+			height: 650px
+			+rotate(45)
+			background: $white
+
 	.menu
 		float: right
+		margin-right: 82px
 	&__in 
+		position: relative
 		@extend %in 
 	&__left
 		float: left
+	.logo
+		position: absolute
+		top: 0
+		left: 50%
+		margin-left: -92px
+		z-index: 1
 
 // menu
 .menu
+	position: relative
 	&.is-active
 		.menu__btn
 			&:before
 				transform: translateY(11px) rotate(45deg)
 			&:after
 				transform: translateY(-12px) rotate(-45deg)
-			span:before
-				transform: translateY(240px)
+			span
+				transform: translate3d(0,0,0)
+				transform: scale(0)
+				opacity: 0
 		.menu__list
 			visibility: visible
 			opacity: 1
 			z-index: 1
-			li
-				transform: translate(0, 0)
-				opacity: 1
-				// animation: loader .6s linear
 
 	&__btn
 		position: relative
@@ -42,43 +64,121 @@
 			right: 0
 			height: 5px
 			background: $black
-			transition: transform .2s
+			transition: transform .3s
 		&:before
 			top: 0
 		&:after
 			top: 23px
-		span:before
-			top: 11px
-			transition: transform .6s ease-in
+		span
+			will-change: opacity
+			transition: opacity .3s, transform .3s
+			&:before
+				top: 11px
 	&__list
-		// visibility: hidden
-		// will-change: opacity
-		// transform: translate3d(0,0,0)
-		// transition: z-index .1s
-		// z-index: -1
-		// transition-delay: .7s
+		position: absolute
+		top: 0
+		left: -1px
+		margin-top: 30px
+		padding-bottom: 5px
+		visibility: hidden
+		z-index: -1
+		opacity: 0
+		will-change: opacity
+		transform: translate3d(0,0,0)
+		transition: opacity .3s
 		+lr
 		font-size: 24px
+		&:before
+			position: absolute
+			content: ''
+			bottom: -5px
+			left: 0
+			width: 35px
+			height: 5px
+			background: $black
 		li
-			will-change: opacity
-			transform: translate3d(0,0,0)
-			transition: transform .4s ease-out, opacity .4s
-			transform: translate(40%, -30%)
-			opacity: 0
+			display: block
+			&.is-active
+				+lb
+	a
+		transition: font-weight .2s, font-family .2s
+		&:hover
+			+lb
 
-			$transition-delay: 0s
+// lang
+.lang
+	float: left
+	margin: 7px 15px 0 0
+	+lb
+	letter-spacing: 1px
+	font-size: 11px
+	&:hover
+		span
+			border-color: $black
+	span
+		transition: border-color .2s
+		border-bottom: 1px solid transparent
 
-			@for $i from 1 through 6
-				&:nth-child(#{$i})
-					transition-delay: $transition-delay
-					$transition-delay: $transition-delay + .1s
-			
+// login
+.login
+	position: relative
+	float: right
+	margin-right: 15px
+	&.is-active
+		.login__form
+			opacity: 1
+			visibility: visible
+			z-index: 1
+	&__btn
+		font-size: 0
+		vertical-align: top
+		background: transparent
+		display: inline-block
+		.icon
+			font-size: 28px
+	&__form
+		position: absolute
+		top: 100%
+		left: -1px
+		margin-top: 16px
+		width: 195px
+		opacity: 0
+		visibility: visible
+		z-index: -1
+		transform: translate3d(0,0,0)
+		will-change: opacity
+		transition: opacity .3s
+	&__row
+		margin-top: 10px
+		&:first-child
+			margin-top: 0
+	&__bott
+		margin-top: 20px
+		.btn
+			margin-right: 22px
+		.forgot
+			font-size: 11px
+			span
+				letter-spacing: 1px
+	&__label
+		margin-bottom: 5px
+		+lb
+		font-size: 11px
+		cursor: pointer
+		user-select: none
+		display: block
 
+// play
+.play
+	float: right
+	.icon
+		font-size: 28px
+	&__btn
+		font-size: 0
+		vertical-align: top
+		background: transparent
+		display: inline-block
 
-// @keyframes listItem
-// 	0%
-// 		transform: translateX(30%)
-// 		opacity: 0
-// 	100%
-// 		transform: translateX(0)
-// 		opacity: 1
+// logo
+.logo
+	+svg(logo,158,172)

@@ -15,15 +15,23 @@
 	<!-- top -->
 	<section class="top">
 		<!-- header -->
-		<header class="header">
+		<header class="header is-home">
 			<div class="header__in">
 				<div class="header__left">
-					<a href="#" class="lang">UKR</a>
-					<div class="login">
-						<button type="button" class="login__btn">
+					<!-- lang -->
+					<a href="#" class="lang"><span>UKR</span></a>
+					<!-- play -->
+					<div class="play">
+						<a href="#" class="play__btn">
+							<i class="icon icon-play"></i>
+						</a>
+					</div>
+					<!-- login -->
+					<div class="login js-login">
+						<button type="button" class="login__btn js-btn-login">
 							<i class="icon icon-user"></i>
 						</button>
-						<div class="login__form">
+						<div class="login__form js-login-form">
 							<form action="">
 								<div class="login__row">
 									<label for="login" class="login__label">Логин</label>
@@ -35,17 +43,13 @@
 								</div>
 								<div class="login__bott">
 									<button class="btn" type="submit">ВОЙТИ</button>
-									<a href="#" class="forgot">Я забыл пароль:(</a>
+									<a href="#" class="forgot"><span>Я забыл пароль</span>:(</a>
 								</div>
 							</form>
 						</div>
 					</div>
-					<div class="play">
-						<a href="#" class="play__btn">
-							<i class="icon icon-play"></i>
-						</a>
-					</div>
 				</div>
+				<!-- logo -->
 				<a href="#" class="logo"></a>
 				<!-- menu -->
 				<div class="menu js-menu">
@@ -54,7 +58,7 @@
 					</button>
 					<ul class="menu__list">
 						<li><a href="#">Цена</a></li>
-						<li><a href="#">Курс</a></li>
+						<li class="is-active"><a href="#">Курс</a></li>
 						<li><a href="#">График</a></li>
 						<li><a href="#">Учебник</a></li>
 						<li><a href="#">Офис</a></li>
@@ -63,7 +67,85 @@
 				</div>
 			</div>
 		</header>
-	</section> 
+		<div class="top__in">
+			<h3 class="title-middle">ТВОЯ ДОСТУПНАЯ ШКОЛА АНГЛИЙСКОГО ЯЗЫКА!</h3>
+			<a href="#price" class="mouse">
+				<span class="icon icon-mouse"></span>
+				<span class="mouse__text">ПРОКРУТИ</span>
+			</a>
+		</div>
+	</section>
+	<!-- bg -->
+	<section class="bg" style="background-image: url(../img/bg1.png);"></section>
+	<!-- price -->
+	<section class="price" id="price">
+		<div class="price__in">
+			<h3 class="title">ЛУЧШАЯ <br>ЦЕНА</h3>
+			<!-- wrap -->
+			<div class="price__wrap">
+				<div class="price__text">За стэп (3 месяца):</div>
+				<div class="price__row">
+					<div class="time-day">Утро</div>
+					<div class="time">(с 9:00 до 13:00)</div>
+					<div class="cost"><span>900</span>грн</div>
+				</div>
+				<div class="price__row">
+					<div class="time-day">День</div>
+					<div class="time">(с 13:00 до 20:00)</div>
+					<div class="cost"><span>1200</span>грн</div>
+				</div>
+				<div class="price__btn">
+					<a href="#" class="btn btn_red">ЗАПИСАТЬСЯ НА ТЕСТ</a>
+				</div>
+				<div class="price__foot">
+					<p>Всего 300 грн/месяц!</p>
+					<p>Мы не шутим! Мы лоу-кост!</p>
+				</div>
+			</div>
+		</div>
+		<!-- circle -->
+		<div class="circle"><span></span></div>
+	</section>
+	<!-- course -->
+	<section class="course">
+		<div class="course__in">
+			<h3 class="title">ИНТЕНСИВНЫЙ <br>КУРС</h3>
+			<!-- wrap -->
+			<div class="wrap">
+				<div class="row">
+					<div class="col">Полный <br>курс</div>
+					<div class="col">это 4 уровня (степа), пройдя которые ты заговоришь на английском! Обучение займет всего один год!</div>
+				</div>
+				<div class="row">
+					<div class="col">Степ</div>
+					<div class="col">это 3 месяца активного обучения дома и в группе (12 человек).</div>
+				</div>
+				<div class="row">
+					<div class="col">Трек</div>
+					<div class="col">это 1 месяц в составе степа. Ты можешь начать заниматся именно с того трека который тебе действительно необходим!</div>
+				</div>
+			</div>
+			<h3 class="title-small">Весь английский за один год!</h3>
+			<!-- steps -->
+			<div class="steps">
+				<div class="steps__item">
+					<div class="steps__text">Степ</div>
+				</div>
+				<div class="steps__item">
+					<div class="steps__text">Степ</div>
+				</div>
+				<div class="steps__item is-bot">
+					<div class="steps__text">Степ</div>
+				</div>
+				<div class="steps__item is-bot">
+					<div class="steps__text">Степ</div>
+				</div>
+				<div class="steps__circle"></div>
+			</div>
+		</div>
+	</section>
+	<!-- bg -->
+	<section class="bg" style="background-image: url(../img/bg2.png);"></section>
 </div>
 <!-- END out-->
 </body>

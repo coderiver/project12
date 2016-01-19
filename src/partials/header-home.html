@@ -1,13 +1,21 @@
 <!-- header -->
-<header class="header">
+<header class="header is-home">
 	<div class="header__in">
 		<div class="header__left">
-			<a href="#" class="lang">UKR</a>
-			<div class="login">
-				<button type="button" class="login__btn">
+			<!-- lang -->
+			<a href="#" class="lang"><span>UKR</span></a>
+			<!-- play -->
+			<div class="play">
+				<a href="#" class="play__btn">
+					<i class="icon icon-play"></i>
+				</a>
+			</div>
+			<!-- login -->
+			<div class="login js-login">
+				<button type="button" class="login__btn js-btn-login">
 					<i class="icon icon-user"></i>
 				</button>
-				<div class="login__form">
+				<div class="login__form js-login-form">
 					<form action="">
 						<div class="login__row">
 							<label for="login" class="login__label">Логин</label>
@@ -19,17 +27,13 @@
 						</div>
 						<div class="login__bott">
 							<button class="btn" type="submit">ВОЙТИ</button>
-							<a href="#" class="forgot">Я забыл пароль:(</a>
+							<a href="#" class="forgot"><span>Я забыл пароль</span>:(</a>
 						</div>
 					</form>
 				</div>
 			</div>
-			<div class="play">
-				<a href="#" class="play__btn">
-					<i class="icon icon-play"></i>
-				</a>
-			</div>
 		</div>
+		<!-- logo -->
 		<a href="#" class="logo"></a>
 		<!-- menu -->
 		<div class="menu js-menu">
@@ -38,7 +42,7 @@
 			</button>
 			<ul class="menu__list">
 				<li><a href="#">Цена</a></li>
-				<li><a href="#">Курс</a></li>
+				<li class="is-active"><a href="#">Курс</a></li>
 				<li><a href="#">График</a></li>
 				<li><a href="#">Учебник</a></li>
 				<li><a href="#">Офис</a></li>
