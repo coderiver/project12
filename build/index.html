@@ -8,6 +8,7 @@
 	<meta name="theme-color" content="#fff">
 	<link rel="stylesheet" media="all" href="css/style.css" >
 	<script src="js/app.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3"></script>
 </head>
 <body>
 <!-- BEGIN  out-->
@@ -19,13 +20,10 @@
 			<div class="header__in">
 				<div class="header__left">
 					<!-- lang -->
-					<a href="#" class="lang"><span>UKR</span></a>
-					<!-- play -->
-					<div class="play">
-						<a href="#" class="play__btn">
-							<i class="icon icon-play"></i>
-						</a>
-					</div>
+					<ul class="lang">
+						<li><a href="#"><span>EN</span></a></li>
+						<li><a href="#"><span>UKR</span></a></li>
+					</ul>
 					<!-- login -->
 					<div class="login js-login">
 						<button type="button" class="login__btn js-btn-login">
@@ -69,16 +67,26 @@
 		</header>
 		<div class="top__in">
 			<h3 class="title-middle">ТВОЯ ДОСТУПНАЯ ШКОЛА АНГЛИЙСКОГО ЯЗЫКА!</h3>
-			<a href="#price" class="mouse">
-				<span class="icon icon-mouse"></span>
-				<span class="mouse__text">ПРОКРУТИ</span>
-			</a>
+			<!-- video -->
+			<div class="video">
+				<button class="video__btn" type="button">
+					<span class="icon icon-play"></span>
+				</button>
+			</div>
 		</div>
 	</section>
-	<!-- bg -->
-	<section class="bg" style="background-image: url(../img/bg1.png);"></section>
+	<!-- picture -->
+	<section class="picture" style="background-image: url(../img/bg1.png);">
+		<div class="picture__in">
+			<h3 class="title-big">100</h3>
+			<p>БЕСПЛАТНЫХ МЕСТ!</p>
+			<div class="picture__but">
+				<a href="#" class="btn btn_yellow">ЗАПИСАТЬСЯ НА ТЕСТ</a>
+			</div>
+		</div>
+	</section>
 	<!-- price -->
-	<section class="price" id="price">
+	<section class="price">
 		<div class="price__in">
 			<h3 class="title">ЛУЧШАЯ <br>ЦЕНА</h3>
 			<!-- wrap -->
@@ -87,12 +95,12 @@
 				<div class="price__row">
 					<div class="time-day">Утро</div>
 					<div class="time">(с 9:00 до 13:00)</div>
-					<div class="cost"><span>900</span>грн</div>
+					<div class="cost"><span>900</span> грн</div>
 				</div>
 				<div class="price__row">
 					<div class="time-day">День</div>
 					<div class="time">(с 13:00 до 20:00)</div>
-					<div class="cost"><span>1200</span>грн</div>
+					<div class="cost"><span>1200</span> грн</div>
 				</div>
 				<div class="price__btn">
 					<a href="#" class="btn btn_red">ЗАПИСАТЬСЯ НА ТЕСТ</a>
@@ -102,9 +110,9 @@
 					<p>Мы не шутим! Мы лоу-кост!</p>
 				</div>
 			</div>
+			<!-- circle -->
+			<div class="circle"></div>
 		</div>
-		<!-- circle -->
-		<div class="circle"><span></span></div>
 	</section>
 	<!-- course -->
 	<section class="course">
@@ -113,7 +121,7 @@
 			<!-- wrap -->
 			<div class="wrap">
 				<div class="row">
-					<div class="col">Полный <br>курс</div>
+					<div class="col">Полный<br> курс</div>
 					<div class="col">это 4 уровня (степа), пройдя которые ты заговоришь на английском! Обучение займет всего один год!</div>
 				</div>
 				<div class="row">
@@ -144,9 +152,85 @@
 			</div>
 		</div>
 	</section>
-	<!-- bg -->
-	<section class="bg" style="background-image: url(../img/bg2.png);"></section>
+	<!-- picture -->
+	<section class="picture" style="background-image: url(../img/bg2.png);">
+		<div class="picture__in">
+			<p>ОТКРЫТИЕ <br>ШКОЛЫ </p>
+			<div class="title-big">10 МАРТА</div>
+		</div>
+	</section>
+	<!-- graph -->
+	<section class="graph">
+		<div class="graph__in">
+			<h3 class="title">СВОБОДНЫЙ <br>ГРАФИК</h3>
+			<!-- wrap -->
+			<div class="wrap">
+				<div class="row">
+					<div class="col">Каждый<br> день</div>
+					<div class="col">Наш сайт позволит тебе управлять временем! Ты можешь переносить свои занятия на один урок либо на весь уровень!</div>
+				</div>
+				<div class="row">
+					<div class="col">Каждую<br> неделю</div>
+					<div class="col">
+						<p>2 занятия в группе (12 человек).</p>
+						<p>2 урока самостоятельно.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">Каждый<br> месяц</div>
+					<div class="col">Получи 25 бесплатных минут индивидуальной консультации.</div>
+				</div>
+			</div>
+			<h3 class="title-small">Создавай свой график сам <br>и меняй при необходимости!</h3>
+		</div>
+	</section>
+	<!-- contacts -->
+	<section class="contacts">
+		<div class="contacts__col">
+			<!-- map -->
+			<div class="map js-map" id="map"></div>
+		</div>
+		<div class="contacts__col">
+			<div class="contacts__in">
+				<h3 class="title-middle">КОНТАКТЫ</h3>
+				<div class="label">Адрес</div>
+				<p>м. Пл. Льва Толстого</p>
+				<p>ул. Льва Толстого, 9а, 3-й этаж</p>
+				<p>(напротив парка Шевченко)</p>
+				<div class="label">Телефон</div>
+				<p>(044) 232-89-71, (044) 289-08-38</p>
+				<label for="phone" class="label">Заказать звонок:</label>
+				<form class="contacts__form" action="">
+					<div class="contacts__input">
+						<input type="text" name="phone" id="phone" class="input">
+					</div>
+					<button class="btm" type="submit">OK</button>
+				</form>
+				<div class="label">График работы</div>
+				<p>Пн. - Пт. с 10:00 до 21:30</p>
+				<h3 class="title-small">Позвони или приходи, <br>чтоб узнать больше!</h3>
+				<div class="soc">
+					<li><a href="#"><span class="icon icon-f"></span></a></li>
+					<li><a href="#"><span class="icon icon-inst"></span></a></li>
+					<li><a href="#"><span class="icon icon-vk"></span></a></li>
+					<li><a href="#"><span class="icon icon-p"></span></a></li>
+				</div>
+			</div>
+		</div>
+	</section>
 </div>
-<!-- END out-->
+<!-- END out--> 
+<!-- footer -->
+<footer class="footer">
+	<div class="footer__in">
+		<!-- dev -->
+		<div class="dev">
+			<p>Дизайнер — Марта Гожа</p>
+			<p>Разработка —  UaMaster</p>
+		</div>
+		<!-- copy -->
+		<div class="copy">&copy; Project 12</div>
+	</div>
+</footer>
 </body>
 </html>

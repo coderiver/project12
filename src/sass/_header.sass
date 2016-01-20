@@ -1,7 +1,7 @@
 // header
 .header
 	position: relative
-	padding: 92px 0 316px
+	padding: 90px 0 320px
 	overflow: hidden
 	&.is-home
 		&:before
@@ -17,7 +17,7 @@
 
 	.menu
 		float: right
-		margin-right: 82px
+		margin-right: 117px
 	&__in 
 		position: relative
 		@extend %in 
@@ -108,16 +108,24 @@
 // lang
 .lang
 	float: left
-	margin: 7px 15px 0 0
+	margin: 7px 25px 0 0
 	+lb
 	letter-spacing: 1px
-	font-size: 11px
-	&:hover
+	font-size: 0
+	li
+		margin-left: 19px
+		font-size: 11px
+		vertical-align: top
+		display: inline-block
+		&:first-child
+			margin-left: 0
+	a
+		&:hover
+			span
+				border-color: $black
 		span
-			border-color: $black
-	span
-		transition: border-color .2s
-		border-bottom: 1px solid transparent
+			transition: border-color .2s
+			border-bottom: 1px solid transparent
 
 // login
 .login

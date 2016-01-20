@@ -1,3 +1,10 @@
+// out
+.out
+	padding-bottom: 54px
+	min-height: 100%
+	height: 100%
+	height: auto
+
 // input
 .input
 	padding: 0 9px
@@ -16,18 +23,33 @@
 
 // btn
 .btn
-	padding: 6px 12px
+	padding: 8px 30px
 	color: $white
 	+lb
 	font-size: 11px
 	text-transform: uppercase
 	transition: background .2s, color .2s
 	border-radius: 4px
+	letter-spacing: .1em
+	line-height: 1.3
 	border: 2px solid $black
 	background: $black
+	display: inline-block
 	&:hover
 		color: $black
 		background: transparent
+	&_yellow
+		color: $black
+		border-color: $yellow
+		background: $yellow
+		&:hover
+			color: $yellow
+	&_red
+		border-color: $red
+		background: $red
+		&:hover
+			color: $red
+
 
 // forgot
 .forgot
@@ -42,7 +64,16 @@
 .title
 	+rb
 	font-size: 48px
+	line-height: 1.1
+	letter-spacing: .14em
 	
+.title-big
+	font-size: 72px
+	line-height: 1.25
+	letter-spacing: .1em
+	text-transform: uppercase
+	+lb
+
 .title-middle
 	+lb
 	font-size: 36px
@@ -51,6 +82,7 @@
 .title-small
 	font-size: 24px
 	+lb
+	letter-spacing: .05em
 
 // mouse
 .mouse
@@ -82,8 +114,92 @@
 	100%
 		transform: translateY(0)
 
-// bg
-.bg
-	height: 380px
+// picture
+.picture
+	position: relative
+	padding: 74px 0
+	height: 382px
+	color: $white
+	+lb
+	letter-spacing: 0.2em
+	line-height: 1.2
+	text-transform: uppercase
 	background-size: cover
 	background-repeat: no-repeat
+	background-position: 50% 0
+	.title-big
+		& + p
+			margin-top: 7px
+	p 
+		&:first-child
+			margin-top: 12px
+		& + .title-big
+			margin-top: 12px
+	&__in
+		text-align: center
+		font-size: 36px
+		@extend %cent
+	&__but
+		margin-top: 25px
+
+// circle
+.circle
+	position: relative
+	width: 152px
+	height: 152px
+	border-radius: 50%
+	background: $dark-gray
+	&:before,
+	&:after
+		position: absolute
+		content: ''
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
+		border-radius: 50%
+	&:before
+		height: 102px
+		width: 102px
+		border: 10px solid rgba($white, .1)
+	&:after
+		height: 208px
+		width: 208px
+		border: 10px solid rgba($white, .6)
+
+// time-day time cost
+.time-day,
+.time,
+.cost
+	vertical-align: top
+	display: inline-block
+
+.time-day
+	+lb
+
+.cost
+	span
+		+lb
+
+// wrap
+.wrap
+	text-align: left
+	+clr
+
+// row
+.row
+	margin-top: 24px
+	+clr
+	&:first-child
+		margin-top: 0
+
+// col
+.col
+	float: left
+	width: calc(100% - 190px)
+	letter-spacing: .08em
+	+lr
+	&:first-child
+		padding-right: 30px
+		width: 190px
+		+lb
+		text-align: right
