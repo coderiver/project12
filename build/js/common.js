@@ -26,6 +26,19 @@ $(document).ready(function() {
 		event.stopPropagation();
 	});
 
-	
+	// slider
+	$('.js-slider').each(function(){
+		var slider 	= $(this),
+			arr 	= slider.parent().find('.js-slider-arr');
+		slider.slick({
+			dots: false,
+			infinite: true,
+			speed: 500,
+			cssEase: 'linear',
+			appendArrows: arr,
+			prevArrow: '<button class="slider__btn is-prev" type="button"><i class="icon icon-slider-prev"></i></button>',
+			nextArrow: '<button class="slider__btn is-next" type="button"><i class="icon icon-slider-next"></i></button>'
+		});
+	});
 
 });

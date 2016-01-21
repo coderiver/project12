@@ -2,10 +2,10 @@ $(document).ready(function() {
 
     $('#map').each(function() {
         function initialize() {
-            var myLatlng = {lat: 50.450776, lng: 30.525280 };
+            var myLatlng = {lat: 50.450776, lng: 30.528280 };
 
             var map = new google.maps.Map(document.getElementById('map'), {
-                zoom                : 19,
+                zoom                : 18,
                 center              : myLatlng,
                 mapTypeControl      : false,
                 streetViewControl   : false,

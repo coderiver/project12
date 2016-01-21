@@ -73,6 +73,7 @@
 	padding: 188px 0 105px
 	color: $white
 	text-align: center
+	background: url(../img/svg/course-bg-left.svg) no-repeat 9% 61%, url(../img/svg/course-bg-right.svg) no-repeat 92% 53%
 	.title
 		margin-bottom: 80px
 	.wrap
@@ -86,9 +87,14 @@
 .video
 	&__btn
 		font-size: 0
+		transition: transform .2s, color .2s
 		background: transparent
+		&:hover
+			transform: scale(1.1)
+			color: $white
 		.icon
-			font-size: 60px
+			transform: translate3d(0,0,0)
+			font-size: 61px
 
 // steps
 .steps
@@ -156,40 +162,133 @@
 
 // graph
 .graph
+	position: relative
+	padding: 178px 15px 120px
 	text-align: center
-	background: $yellow
+	overflow: hidden
+	background: url(../img/svg/graph-bg-left.svg) no-repeat 7% 41%, url(../img/svg/graph-bg-right.svg) no-repeat 92% 57%, $yellow
+	&:before,
+	&:after
+		position: absolute
+		content: ''
+		left: 50%
+		transform: translateX(-50%)
+	&:before
+		top: -102px
+		width: 204px
+		height: 204px
+		border-radius: 50%
+		background: $dark-gray
+	&:after
+		top: 26px
+		+svg(graph-arr,484,44)
 	.wrap
 		margin: 78px 0 75px
 	&__in
-		position: relative
-		padding: 178px 15px 120px
 		@extend %cent
-		&:before,
-		&:after
-			position: absolute
-			content: ''
-			left: 50%
-			transform: translateX(-50%)
-		&:before
-			top: -102px
-			width: 204px
-			height: 204px
-			border-radius: 50%
-			background: $dark-gray
-		&:after
-			top: 26px
-			+svg(graph-arr,484,44)
+
+// textbook
+.textbook
+	position: relative
+	padding: 197px 0 100px
+	color: $white
+	text-align: center
+	overflow: hidden
+	background: url(../img/svg/textbook-bg-left.svg) no-repeat 7% 10%, url(../img/svg/textbook-bg-right.svg) no-repeat 93% 11%
+	&:before
+		position: absolute
+		content: ''
+		top: -45px
+		left: 50%
+		margin-left: -101px
+		z-index: 2
+		+svg(graph-bot-arr,202,159)
+	.title
+		margin-bottom: 75px
+	.title-small
+		margin-top: 75px
+	&__in
+		@extend %in
+	&__wrap
+		@extend %cent
+	&__bot
+		margin-top: 80px
+		+clr
+	&__left
+		float: left
+		padding-right: 121px
+		width: 42%
+		+lb
+		font-size: 24px
+		text-align: right
+		letter-spacing: .05em
+	&__right
+		float: right
+		padding-top: 20px
+		width: 58%
+		text-align: left
+
+// slider
+.slider
+	position: relative
+	margin: 93px auto 0
+	padding: 0 88px
+	max-width: 1192px
+	&__arr
+		position: absolute
+		top: 0
+		left: 15px
+		right: 15px
+		bottom: 0
+	&__btn
+		position: absolute
+		top: 50%
+		margin-top: -30px
+		font-size: 0
+		opacity: .5
+		will-chenge: opacity
+		transition: opacity .2s
+		color: $white
+		background: transparent
+		&:hover
+			opacity: 1
+		&:active
+			opacity: .5
+		&.is-prev
+			left: 0
+		&.is-next
+			right: 0
+		.icon
+			font-size: 60px
 
 // contacts
 .contacts
 	background: $yellow
 	+clr
+	.title-middle
+		margin-bottom: 42px
+	.label
+		margin-top: 22px
+	.title-small
+		margin-top: 60px
+	.soc
+		margin-top: 48px
 	&__col
 		float: left
 		width: 50%
 	&__in
-		padding: 35px 20px 68px 136px
+		padding: 53px 20px 68px 136px
 		max-width: 510px
+	&__form
+		margin: 15px 0 28px
+		font-size: 0
+		.btn
+			margin-left: 35px
+			vertical-align: top
+	&__input
+		width: 203px
+		vertical-align: top
+		display: inline-block
 
 // map
 .map

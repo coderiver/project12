@@ -7,10 +7,13 @@
 
 // input
 .input
-	padding: 0 9px
+	padding: 0 20px
 	height: 30px
 	width: 100%
 	+lr
+	color: rgba($black, .4)
+	letter-spacing: 0.05em
+	font-size: 16px
 	border-radius: 4px
 	border: 2px solid $black
 	background: transparent
@@ -19,7 +22,8 @@
 		&::placeholder
 			font-size: 0
 	&::placeholder
-		color: $dark-gray
+		color: rgba($black, .4)
+		opacity: .4
 
 // btn
 .btn
@@ -49,7 +53,42 @@
 		background: $red
 		&:hover
 			color: $red
+	&_small
+		padding: 6px 17px
 
+.soc
+	font-size: 0
+	.icon
+		font-size: 25px
+		vertical-align: middle
+		&-vk
+			font-size: 14px
+	li
+		margin-left: 36px
+		vertical-align: top
+		display: inline-block
+		&:first-child
+			margin-left: 0
+	a
+		height: 41px
+		width: 41px
+		text-align: center
+		color: $yellow
+		line-height: 39px
+		transition: background .2s, color .2s
+		border-radius: 50%
+		border: 2px solid $black
+		background: $black
+		display: block
+		&:hover
+			color: $black
+			background: transparent
+
+// label
+.label
+	margin-bottom: 5px
+	+lb
+	display: block
 
 // forgot
 .forgot
