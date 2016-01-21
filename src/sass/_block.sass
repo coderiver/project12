@@ -18,6 +18,9 @@
 	border: 2px solid $black
 	background: transparent
 	display: block
+	+r(768)
+		padding: 0 10px
+		font-size: 12px
 	&:focus
 		&::placeholder
 			font-size: 0
@@ -61,12 +64,18 @@
 	.icon
 		font-size: 25px
 		vertical-align: middle
+		+r(768)
+			font-size: 18px
 		&-vk
 			font-size: 14px
+			+r(768)
+				font-size: 12px
 	li
 		margin-left: 36px
 		vertical-align: top
 		display: inline-block
+		+r(768)
+			margin-left: 25px
 		&:first-child
 			margin-left: 0
 	a
@@ -80,6 +89,10 @@
 		border: 2px solid $black
 		background: $black
 		display: block
+		+r(768)
+			width: 32px
+			height: 32px
+			line-height: 28px
 		&:hover
 			color: $black
 			background: transparent
@@ -105,6 +118,8 @@
 	font-size: 48px
 	line-height: 1.1
 	letter-spacing: .14em
+	+r(768)
+		font-size: 28px
 	
 .title-big
 	font-size: 72px
@@ -117,11 +132,15 @@
 	+lb
 	font-size: 36px
 	letter-spacing: .11em
+	+r(768)
+		font-size: 24px
 
 .title-small
 	font-size: 24px
 	+lb
 	letter-spacing: .05em
+	+r(768)
+		font-size: 18px
 
 // mouse
 .mouse
@@ -188,6 +207,9 @@
 	height: 152px
 	border-radius: 50%
 	background: $dark-gray
+	+r(768)
+		width: 120px
+		height: 120px
 	&:before,
 	&:after
 		position: absolute
@@ -200,10 +222,16 @@
 		height: 102px
 		width: 102px
 		border: 10px solid rgba($white, .1)
+		+r(768)
+			width: 80px
+			height: 80px
 	&:after
 		height: 208px
 		width: 208px
 		border: 10px solid rgba($white, .6)
+		+r(768)
+			width: 160px
+			height: 160px
 
 // time-day time cost
 .time-day,
@@ -223,11 +251,15 @@
 .wrap
 	text-align: left
 	+clr
+	+r(768)
+		padding-left: 60px
 
 // row
 .row
 	margin-top: 24px
 	+clr
+	+r(768)
+		margin-top: 28px
 	&:first-child
 		margin-top: 0
 
@@ -237,8 +269,15 @@
 	width: calc(100% - 190px)
 	letter-spacing: .08em
 	+lr
+	+r(768)
+		width: 100%
 	&:first-child
 		padding-right: 30px
 		width: 190px
 		+lb
 		text-align: right
+		+r(768)
+			width: 100%
+			text-align: left
+			br
+				display: none

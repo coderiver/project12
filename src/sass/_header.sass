@@ -3,6 +3,8 @@
 	position: relative
 	padding: 90px 0 320px
 	overflow: hidden
+	+r(768)
+		padding: 0 0 320px
 	&.is-home
 		&:before
 			position: absolute
@@ -14,13 +16,24 @@
 			height: 650px
 			+rotate(45)
 			background: $white
-
+			+r(1024)
+				margin-top: -378px
+			+r(768)
+				margin-top: -414px
 	.menu
 		float: right
 		margin-right: 117px
+		+r(1024)
+			margin-right: 60px
+		+r(768)
+			margin-right: 32px
 	&__in 
 		position: relative
 		@extend %in 
+		+r(768)
+			padding: 13px 15px 10px
+			color: $white
+			background: $black
 	&__left
 		float: left
 	.logo
@@ -29,16 +42,23 @@
 		left: 50%
 		margin-left: -92px
 		z-index: 1
+		+r(768)
+			top: 96px
+			margin-left: -68px
 
 // menu
 .menu
 	position: relative
+	+r(768)
+		line-height: 1
 	&.is-active
 		.menu__btn
 			&:before
 				transform: translateY(11px) rotate(45deg)
 			&:after
 				transform: translateY(-12px) rotate(-45deg)
+				+r(768)
+					transform: translateY(-10px) rotate(-45deg)
 			span
 				transform: translate3d(0,0,0)
 				transform: scale(0)
@@ -55,6 +75,10 @@
 		+lb
 		line-height: 1
 		background: transparent
+		+r(769)
+			padding-top: 25px
+			width: 30px
+			font-size: 0
 		&:before,
 		&:after,
 		span:before
@@ -65,15 +89,21 @@
 			height: 5px
 			background: $black
 			transition: transform .3s
+			+r(769)
+				background: $white
 		&:before
 			top: 0
 		&:after
 			top: 23px
+			+r(768)
+				top: 21px
 		span
 			will-change: opacity
 			transition: opacity .3s, transform .3s
 			&:before
 				top: 11px
+				+r(768)
+					top: 10px
 	&__list
 		position: absolute
 		top: 0
@@ -88,6 +118,21 @@
 		transition: opacity .3s
 		+lr
 		font-size: 24px
+		+r(1024)
+			font-size: 21px
+		+r(768)
+			position: fixed
+			top: 50px
+			left: 0
+			right: 0
+			bottom: 0
+			margin: 0
+			color: $black
+			line-height: 1.3
+			font-size: 16px
+			overflow: auto
+			text-align: center
+			background: $white
 		&:before
 			position: absolute
 			content: ''
@@ -112,6 +157,8 @@
 	+lb
 	letter-spacing: 1px
 	font-size: 0
+	+r(1024)
+		margin-right: 15px
 	li
 		margin-left: 19px
 		font-size: 11px
@@ -142,8 +189,12 @@
 		vertical-align: top
 		background: transparent
 		display: inline-block
+		+r(768)
+			color: $white
 		.icon
 			font-size: 28px
+			+r(768)
+				font-size: 26px
 	&__form
 		position: absolute
 		top: 100%
@@ -190,3 +241,5 @@
 // logo
 .logo
 	+svg(logo,158,172)
+	+r(768)
+		+svg(logo,117,128)

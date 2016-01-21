@@ -8,11 +8,18 @@
 		@extend %in
 		padding-left: 123px
 		padding-right: 123px
+		+r(768)
+			padding-left: 85px
+			padding-right: 50px
+			font-size: 10px
 
 // copy
 .copy
 	float: right
 	width: 115px
+	+r(768)
+		float: left
+		width: 90px
 	& + .dev
 		margin-left: 20px
 

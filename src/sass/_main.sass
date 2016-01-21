@@ -2,86 +2,20 @@
 .top
 	padding-bottom: 56px
 	background: url(../img/svg/top-bg-right.svg) no-repeat 96% 73%, url(../img/svg/top-bg-left.svg) no-repeat 10% 77%, $yellow
+	+r(1024)
+		background-position: 112% 73%, -9% 77%
+	+r(769)
+		background-position: 756% 73%, -150% 77%
 	&__in
 		position: relative
 		margin: 4.2% auto 0
+		padding: 0 30px
 		max-width: 790px
 		text-align: center
+		+r(768)
+			margin: 13.2% auto 0
 		.video
 			margin-top: 60px
-
-// price
-.price
-	position: relative
-	text-align: center
-	background: url(../img/svg/price-bg-right.svg) no-repeat 95% 35%, url(../img/svg/price-bg-left.svg) no-repeat 9% 58%, $yellow
-	&:before
-		position: absolute
-		content: ''
-		left: 50%
-		bottom: -103px
-		margin-left: -103px
-		+arr(206,103,$yellow,b)
-	&:after
-		position: absolute
-		content: ''
-		left: 50%
-		bottom: -90px
-		margin-left: -36px
-		+svg(price-arr,72,55)
-	.circle
-		position: absolute
-		top: -76px
-		left: 50%
-		margin-left: -76px
-	.title
-		margin-bottom: 76px
-	.time-day,
-	.time,
-	.cost
-		min-width: 83px
-		text-align: left
-		font-size: 19px
-	.time
-		width: 220px
-		text-align: center
-	.cost
-		padding-left: 22px
-		width: 105px
-	&__in
-		position: relative
-		padding: 160px 15px
-		@extend %cent
-		overflow: hidden
-	&__text
-		margin-bottom: 20px
-		letter-spacing: .05em
-	&__row
-		margin-top: 10px
-		padding-left: 30px
-		font-size: 0
-	&__btn
-		margin-top: 44px
-	&__foot
-		margin-top: 60px
-		+lb
-		font-size: 24px
-		line-height: 1.2
-
-// course
-.course
-	padding: 188px 0 105px
-	color: $white
-	text-align: center
-	background: url(../img/svg/course-bg-left.svg) no-repeat 9% 61%, url(../img/svg/course-bg-right.svg) no-repeat 92% 53%
-	.title
-		margin-bottom: 80px
-	.wrap
-		text-align: left
-	.title-small
-		margin: 86px 0 55px
-	&__in
-		@extend %cent
 
 // video
 .video
@@ -94,7 +28,127 @@
 			color: $white
 		.icon
 			transform: translate3d(0,0,0)
-			font-size: 61px
+			font-size: 60px
+
+// price
+.price
+	position: relative
+	text-align: center
+	background: url(../img/svg/price-bg-right.svg) no-repeat 95% 35%, url(../img/svg/price-bg-left.svg) no-repeat 9% 58%, $yellow
+	+r(1024)
+		background-position: 101% 35%, -3% 58%
+	+r(768)
+		background-position: 201% 35%, -150% 58%
+	&:before
+		position: absolute
+		content: ''
+		left: 50%
+		bottom: -103px
+		margin-left: -103px
+		+arr(206,103,$yellow,b)
+		+r(768)
+			bottom: -60px
+			margin-left: -60px
+			+arr(120,60,$yellow,b)
+	&:after
+		position: absolute
+		content: ''
+		left: 50%
+		bottom: -90px
+		margin-left: -36px
+		+svg(price-arr,72,55)
+		+r(768)
+			bottom: -53px
+			margin-left: -21px
+			+svg(price-arr,42,31)
+	.circle
+		position: absolute
+		top: -76px
+		left: 50%
+		margin-left: -76px
+		+r(768)
+			top: -60px
+			margin-left: -60px
+	.title
+		margin-bottom: 76px
+		+r(768)
+			margin-bottom: 47px
+	.time-day,
+	.time,
+	.cost
+		min-width: 83px
+		text-align: left
+		font-size: 19px
+		+r(768)
+			font-size: 16px
+	.time-day
+		+r(768)
+			margin-bottom: 10px
+			display: block
+	.time
+		width: 220px
+		text-align: center
+		+r(768)
+			width: 160px
+			text-align: left
+	.cost
+		padding-left: 22px
+		width: 105px
+		+r(768)
+			padding-left: 0
+	&__in
+		position: relative
+		padding: 160px 15px
+		@extend %cent
+		overflow: hidden
+		+r(768)
+			padding: 120px 15px 82px
+	&__text
+		margin-bottom: 20px
+		letter-spacing: .05em
+	&__row
+		margin-top: 10px
+		padding-left: 30px
+		font-size: 0
+		+r(768)
+			margin-top: 15px
+			padding-left: 60px
+	&__btn
+		margin-top: 44px
+		+r(768)
+			margin-top: 48px
+	&__foot
+		margin-top: 60px
+		+lb
+		font-size: 24px
+		line-height: 1.2
+		+r(768)
+			margin-top: 43px
+			font-size: 18px
+
+// course
+.course
+	padding: 188px 0 105px
+	color: $white
+	text-align: center
+	background: url(../img/svg/course-bg-left.svg) no-repeat 9% 61%, url(../img/svg/course-bg-right.svg) no-repeat 92% 53%
+	+r(1024)
+		background-position: -8% 61%, 102% 53%
+	+r(768)
+		padding: 116px 0 71px
+		background-position: -96% 61%, 192% 53%
+	.title
+		margin-bottom: 80px
+		+r(766)
+			margin-bottom: 50px
+	.wrap
+		text-align: left
+	.title-small
+		margin: 86px 0 55px
+		+r(768)
+			margin: 44px 0 35px
+	&__in
+		@extend %cent
 
 // steps
 .steps
@@ -105,6 +159,10 @@
 	border-radius: 50%
 	vertical-align: top
 	display: inline-block
+	+r(768)
+		width: 270px
+		height: 270px
+		border-width: 8px
 	&:before,
 	&:after
 		position: absolute
@@ -117,16 +175,25 @@
 		height: 112px
 		width: 112px
 		background: $yellow
+		+r(768)
+			width: 85px
+			height: 85px
 	&:after
 		height: 157px
 		width: 157px
 		border: 10px solid rgba($yellow, .3)
+		+r(768)
+			width: 120px
+			height: 120px
+			border-width: 8px
 	&__item
 		position: absolute
 		left: -10px
 		font-size: 22px
 		+lb
 		opacity: .5
+		+r(768)
+			font-size: 16px
 		&:before
 			position: absolute
 			content: ''
@@ -134,26 +201,49 @@
 			width: 48px
 			border: 10px solid rgba($white, .1)
 			border-radius: 50%
+			+r(768)
+				width: 37px
+				height: 37px
+				border-width: 8px
 		&:first-child
-			top: -17px
+			+r(768)
+				top: -15px
 			&:before
 				bottom: -54px
 				right: -28px
+				+r(768)
+					bottom: -46px
+					right: -22px
 		&:nth-child(2)
 			top: -17px
+			+r(768)
+				top: -15px
 			&:before
 				bottom: -54px
 				left: -28px
+				+r(768)
+					bottom: -46px
+					left: -22px
 		&:nth-child(3)
 			bottom: -17px
+			+r(768)
+				bottom: -15px
 			&:before
 				top: -56px
 				right: -28px
+				+r(768)
+					top: -46px
+					right: -22px
 		&:nth-child(4)
 			bottom: -17px
+			+r(768)
+				bottom: -15px
 			&:before
 				top: -54px
 				left: -28px
+				+r(768)
+					top: -46px
+					left: -22px
 		&:nth-child(even)
 			left: auto
 			right: -10px
@@ -167,6 +257,9 @@
 	text-align: center
 	overflow: hidden
 	background: url(../img/svg/graph-bg-left.svg) no-repeat 7% 41%, url(../img/svg/graph-bg-right.svg) no-repeat 92% 57%, $yellow
+	+r(768)
+		background-position: -80% 41%, 162% 57%
+		padding: 117px 15px 72px
 	&:before,
 	&:after
 		position: absolute
@@ -179,11 +272,20 @@
 		height: 204px
 		border-radius: 50%
 		background: $dark-gray
+		+r(768)
+			top: -59px
+			width: 118px
+			height: 118px
 	&:after
 		top: 26px
 		+svg(graph-arr,484,44)
+		+r(768)
+			top: 15px
+			+svg(graph-arr,670,26)
 	.wrap
 		margin: 78px 0 75px
+		+r(768)
+			margin: 48px 0 20px
 	&__in
 		@extend %cent
 
@@ -195,6 +297,10 @@
 	text-align: center
 	overflow: hidden
 	background: url(../img/svg/textbook-bg-left.svg) no-repeat 7% 10%, url(../img/svg/textbook-bg-right.svg) no-repeat 93% 11%
+	+r(1024)
+		background-position: -17% 10%, 108% 13%
+	+r(768)
+		padding: 120px 0 52px
 	&:before
 		position: absolute
 		content: ''
@@ -203,10 +309,18 @@
 		margin-left: -101px
 		z-index: 2
 		+svg(graph-bot-arr,202,159)
+		+r(768)
+			top: -24px
+			margin-left: -59px
+			+svg(graph-bot-arr,117,92)
 	.title
 		margin-bottom: 75px
+		+r(768)
+			margin-bottom: 50px
 	.title-small
 		margin-top: 75px
+		+r(768)
+			margin-top: 40px
 	&__in
 		@extend %in
 	&__wrap
@@ -214,6 +328,8 @@
 	&__bot
 		margin-top: 80px
 		+clr
+		+r(768)
+			margin-top: 30px
 	&__left
 		float: left
 		padding-right: 121px
@@ -222,11 +338,26 @@
 		font-size: 24px
 		text-align: right
 		letter-spacing: .05em
+		+r(1200)
+			padding-right: 30px
+			padding: 0
+			width: 39%
+		+r(768)
+			width: 100%
+			font-size: 18px
+			text-align: center
 	&__right
 		float: right
 		padding-top: 20px
 		width: 58%
 		text-align: left
+		+r(1200)
+			width: 61%
+		+r(768)
+			margin-top: 23px
+			padding: 0
+			width: 100%
+			text-align: center
 
 // slider
 .slider
@@ -234,12 +365,18 @@
 	margin: 93px auto 0
 	padding: 0 88px
 	max-width: 1192px
+	+r(768)
+		margin-top: 30px
+		padding: 0 15px
 	&__arr
 		position: absolute
 		top: 0
 		left: 15px
 		right: 15px
 		bottom: 0
+		+r(768)
+			left: -5px
+			right: -5px
 	&__btn
 		position: absolute
 		top: 50%
@@ -250,6 +387,8 @@
 		transition: opacity .2s
 		color: $white
 		background: transparent
+		+r(768)
+			margin-top: -13px
 		&:hover
 			opacity: 1
 		&:active
@@ -260,6 +399,8 @@
 			right: 0
 		.icon
 			font-size: 60px
+			+r(768)
+				font-size: 26px
 
 // contacts
 .contacts
@@ -267,28 +408,46 @@
 	+clr
 	.title-middle
 		margin-bottom: 42px
+		+r(768)
+			margin-left: -75px
+			text-align: center
 	.label
 		margin-top: 22px
 	.title-small
 		margin-top: 60px
+		+r(768)
+			margin-top: 38px
 	.soc
 		margin-top: 48px
 	&__col
 		float: left
 		width: 50%
+		+r(768)
+			width: 100%
+		&:first-child
+			+r(768)
+				display: none
 	&__in
 		padding: 53px 20px 68px 136px
 		max-width: 510px
+		+r(1024)
+			padding-left: 105px
+		+r(768)
+			padding: 53px 20px 26px 75px
 	&__form
 		margin: 15px 0 28px
 		font-size: 0
 		.btn
 			margin-left: 35px
 			vertical-align: top
+			+r(768)
+				margin-left: 20px
 	&__input
 		width: 203px
 		vertical-align: top
 		display: inline-block
+		+r(768)
+			width: 140px
 
 // map
 .map
