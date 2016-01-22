@@ -34,6 +34,10 @@
 =lb
 	font-family: "Lato-Black", Arial, sans-serif
 
++font(Lato-Bold, Lato-Black)
+=lbd
+	font-family: "Lato-Bold", Arial, sans-serif
+
 +font(Lato, Lato-Regular) 
 =lr
 	font-family: 'Lato', Arial, sans-serif
@@ -67,6 +71,8 @@ body
 	font-size: 19px
 	line-height: 1.4
 	background: $dark-gray
+	&.is-hidden
+		overflow: hidden
 	+r(768)
 		font-size: 16px
 	

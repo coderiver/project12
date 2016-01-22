@@ -1904,12 +1904,14 @@ $(document).ready(function() {
 	$('body').on('click', function(){
 		$('.js-menu').removeClass('is-active');
 		$('.js-login').removeClass('is-active');
+		$('body').removeClass('is-hidden');
 	});
 
 	// open menu
 	$('.js-btn-menu').on('click', function(event){
 
 		$(this).parents('.js-menu').toggleClass('is-active');
+		$('body').toggleClass('is-hidden');
 		$('.js-login').removeClass('is-active');
 
 		event.stopPropagation();
