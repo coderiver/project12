@@ -11,8 +11,10 @@ $(document).ready(function() {
 	$('.js-btn-menu').on('click', function(event){
 
 		$(this).parents('.js-menu').toggleClass('is-active');
-		$('body').toggleClass('is-hidden');
 		$('.js-login').removeClass('is-active');
+		if ($(window).width() <= 768) {
+			$('body').toggleClass('is-hidden');
+		}
 
 		event.stopPropagation();
 	});
