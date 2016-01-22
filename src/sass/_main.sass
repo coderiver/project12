@@ -24,10 +24,8 @@
 		transition: transform .2s, color .2s
 		background: transparent
 		&:hover
-			transform: scale(1.1)
 			color: $white
 		.icon
-			transform: translate3d(0,0,0)
 			font-size: 60px
 
 // price
@@ -153,102 +151,14 @@
 // steps
 .steps
 	position: relative
-	width: 353px
-	height: 353px
-	border: 10px solid rgba($white, .1)
-	border-radius: 50%
 	vertical-align: top
 	display: inline-block
 	+r(768)
 		width: 270px
 		height: 270px
-		border-width: 8px
-	&:before,
-	&:after
-		position: absolute
-		content: ''
-		top: 50%
-		left: 50%
-		transform: translate(-50%,-50%)
-		border-radius: 50%
-	&:before
-		height: 112px
-		width: 112px
-		background: $yellow
-		+r(768)
-			width: 85px
-			height: 85px
-	&:after
-		height: 157px
-		width: 157px
-		border: 10px solid rgba($yellow, .3)
-		+r(768)
-			width: 120px
-			height: 120px
-			border-width: 8px
-	&__item
-		position: absolute
-		left: -10px
-		font-size: 22px
-		+lb
-		opacity: .5
-		+r(768)
-			font-size: 16px
-		&:before
-			position: absolute
-			content: ''
-			height: 48px
-			width: 48px
-			border: 10px solid rgba($white, .1)
-			border-radius: 50%
-			+r(768)
-				width: 37px
-				height: 37px
-				border-width: 8px
-		&:first-child
-			+r(768)
-				top: -15px
-			&:before
-				bottom: -54px
-				right: -28px
-				+r(768)
-					bottom: -46px
-					right: -22px
-		&:nth-child(2)
-			top: -17px
-			+r(768)
-				top: -15px
-			&:before
-				bottom: -54px
-				left: -28px
-				+r(768)
-					bottom: -46px
-					left: -22px
-		&:nth-child(3)
-			bottom: -17px
-			+r(768)
-				bottom: -15px
-			&:before
-				top: -56px
-				right: -28px
-				+r(768)
-					top: -46px
-					right: -22px
-		&:nth-child(4)
-			bottom: -17px
-			+r(768)
-				bottom: -15px
-			&:before
-				top: -54px
-				left: -28px
-				+r(768)
-					top: -46px
-					left: -22px
-		&:nth-child(even)
-			left: auto
-			right: -10px
-	&__text
-		letter-spacing: .05em
+	img
+		max-width: 100%
+		display: block
 
 // graph
 .graph

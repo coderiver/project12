@@ -59,6 +59,35 @@
 	&_small
 		padding: 6px 17px
 
+// field
+.field
+	margin-top: 23px
+	+clr
+	&:first-child
+		margin-top: 0
+	.input
+		float: right
+		padding: 0 10px
+		height: 43px
+		width: calc(100% - 43px)
+		border-color: $yellow
+		border-radius: 0 4px 4px 0
+	&__label
+		float: left
+		height: 43px
+		width: 43px
+		line-height: 41px
+		font-size: 26px
+		text-align: center
+		cursor: pointer
+		user-select: none
+		border-radius: 4px 0 0 4px
+		background: $yellow
+		.icon
+			vertical-align: middle
+			display: inline-block
+
+// soc
 .soc
 	font-size: 0
 	.icon
@@ -96,6 +125,42 @@
 		&:hover
 			color: $black
 			background: transparent
+
+// checkbox
+.checkbox
+	position: relative
+	cursor: pointer
+	user-select: none
+	input,
+	span:before
+		position: absolute
+		top: 1px
+		left: 0
+		width: 10px
+		height: 10px
+	input
+		z-index: 2
+		opacity: 0
+		cursor: pointer
+		&:checked
+			& + span
+				&:after
+					display: block
+	span
+		position: relative
+		padding-left: 20px
+		font-size: 11px
+		&:before
+			content: ''
+			border: 1px solid $black
+		&:after
+			position: absolute
+			content: ''
+			top: 0
+			left: 2px
+			+svg(checkbox-arr, 10,7)
+			display: none
+
 
 // label
 .label

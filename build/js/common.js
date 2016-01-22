@@ -21,12 +21,25 @@ $(document).ready(function() {
 
 	// open login
 	$('.js-btn-login').on('click', function(){
-		$(this).parents('.js-login').toggleClass('is-active');
+		$(this).parents('.js-login')
+		.find('.js-popup')
+		.toggleClass('is-active');
 		$('.js-menu').removeClass('is-active');
 		return false;
 	});
-
 	$('.js-login').on('click', function(event){
+		event.stopPropagation();
+	});
+
+	// popup
+	$('.js-popup-close').on('click', function(){
+		$('.js-popup').removeClass('is-active');
+	});
+
+	$('.js-popup').on('click', function(){
+		$(this).removeClass('is-active');
+	});
+	$('.js-popup div').on('click', function(event){
 		event.stopPropagation();
 	});
 

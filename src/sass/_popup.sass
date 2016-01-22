@@ -1,0 +1,79 @@
+// popup
+.popup
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 100
+	color: $black
+	opacity: 0
+	visibility: hidden
+	z-index: -1
+	transform: translate3d(0,0,0)
+	will-chenge: opacity
+	background: rgba($black, .6)
+	+vertical
+	transition: opacity .4s ease-in, z-index .4s ease-in, visibility .4s ease-in
+	&.is-active
+		opacity: 1
+		visibility: visible
+		z-index: 100
+		.popup__in
+			transform: scale(1) 
+	&__in
+		position: relative
+		margin-top: 130px
+		padding: 55px 80px 80px
+		width: 100%
+		max-width: 513px
+		font-size: 14px
+		vertical-align: top
+		display: inline-block
+		background: $white
+		transform: translate3d(0,0,0)
+		transition: transform .4s
+		transform: scale(0.4)
+	&__close
+		position: absolute
+		top: -38px
+		right: 0
+		color: $white
+		font-size: 0
+		will-chenge: opacity
+		transform: translate3d(0,0,0)
+		transition: opacity .2s
+		background: transparent
+		&:hover
+			opacity: .7
+		&:active
+			opacity: 1
+			color: $white
+		.icon
+			font-size: 20px
+	&__title
+		margin-bottom: 30px
+		+rb
+		font-size: 29px
+		line-height: 1.3
+	&__form
+		margin: 43px auto 0
+		max-width: 240px
+	&__check
+		margin-top: 25px
+		text-align: left
+	&__butt
+		margin-top: 40px
+		.btn
+			padding: 8px 10px
+	&__chenge
+		margin-top: 45px
+		a
+			line-height: 1.3
+			transition: border-color .2s
+			border-bottom: 1px solid $black
+			display: inline-block
+			&:hover
+				border-color: transparent
+	// &__wrap
+	// 	width: 350px
