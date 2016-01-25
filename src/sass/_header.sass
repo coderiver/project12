@@ -2,6 +2,7 @@
 .header
 	position: relative
 	padding: 90px 0 320px
+	z-index: 3
 	overflow: hidden
 	+r(768)
 		padding: 0 0 320px
@@ -20,6 +21,8 @@
 				margin-top: -378px
 			+r(768)
 				margin-top: -414px
+	&.is-init
+		overflow: initial
 	.menu
 		float: right
 		margin-right: 117px

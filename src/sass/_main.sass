@@ -1,7 +1,7 @@
 // top
 .top
 	padding-bottom: 56px
-	background: url(../img/svg/top-bg-right.svg) no-repeat 96% 73%, url(../img/svg/top-bg-left.svg) no-repeat 10% 77%, $yellow
+	background: url(../img/svg/top-bg-right.svg) no-repeat 96% 73%,  $yellow
 	+r(1024)
 		background-position: 112% 73%, -9% 77%
 	+r(769)
@@ -12,6 +12,7 @@
 		padding: 0 30px
 		max-width: 790px
 		text-align: center
+		z-index: 2
 		+r(768)
 			margin: 13.2% auto 0
 		.video
@@ -98,6 +99,7 @@
 		position: relative
 		padding: 160px 15px
 		@extend %cent
+		z-index: 2
 		overflow: hidden
 		+r(768)
 			padding: 120px 15px 82px
@@ -146,7 +148,9 @@
 		+r(768)
 			margin: 44px 0 35px
 	&__in
+		position: relative
 		@extend %cent
+		z-index: 3
 
 // steps
 .steps
@@ -197,7 +201,9 @@
 		+r(768)
 			margin: 48px 0 20px
 	&__in
+		position: relative
 		@extend %cent
+		z-index: 2
 
 // textbook
 .textbook
@@ -232,7 +238,9 @@
 		+r(768)
 			margin-top: 40px
 	&__in
+		position: relative
 		@extend %in
+		z-index: 2
 	&__wrap
 		@extend %cent
 	&__bot
@@ -314,8 +322,10 @@
 
 // contacts
 .contacts
+	position: relative
 	background: $yellow
 	+clr
+	z-index: 2
 	.title-middle
 		margin-bottom: 42px
 		+r(768)

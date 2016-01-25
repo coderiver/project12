@@ -1,0 +1,54 @@
+// paralax
+.paralax
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	min-height: 100%
+	z-index: 1
+	overflow: hidden
+	animation: translate 20s infinite normal linear
+	&__item
+		position: relative
+		left: 5%
+		top: 296px
+		g
+			animation: rotate 2s infinite normal linear
+			transform: translate3(0,0,0)
+			transform-origin: 50% 50%
+		// &:nth-child(2)
+		// 	left: 9%
+		// 	top: 353px
+		// &:nth-child(3)
+		// 	left: 25%
+		// 	top: 434px
+		// &:nth-child(4)
+		// 	left: 13%
+		// 	top: 533px
+		// &:nth-child(5)
+		// 	left: 8%
+		// 	top: 605px
+		// &:nth-child(6)
+		// 	left: 22%
+		// 	top: 680px
+		// $top: 0px
+
+		// @for $i from 1 through 6
+		// 	&:nth-child(#{$i}) 
+		// 		top: random(200px) + 290px
+		// 		left: random(400px) - 100px
+
+@keyframes rotate
+	0%
+		transform: rotate(-180deg)
+
+	100%
+		transform: rotate(180deg)
+
+@keyframes translate
+	0%
+		transform: translateY(10%)
+	50%
+		transform: translateY(0)
+	100%
+		transform: translateY(10%)
