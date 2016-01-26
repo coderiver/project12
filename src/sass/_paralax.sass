@@ -7,13 +7,19 @@
 	bottom: 0
 	z-index: 1
 	overflow: hidden
+	+clr
 	&__left
+		float: left
 		position: relative
 		top: -40%
 		left: 5%
 		transition: transform .8s
-		vertical-align: top
-		display: inline-block
+	&__right
+		float: right
+		position: relative
+		top: -40%
+		right: 5%
+		transition: transform .8s
 	&__svg
 		position: relative
 		animation: translate 40s infinite normal linear
