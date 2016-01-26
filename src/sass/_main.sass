@@ -11,7 +11,7 @@
 		padding: 0 30px
 		max-width: 790px
 		text-align: center
-		z-index: 2
+		z-index: 3
 		+r(768)
 			margin: 13.2% auto 0
 		+r(1400)
@@ -37,6 +37,14 @@
 			color: $white
 		.icon
 			font-size: 60px
+	.popup
+		&__in
+			min-width: 90%
+			+r(768)
+				width: 90%
+				padding: 20px
+			iframe
+				height: 280px !important
 
 // price
 .price

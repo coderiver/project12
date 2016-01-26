@@ -33,8 +33,6 @@ $(document).ready(function() {
 		});
 	};
 
-	
-
 	// open login
 	$('.js-btn-login').on('click', function(){
 		$(this).parents('.js-login')
@@ -49,12 +47,39 @@ $(document).ready(function() {
 		event.stopPropagation();
 	});
 
+	// open video
+	$('.js-btn-video').on('click', function(){
+		$(this).parents('.js-video')
+		.find('.js-popup')
+		.toggleClass('is-active');
+
+		videoPause();
+
+		return false;
+	});
+	$('.js-video').on('click', function(event){
+		event.stopPropagation();
+	});
+	
+	// video pause
+	function videoPause(){
+		var url = $('.js-video-frame').data('link'),
+			popup = $('.js-popup');
+		if (popup.hasClass('is-active')) {
+			$('.js-video-frame iframe').attr('src', url);
+		}
+		else {
+			$('.js-video-frame iframe').attr('src', '');
+		}
+	};
+
 	// popup
 	$('.js-popup-close').on('click', function(){
 		$('.js-popup').removeClass('is-active');
 		setTimeout(function() {
 			$('.js-header').removeClass('is-init');
 		}, 400);
+		videoPause();
 	});
 
 	$('.js-popup').on('click', function(){
@@ -62,6 +87,7 @@ $(document).ready(function() {
 		setTimeout(function() {
 			$('.js-header').removeClass('is-init');
 		}, 400);
+		videoPause();
 	});
 	$('.js-popup div').on('click', function(event){
 		event.stopPropagation();

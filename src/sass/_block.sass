@@ -26,7 +26,6 @@
 			font-size: 0
 	&::placeholder
 		color: rgba($black, .4)
-		opacity: .4
 
 // btn
 .btn
@@ -349,3 +348,14 @@ h1,
 			br
 				display: none
 
+// error-text
+.error-text
+	margin-bottom: 5px
+	text-align: left
+	display: none
+	&.is-active
+		display: block
+	.icon
+		margin: 2px 5px 0 0
+		color: $red
+		vertical-align: top
