@@ -91,12 +91,12 @@ $(document).ready(function() {
 	 
 	function parallaxScroll(){
 		var scrolled 	= $(window).scrollTop()
-			pos 		= 0 - (scrolled * .185) + 'px';
-		$('.js-paralax')
-		// .animate({
-		// 	'margin-top': pos
-		// }, 200)
-		.css('top', pos);
+			pos 		= 0 - (scrolled * .025) + 'px';
+		 $('.js-paralax').animate({
+			// 'top': pos
+			// 'transform': 'translateY(' + pos + ')'
+		}, 20)
+		.css('transform', 'translateY(' + pos + ')');
 	}
 
 });

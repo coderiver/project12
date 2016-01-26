@@ -1,21 +1,38 @@
 // paralax
 .paralax
-	position: absolute
+	position: fixed
 	top: 0
 	left: 0
 	right: 0
-	min-height: 100%
+	bottom: 0
 	z-index: 1
 	overflow: hidden
-	animation: translate 20s infinite normal linear
-	&__item
+	&__left
 		position: relative
+		top: -40%
 		left: 5%
-		top: 296px
+		transition: transform .8s
+		vertical-align: top
+		display: inline-block
+	&__svg
+		position: relative
+		animation: translate 40s infinite normal linear
 		g
-			animation: rotate 2s infinite normal linear
 			transform: translate3(0,0,0)
 			transform-origin: 50% 50%
+			// animation: rotate 7.8s infinite normal linear
+			animation-name: rotate
+			animation-timing-function: linear
+			animation-iteration-count: infinite
+			$animation-delay: 0s
+			animation-duration: 4.8s
+			@for $i from 1 through 29
+				&:nth-child(#{$i}) 
+					// top: random(200px) + 290px
+					animation-delay: $animation-delay
+					$animation-delay: $animation-delay + .2s
+					// animation-duration: $animation-duration
+					// $animation-duration: $animation-duration + .5s
 		// &:nth-child(2)
 		// 	left: 9%
 		// 	top: 353px
@@ -47,8 +64,8 @@
 
 @keyframes translate
 	0%
-		transform: translateY(10%)
+		transform: translateY(5%)
 	50%
 		transform: translateY(0)
 	100%
-		transform: translateY(10%)
+		transform: translateY(8%)
