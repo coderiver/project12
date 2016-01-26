@@ -3,6 +3,7 @@
 	position: relative
 	padding: 90px 0 320px
 	z-index: 3
+	+clr
 	+r(768)
 		padding: 0 0 320px
 	&.is-home
@@ -17,20 +18,35 @@
 			// +rotate(45)
 			// background: $white
 			+arr(924,458,$white,b)
-			// +r(1024)
-			// 	margin-top: -378px
-			// +r(768)
-			// 	margin-top: -414px
+			+r(1024)
+				margin: 0 0 0 -421px
+				+arr(842,423,$white,b)
+			+r(950)
+				margin: 0 0 0 -371px
+				+arr(742,373,$white,b)
+			+r(768)
+				top: 50px
+				margin: 0 0 0 -320px
+				+arr(640,320,$white,b)
 	&.is-init
 		overflow: initial
 	&__menu
 		float: right
 		height: 46px
 		margin-right: 117px
+		+clr
+		+r(1024)
+			margin-right: 60px
+		+r(768)
+			margin-right: 32px
+			height: auto
 	.menu
 		position: fixed
 		top: 92px
 		float: right
+		+r(768)
+			position: relative
+			top: auto
 		&.is-white
 			color: $white
 			.menu__btn
@@ -41,12 +57,7 @@
 					background: $white
 			.menu__list
 				&:before
-					background: $white
-
-		+r(1024)
-			margin-right: 60px
-		+r(768)
-			margin-right: 32px
+					background: $white		
 	&__in 
 		position: relative
 		@extend %in 
