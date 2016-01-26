@@ -66,10 +66,7 @@ $(document).ready(function() {
                 "elementType": "labels.icon",
                 "stylers": [
                     {
-                        "saturation": "-100"
-                    },
-                    {
-                        "lightness": "-61"
+                        "visibility": "on"
                     }
                 ]
             },
@@ -304,24 +301,6 @@ $(document).ready(function() {
                     },
                     {
                         "lightness": 19
-                    }
-                ]
-            },
-            {
-                "featureType": "transit",
-                "elementType": "labels.icon",
-                "stylers": [
-                    {
-                        "visibility": "on"
-                    }
-                ]
-            },
-            {
-                "featureType": "transit.station",
-                "elementType": "all",
-                "stylers": [
-                    {
-                        "visibility": "on"
                     }
                 ]
             },

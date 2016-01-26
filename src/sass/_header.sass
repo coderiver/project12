@@ -3,7 +3,6 @@
 	position: relative
 	padding: 90px 0 320px
 	z-index: 3
-	overflow: hidden
 	+r(768)
 		padding: 0 0 320px
 	&.is-home
@@ -12,20 +11,38 @@
 			content: ''
 			top: 0
 			left: 50%
-			margin: -325px 0 0 -325px
-			width: 650px 
-			height: 650px
-			+rotate(45)
-			background: $white
-			+r(1024)
-				margin-top: -378px
-			+r(768)
-				margin-top: -414px
+			margin: 0 0 0 -462px
+			// width: 650px 
+			// height: 650px
+			// +rotate(45)
+			// background: $white
+			+arr(924,458,$white,b)
+			// +r(1024)
+			// 	margin-top: -378px
+			// +r(768)
+			// 	margin-top: -414px
 	&.is-init
 		overflow: initial
-	.menu
+	&__menu
 		float: right
+		height: 46px
 		margin-right: 117px
+	.menu
+		position: fixed
+		top: 92px
+		float: right
+		&.is-white
+			color: $white
+			.menu__btn
+				color: $white
+				&:before,
+				&:after,
+				span:before
+					background: $white
+			.menu__list
+				&:before
+					background: $white
+
 		+r(1024)
 			margin-right: 60px
 		+r(768)
