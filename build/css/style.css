@@ -367,8 +367,8 @@ h1, .title-middle { font-family: "Lato-Black", Arial, sans-serif; font-size: 36p
 
 .paralax { position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 1; overflow: hidden; *zoom: 1; }
 .paralax:after { content: " "; display: table; clear: both; }
-.paralax__left { float: left; position: relative; top: -40%; left: 5%; -webkit-transition: -webkit-transform 0.8s; transition: transform 0.8s; }
-.paralax__right { float: right; position: relative; top: -40%; right: 5%; -webkit-transition: -webkit-transform 0.8s; transition: transform 0.8s; }
+.paralax__left { float: left; position: relative; top: 0; left: 5%; -webkit-transition: -webkit-transform 0.8s; transition: transform 0.8s; }
+.paralax__right { float: right; position: relative; top: 0; right: 5%; -webkit-transition: -webkit-transform 0.8s; transition: transform 0.8s; }
 .paralax__svg { position: relative; -webkit-animation: translate 40s infinite normal linear; animation: translate 40s infinite normal linear; }
 .paralax__svg g { -webkit-transform: translate3(0, 0, 0); -ms-transform: translate3(0, 0, 0); transform: translate3(0, 0, 0); -webkit-transform-origin: 50% 50%; -ms-transform-origin: 50% 50%; transform-origin: 50% 50%; -webkit-animation-name: rotate; animation-name: rotate; -webkit-animation-timing-function: linear; animation-timing-function: linear; -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite; -webkit-animation-duration: 4.8s; animation-duration: 4.8s; }
 .paralax__svg g:nth-child(1) { -webkit-animation-delay: 0s; animation-delay: 0s; }
