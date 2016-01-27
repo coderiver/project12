@@ -294,8 +294,10 @@ h1, .title-middle { font-family: "Lato-Black", Arial, sans-serif; font-size: 36p
 .video__btn { font-size: 0; -webkit-transition: -webkit-transform 0.2s, color 0.2s; transition: transform 0.2s, color 0.2s; background: transparent; }
 .video__btn:hover { color: #fff; }
 .video__btn .icon { font-size: 60px; }
-.video .popup__in { min-width: 90%; }
-.video .popup__in iframe { height: 280px !important; }
+.video .popup__in { min-width: 90%; height: 70%; }
+.video .popup__in iframe { height: 100% !important; }
+.video .popup__wrap { height: 100%; }
+.video .popup__wrap > div { height: 100%; }
 
 .price { position: relative; text-align: center; background: #ffe94a; }
 .price:before { position: absolute; content: ""; left: 50%; bottom: -103px; margin-left: -103px; width: 0px; height: 0px; border-style: solid; border-width: 103px 103px 0 103px; border-color: #ffe94a transparent transparent transparent; }
@@ -452,7 +454,8 @@ h1, .title-middle { font-family: "Lato-Black", Arial, sans-serif; font-size: 36p
  .menu__list{ font-size: 21px; }
  .lang{ margin-right: 15px; }
  .top__in .video{ margin-top: 60px; }
- .contacts__in{ padding-left: 105px; } }
+ .contacts__in{ padding-left: 105px; }
+ .popup__in{ margin-top: 50px; } }
 @media only screen and (max-width: 950px){
  .header.is-home:before{ margin: 0 0 0 -371px; width: 0px; height: 0px; border-style: solid; border-width: 373px 371px 0 371px; border-color: #fff transparent transparent transparent; } }
 @media only screen and (max-width: 769px){
