@@ -1,0 +1,251 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="theme-color" content="#fff">
+	<link rel="stylesheet" media="all" href="css/style.css" >
+	<script src="js/app.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3"></script>
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out is-teacher">
+	<!-- header -->
+	<header class="header is-home js-header">
+		<div class="header__in">
+			<div class="header__left">
+				<!-- lang -->
+				<ul class="lang">
+					<li><a href="#"><span>EN</span></a></li>
+					<li><a href="#"><span>UK</span></a></li>
+				</ul>
+				<!-- login -->
+				<div class="login js-login">
+					<button type="button" class="login__btn js-btn-login">
+						<i class="icon icon-user"></i>
+					</button>
+					<!-- popup --> 
+					<div class="popup js-popup">
+						<div class="popup__in">
+							<button class="popup__close js-popup-close"><i class="icon icon-close"></i></button>
+							<div class="popup__wrap">
+								<h3 class="popup__title">Вход <br>в личный кабинет </h3>
+								<form action="" class="popup__form" id="js-popup-form">
+									<div class="field">
+										<label for="phone" class="field__label">
+											<i class="icon icon-phone"></i>
+										</label>
+										<input type="text" name="phone" id="phone" class="input js-input-phone" data-validation="required" data-validation-length="min40">
+									</div>
+									<div class="field">
+										<label for="password" class="field__label">
+											<i class="icon icon-key"></i>
+										</label>
+										<input type="passwod" name="password" id="password" class="input js-input-password" placeholder="_______" data-validation="required" data-validation-length="min20">
+									</div>
+									<div class="popup__check">
+										<label class="checkbox">
+											<input type="checkbox" checked>
+											<span>Запомнить меня</span>
+										</label>
+									</div>
+									<div class="popup__butt">
+										<!-- <input type="submit" class="btn" value="ВОЙТИ"> -->
+										<button class="btn" type="submit">ВОЙТИ</button>
+									</div>
+									<div class="popup__chenge">
+										<a href="#">Изменить пароль</a>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- logo -->
+			<a href="#" class="logo"></a>
+			<div class="header__menu">
+				<!-- menu -->
+				<div class="menu js-menu">
+					<button class="menu__btn js-btn-menu">
+						<span>MENU</span>
+					</button>
+					<ul class="menu__list">
+						<li><a href="#">Цена</a></li>
+						<li class="is-active"><a href="#">Курс</a></li>
+						<li><a href="#">График</a></li>
+						<li><a href="#">Учебник</a></li>
+						<li><a href="#">Офис</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- center -->
+	<div class="center">
+		<!-- sidebar -->
+		<div class="sidebar">
+			<!-- logo -->
+			<a href="#" class="logo is-teacher"></a>
+			<!-- nav -->
+			<nav class="nav">
+				<li class="is-active"><a href="#">Дата</a></li>
+				<li><a href="#">Групи</a></li>
+				<li><a href="#">Додаткові заняття</a></li>
+				<li><a href="#">Консультації</a></li>
+			</nav>
+		</div>
+		<!-- l -->
+		<div class="l">
+			<!-- l-col1 -->
+			<div class="l-col1">
+				<h3 class="title-large">СЬОГОДНІ</h3>
+				<h5 class="title-little">Заняття</h5>
+				<!-- hours -->
+				<div class="hours">
+					<div class="hours__in">
+						<div class="hour">
+							<span class="group-name">С1</span>
+							<span class="time">14.00–16.00</span>
+						</div>
+						<div class="hour">
+							<span class="group-name">С3</span>
+							<span class="time">17.00–18.00</span>
+						</div>
+						<div class="hour">
+							<span class="group-name">С1</span>
+							<span class="time">19.00–20.00</span>
+						</div>
+						<div class="hour">
+							<span class="group-name">С3</span>
+							<span class="time">9.00–10.00</span>
+						</div>
+						<div class="hour">
+							<span class="group-name">С2</span>
+							<span class="time">10.00–12.00</span>
+						</div>
+						<div class="hour">
+							<span class="group-name">С2</span>
+							<span class="time">12.00–13.00</span>
+						</div>
+					</div>
+				</div>
+				<!-- table -->
+				<div class="table">
+					<div class="table__row">
+						<div class="table__name">Борис Васюк</div>
+						<div class="table__right">H</div>
+					</div>
+					<div class="table__row">
+						<div class="table__name">Борис Васюк</div>
+						<div class="table__right">H</div>
+					</div>
+					<div class="table__row">
+						<div class="table__name">Борис Васюк</div>
+						<div class="table__right">H</div>
+					</div>
+					<div class="table__row">
+						<div class="table__name">Борис Васюк</div>
+						<div class="table__right">H</div>
+					</div>
+					<div class="table__row">
+						<div class="table__name">Борис Васюк</div>
+						<div class="table__right">H</div>
+					</div>
+					<div class="table__row">
+						<div class="table__name">Борис Васюк</div>
+						<div class="table__right">H</div>
+					</div>
+					<div class="table__row">
+						<div class="table__name">Борис Васюк</div>
+						<div class="table__right">H</div>
+					</div>
+					<div class="table__row">
+						<div class="table__name">Борис Васюк</div>
+						<div class="table__right">H</div>
+					</div>
+					<div class="table__row">
+						<div class="table__name">Борис Васюк</div>
+						<div class="table__right">H</div>
+					</div>
+					<div class="table__row">
+						<div class="table__name">Борис Васюк</div>
+						<div class="table__right">H</div>
+					</div>
+					<div class="table__row">
+						<div class="table__name">Борис Васюк</div>
+						<div class="table__right">H</div>
+					</div>
+					<div class="table__row">
+						<div class="table__name">Борис Васюк</div>
+						<div class="table__right">H</div>
+					</div>
+				</div>
+				<h5 class="title-little">Додадкові заняття</h5>
+				<!-- accord -->
+				<div class="accord js-accord">
+					<div class="accord__top js-accord-top">
+						<span class="group-name">С3-C4</span>
+						<span class="time">13:00–13:30</span>
+						<span class="theme">Past Perfect</span>
+					</div>
+					<div class="accord__block js-accord-block"></div>
+				</div>
+			</div>
+			<!-- l-col2 -->
+			<div class="l-col2">
+				<!-- stat -->
+				<div class="stat">
+					<div class="stat__row">
+						<div class="stat__text">Групи</div>
+						<div class="stat__numb">6</div>
+					</div>
+					<div class="stat__row">
+						<div class="stat__text">Консультації</div>
+						<div class="stat__numb">2</div>
+					</div>
+					<div class="stat__row">
+						<div class="stat__text">Додадкові заняття</div>
+						<div class="stat__numb">1</div>
+					</div>
+				</div>
+				<!-- calendar -->
+				<div class="calendar js-calendar"></div>
+				<!-- table -->
+				<div class="table is-consult">
+					<div class="table__row">
+						<div class="table__time">13:00</div>
+						<div class="table__name">Борис Васюк</div>
+						<div class="table__group">C3</div>
+						<div class="table__right">H</div>
+					</div>
+					<div class="table__row">
+						<div class="table__time">13:30</div>
+						<div class="table__name">Борис Васюк</div>
+						<div class="table__group">C3</div>
+						<div class="table__right">H</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END out--> 
+<!-- footer -->
+<footer class="footer">
+	<div class="footer__in">
+		<!-- dev -->
+		<div class="dev">
+			<p>Дизайнер — Марта Гожа</p>
+			<p>Разработка —  UaMaster</p>
+		</div>
+		<!-- copy -->
+		<div class="copy">&copy; Project 12</div>
+	</div>
+</footer>
+</body>
+</html>

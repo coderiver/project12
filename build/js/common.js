@@ -5,11 +5,12 @@ $(document).ready(function() {
 		$('.js-menu').removeClass('is-active');
 		$('.js-login').removeClass('is-active');
 		$('body').removeClass('is-hidden');
+		$('.js-header').removeClass('is-init');
 	});
 
 	// open menu
 	$('.js-btn-menu').on('click', function(event){
-
+		$(this).parents('.js-header').toggleClass('is-init');
 		$(this).parents('.js-menu').toggleClass('is-active');
 		$('.js-login').removeClass('is-active');
 		if ($(window).width() <= 768) {
