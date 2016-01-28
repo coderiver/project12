@@ -1,0 +1,120 @@
+body.is-teacher
+	.out
+		width: 100%
+		display: inline-table
+
+// leftbar
+.rightbar
+	height: 100%
+	width: 89%
+	vertical-align: top
+	display: table-cell
+	+r(1280)
+		width: calc(100% - 140px)
+	.l,
+	.header
+		margin: 0 auto
+		padding: 0 88px 0 103px
+		max-width: 1150px
+	.l
+		padding-top: 40px
+		padding-bottom: 40px
+
+// sidebar
+.sidebar
+	padding: 68px 20px 10px
+	width: 11%
+	height: 100%
+	color: $white
+	text-align: center
+	vertical-align: top
+	display: table-cell
+	background: $dark-gray
+	+r(1280)
+		width: 140px
+	.nav
+		margin-top: 126px
+
+// nav
+.nav
+	font-size: 12px
+	li
+		margin-top: 28px
+		display: block
+		&:first-child
+			margin-top: 0
+		&.is-active
+			+lb
+			span
+				border-width: 2px
+				border-color: $white
+	a
+		text-decoration: none
+		&:hover
+			span
+				border-color: $white
+		span
+			transition: border-color .2s
+			border-bottom: 1px solid transparent
+
+// hours
+.hours
+	overflow: hidden
+	font-size: 0
+	&__in
+		margin: -2% -2% 0 0
+
+// hour
+.hour
+	margin: 2% 2% 0 0
+	width: 31.3%
+	color: $c_hour
+	font-size: 12px
+	vertical-align: top
+	transition: background .2s
+	background: $light-gray
+	display: inline-block
+	&:hover,
+	&.is-active
+		background: $yellow
+	a
+		padding: 6px 14px 6px 11px
+		display: block
+		+clr
+	.time
+		float: right
+		letter-spacing: 1px
+	.group-name
+		+lb
+
+// visiting
+.visiting
+	color: $c_visiting
+	opacity: .2
+	cursor: pointer
+	user-select: none
+	// text-transform: uppercase
+	+lbd
+	font-size: 14px
+	will-chenge: opacity
+	transform: translate3d(0,0,0)
+	transition: opacity .2s
+	&:hover,
+	&.is-checked
+		opacity: 1
+
+// 
+.stat
+	text-align: right
+	&__row
+		margin-top: 4px
+		&:first-child
+			margin-top: 0
+	&__text,
+	&__numb
+		vertical-align: middle
+		display: inline-block
+	&__numb
+		padding: 0 3px
+		background: $yellow
+		display: inline-block

@@ -5,6 +5,32 @@
 	height: 100%
 	height: auto
 
+// l
+.l
+	+clr
+.l-col1
+	float: left
+	width: 52%
+	& > .title-large
+		line-height: 0.7
+	.title-large
+		color: $yellow
+	.title-little
+		margin: 32px 0 12px
+.l-col2
+	float: right
+	padding-left: 32px
+	width: 48%
+
+// logo
+.logo
+	transform: translate3d(0,0,0)
+	+svg(logo,158,172)
+	&.is-teacher
+		+svg(logo-teacher,51,56)
+	+r(768)
+		+svg(logo,117,128)
+
 // input
 .input
 	padding: 0 20px
@@ -188,7 +214,8 @@
 .title-large
 	+rb
 	font-size: 57px
-	line-height: 1.1
+	line-height: 1
+	letter-spacing: 0.015em
 
 .title-big
 	font-size: 72px
@@ -369,3 +396,114 @@ h1,
 		margin: 2px 5px 0 0
 		color: $red
 		vertical-align: top
+
+// tabs
+.tabs
+	&__cont
+		display: none
+
+// table
+.table
+	margin-top: 19px
+	border: 2px solid $bd-table
+	&.is-yellow
+		border-color: $yellow
+		.table__row
+			border-color: $yellow
+		.table__right
+			border-color: $yellow
+	&.is-numb
+		counter-reset: list
+		.table__row
+			padding-left: 65px
+			&:before
+				position: absolute
+				counter-increment: list
+				content: counter(list)'.'
+				width: 42px
+				top: 0
+				left: 0
+				bottom: 0
+				+lbd
+				text-align: right
+				line-height: 37px
+	&__row
+		position: relative
+		padding-left: 15px
+		width: 100%
+		line-height: 35px
+		border-top: 1px solid $bd-table
+		display: table
+		+clr
+		&:first-child
+			border-top: none
+	&__name,
+	&__right,
+	&__time,
+	&__group
+		display: table-cell
+	&__time,
+	&__group
+		+lb
+	&__right
+		width: 60px
+		text-align: center
+		border-left: 1px solid $bd-table
+	&__time
+		width: 87px
+	&__name
+		& + .table__group
+			padding-left: 8px
+			width: 40px
+	a
+		transition: border-color .2s
+		border-bottom: 1px solid transparent
+		&:hover
+			border-color: $black
+
+// accord
+.accord
+	&.is-active,
+	&:hover
+		.accord__top
+			border-color: $yellow
+			background: $yellow
+			&:before
+				+arr(15,7,$light-black,b)
+	&.is-active
+		.accord__top
+			&:before
+				transform: rotate(180deg)
+	.table
+		margin: 0
+	.group-name
+		width: 50px
+	.time
+		width: 100px
+	.theme
+		font-size: 12px
+		+lr
+	.group-name,
+	.time,
+	.theme
+		display: table-cell
+	&__top
+		position: relative
+		padding: 14px 50px 14px 14px
+		width: 100%
+		cursor: pointer
+		+lb
+		user-select: none
+		transition: border-color .2s, background .2s
+		border: 2px solid $bd-table
+		display: table
+		&:before
+			position: absolute
+			content: ''
+			right: 25px
+			top: 50%
+			margin-top: calc(-7px / 2)
+			transition: border-color .2s, transform .2s
+			+arr(15,7,$bd-table,b)
+	&__block
+		display: none

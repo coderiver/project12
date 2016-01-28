@@ -1,95 +1,520 @@
 //=include partials/head.html 
-<body>
+<body class="is-teacher">
 <!-- BEGIN  out-->
-<div class="out is-teacher">
-	//=include partials/header_teacher.html 
-	<!-- center -->
-	<div class="center">
-		//=include partials/sidebar-teacher.html
+<div class="out">
+	//=include partials/sidebar-teacher.html
+	<!-- rightbar -->
+	<div class="rightbar">
+		//=include partials/header_teacher.html 
 		<!-- l -->
 		<div class="l">
 			<!-- l-col1 -->
 			<div class="l-col1">
 				<h3 class="title-large">СЬОГОДНІ</h3>
 				<h5 class="title-little">Заняття</h5>
-				<!-- hours -->
-				<div class="hours">
-					<div class="hours__in">
-						<div class="hour">
-							<span class="group-name">С1</span>
-							<span class="time">14.00–16.00</span>
+				<div class="tabs js-tab-group">
+					<!-- hours -->
+					<div class="hours">
+						<div class="hours__in js-tab">
+							<div class="hour js-tab-item">
+								<a href="js-tab1" class="hours__link">
+									<span class="group-name">С1</span>
+									<span class="time">14.00–16.00</span>
+								</a>
+							</div>
+							<div class="hour js-tab-item">
+								<a href="js-tab2" class="hours__link">
+									<span class="group-name">С3</span>
+									<span class="time">17.00–18.00</span>
+								</a>
+							</div>
+							<div class="hour js-tab-item">
+								<a href="js-tab3" class="hours__link">
+									<span class="group-name">С1</span>
+									<span class="time">19.00–20.00</span>
+								</a>
+							</div>
+							<div class="hour is-active js-tab-item">
+								<a href="js-tab4" class="hours__link">
+									<span class="group-name">С3</span>
+									<span class="time">9.00–10.00</span>
+								</a>
+							</div>
+							<div class="hour js-tab-item">
+								<a href="js-tab5" class="hours__link">
+									<span class="group-name">С2</span>
+									<span class="time">10.00–12.00</span>
+								</a>
+							</div>
+							<div class="hour js-tab-item">
+								<a href="js-tab6" class="hours__link">
+									<span class="group-name">С2</span>
+									<span class="time">12.00–13.00</span>
+								</a>
+							</div>
 						</div>
-						<div class="hour">
-							<span class="group-name">С3</span>
-							<span class="time">17.00–18.00</span>
+					</div>
+					<div class="tabs__cont js-tab-cont js-tab1">
+						<!-- table -->
+						<div class="table is-numb is-yellow">
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
 						</div>
-						<div class="hour">
-							<span class="group-name">С1</span>
-							<span class="time">19.00–20.00</span>
+					</div>
+					<div class="tabs__cont js-tab-cont js-tab2">
+						<!-- table -->
+						<div class="table is-numb is-yellow">
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
 						</div>
-						<div class="hour">
-							<span class="group-name">С3</span>
-							<span class="time">9.00–10.00</span>
+					</div>
+					<div class="tabs__cont js-tab-cont js-tab3">
+						<!-- table -->
+						<div class="table is-numb is-yellow">
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
 						</div>
-						<div class="hour">
-							<span class="group-name">С2</span>
-							<span class="time">10.00–12.00</span>
+					</div>
+					<div class="tabs__cont js-tab-cont js-tab4">
+						<!-- table -->
+						<div class="table is-numb is-yellow">
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
 						</div>
-						<div class="hour">
-							<span class="group-name">С2</span>
-							<span class="time">12.00–13.00</span>
+					</div>
+					<div class="tabs__cont js-tab-cont js-tab5">
+						<!-- table -->
+						<div class="table is-numb is-yellow">
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
-				<!-- table -->
-				<div class="table">
-					<div class="table__row">
-						<div class="table__name">Борис Васюк</div>
-						<div class="table__right">H</div>
-					</div>
-					<div class="table__row">
-						<div class="table__name">Борис Васюк</div>
-						<div class="table__right">H</div>
-					</div>
-					<div class="table__row">
-						<div class="table__name">Борис Васюк</div>
-						<div class="table__right">H</div>
-					</div>
-					<div class="table__row">
-						<div class="table__name">Борис Васюк</div>
-						<div class="table__right">H</div>
-					</div>
-					<div class="table__row">
-						<div class="table__name">Борис Васюк</div>
-						<div class="table__right">H</div>
-					</div>
-					<div class="table__row">
-						<div class="table__name">Борис Васюк</div>
-						<div class="table__right">H</div>
-					</div>
-					<div class="table__row">
-						<div class="table__name">Борис Васюк</div>
-						<div class="table__right">H</div>
-					</div>
-					<div class="table__row">
-						<div class="table__name">Борис Васюк</div>
-						<div class="table__right">H</div>
-					</div>
-					<div class="table__row">
-						<div class="table__name">Борис Васюк</div>
-						<div class="table__right">H</div>
-					</div>
-					<div class="table__row">
-						<div class="table__name">Борис Васюк</div>
-						<div class="table__right">H</div>
-					</div>
-					<div class="table__row">
-						<div class="table__name">Борис Васюк</div>
-						<div class="table__right">H</div>
-					</div>
-					<div class="table__row">
-						<div class="table__name">Борис Васюк</div>
-						<div class="table__right">H</div>
+					<div class="tabs__cont js-tab-cont js-tab6">
+						<!-- table -->
+						<div class="table is-numb is-yellow">
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<h5 class="title-little">Додадкові заняття</h5>
@@ -100,7 +525,53 @@
 						<span class="time">13:00–13:30</span>
 						<span class="theme">Past Perfect</span>
 					</div>
-					<div class="accord__block js-accord-block"></div>
+					<div class="accord__block js-accord-block">
+						<!-- table -->
+						<div class="table is-numb">
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting is-checked js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+							<div class="table__row">
+								<div class="table__name"><a href="#">Борис Васюк</a></div>
+								<div class="table__right">
+									<span class="visiting js-visiting">H</span>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<!-- l-col2 -->
@@ -126,15 +597,23 @@
 				<div class="table is-consult">
 					<div class="table__row">
 						<div class="table__time">13:00</div>
-						<div class="table__name">Борис Васюк</div>
+						<div class="table__name">
+							<a href="#">Борис Васюк</a>
+						</div>
 						<div class="table__group">C3</div>
-						<div class="table__right">H</div>
+						<div class="table__right">
+							<span class="visiting js-visiting">H</span>
+						</div>
 					</div>
 					<div class="table__row">
 						<div class="table__time">13:30</div>
-						<div class="table__name">Борис Васюк</div>
+						<div class="table__name">
+							<a href="#">Борис Васюк</a>
+						</div>
 						<div class="table__group">C3</div>
-						<div class="table__right">H</div>
+						<div class="table__right">
+							<span class="visiting js-visiting">H</span>
+						</div>
 					</div>
 				</div>
 			</div>
