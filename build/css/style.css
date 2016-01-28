@@ -104,7 +104,7 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 .center-sm, .picture__in, .price__in, .course__in, .graph__in, .textbook__wrap { margin: 0 auto; max-width: 630px; padding: 0 15px; *zoom: 1; }
 .center-sm:after, .picture__in:after, .price__in:after, .course__in:after, .graph__in:after, .textbook__wrap:after { content: " "; display: table; clear: both; }
 
-body { font-family: "Lato", Arial, sans-serif; font-size: 19px; line-height: 1.4; background: #2a2a2a; }
+body { font-family: "Lato", Arial, sans-serif; font-size: 19px; line-height: 1.4; }
 body.is-hidden { overflow: hidden; }
 
 a { color: inherit; text-decoration: none; }
@@ -217,9 +217,8 @@ h1, .title-middle { font-family: "Lato-Black", Arial, sans-serif; font-size: 36p
 .error-text.is-active { display: block; }
 .error-text .icon { margin: 2px 5px 0 0; color: #d84d00; vertical-align: top; }
 
-.header { position: relative; padding: 90px 0 320px; z-index: 3; *zoom: 1; }
+.header { position: relative; *zoom: 1; }
 .header:after { content: " "; display: table; clear: both; }
-.header.is-home:before { position: absolute; content: ""; top: 0; left: 50%; margin: 0 0 0 -462px; width: 0px; height: 0px; border-style: solid; border-width: 458px 462px 0 462px; border-color: #fff transparent transparent transparent; }
 .header.is-init { overflow: initial; z-index: 4; }
 .header__menu { float: right; height: 46px; margin-right: 117px; *zoom: 1; }
 .header__menu:after { content: " "; display: table; clear: both; }
@@ -231,6 +230,7 @@ h1, .title-middle { font-family: "Lato-Black", Arial, sans-serif; font-size: 36p
 .header__in { position: relative; }
 .header__left { float: left; }
 .header .logo { position: absolute; top: 0; left: 50%; margin-left: -92px; z-index: 1; }
+.header .logout { float: right; }
 
 .menu { position: relative; }
 .menu.is-active .menu__btn:before { -webkit-transform: translateY(11px) rotate(45deg); -ms-transform: translateY(11px) rotate(45deg); transform: translateY(11px) rotate(45deg); }
@@ -285,6 +285,11 @@ h1, .title-middle { font-family: "Lato-Black", Arial, sans-serif; font-size: 36p
 .copy + .dev { margin-left: 20px; }
 
 .dev { float: right; min-width: 130px; }
+
+body.is-home { background: #2a2a2a; }
+body.is-home .header { padding: 90px 0 320px; z-index: 3; }
+body.is-home .header.is-init { overflow: initial; z-index: 4; }
+body.is-home .header:before { position: absolute; content: ""; top: 0; left: 50%; margin: 0 0 0 -462px; width: 0px; height: 0px; border-style: solid; border-width: 458px 462px 0 462px; border-color: #fff transparent transparent transparent; }
 
 .top { padding-bottom: 56px; background: #ffe94a; }
 .top__in { position: relative; margin: 4.2% auto 0; padding: 0 30px; max-width: 790px; text-align: center; z-index: 3; }
@@ -452,10 +457,10 @@ h1, .title-middle { font-family: "Lato-Black", Arial, sans-serif; font-size: 36p
  .textbook__left{ padding-right: 30px; padding: 0; width: 39%; }
  .textbook__right{ width: 61%; } }
 @media only screen and (max-width: 1024px){
- .header.is-home:before{ margin: 0 0 0 -421px; width: 0px; height: 0px; border-style: solid; border-width: 423px 421px 0 421px; border-color: #fff transparent transparent transparent; }
  .header__menu{ margin-right: 60px; }
  .menu__list{ font-size: 21px; }
  .lang{ margin-right: 15px; }
+ body.is-home .header:before{ margin: 0 0 0 -421px; width: 0px; height: 0px; border-style: solid; border-width: 423px 421px 0 421px; border-color: #fff transparent transparent transparent; }
  .top__in .video{ margin-top: 60px; }
  .video .popup__in{ height: 60vw; }
  .contacts__in{ padding-left: 105px; }
@@ -464,7 +469,7 @@ h1, .title-middle { font-family: "Lato-Black", Arial, sans-serif; font-size: 36p
  .contacts__form .btn{ margin-left: 10px; }
  .contacts__input{ width: 190px; } }
 @media only screen and (max-width: 950px){
- .header.is-home:before{ margin: 0 0 0 -371px; width: 0px; height: 0px; border-style: solid; border-width: 373px 371px 0 371px; border-color: #fff transparent transparent transparent; } }
+ body.is-home .header:before{ margin: 0 0 0 -371px; width: 0px; height: 0px; border-style: solid; border-width: 373px 371px 0 371px; border-color: #fff transparent transparent transparent; } }
 @media only screen and (max-width: 769px){
  .menu__btn{ padding-top: 25px; width: 30px; font-size: 0; }
  .menu__btn:before, .menu__btn:after, .menu__btn span:before{ background: #fff; } }
@@ -486,11 +491,8 @@ h1, .title-middle { font-family: "Lato-Black", Arial, sans-serif; font-size: 36p
  .col{ width: 100%; }
  .col:first-child{ width: 100%; text-align: left; }
  .col:first-child br{ display: none; }
- .header{ padding: 0 0 320px; }
- .header.is-home:before{ top: 50px; margin: 0 0 0 -320px; width: 0px; height: 0px; border-style: solid; border-width: 320px 320px 0 320px; border-color: #fff transparent transparent transparent; }
  .header__menu{ margin-right: 32px; height: auto; }
  .header .menu{ position: relative; top: auto; }
- .header__in{ padding: 13px 15px 10px; color: #fff; background: #000; }
  .header .logo{ top: 96px; margin-left: -68px; }
  .menu{ line-height: 1; }
  .menu.is-active .menu__btn:after{ -webkit-transform: translateY(-10px) rotate(-45deg); -ms-transform: translateY(-10px) rotate(-45deg); transform: translateY(-10px) rotate(-45deg); }
@@ -504,6 +506,9 @@ h1, .title-middle { font-family: "Lato-Black", Arial, sans-serif; font-size: 36p
  .logo{ background: url("../img/svg/logo.svg") no-repeat 0 0; background-size: 117px 128px; width: 117px; height: 128px; display: inline-block; }
  .footer__in{ padding-left: 85px; padding-right: 50px; font-size: 10px; }
  .copy{ float: left; width: 90px; }
+ body.is-home .header{ padding: 0 0 320px; }
+ body.is-home .header:before{ top: 50px; margin: 0 0 0 -320px; width: 0px; height: 0px; border-style: solid; border-width: 320px 320px 0 320px; border-color: #fff transparent transparent transparent; }
+ body.is-home .header__in{ padding: 13px 15px 10px; color: #fff; background: #000; }
  .top{ overflow: hidden; }
  .top__in{ margin: 13.2% auto 0; }
  .video .popup__in{ width: 90%; padding: 20px; height: 60vw; }

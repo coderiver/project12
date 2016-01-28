@@ -1,3 +1,39 @@
+body.is-home
+	background: $dark-gray
+	.header
+		padding: 90px 0 320px
+		z-index: 3
+		&.is-init
+			overflow: initial
+			z-index: 4
+		+r(768)
+			padding: 0 0 320px
+		&:before
+			position: absolute
+			content: ''
+			top: 0
+			left: 50%
+			margin: 0 0 0 -462px
+			// width: 650px 
+			// height: 650px
+			// +rotate(45)
+			// background: $white
+			+arr(924,458,$white,b)
+			+r(1024)
+				margin: 0 0 0 -421px
+				+arr(842,423,$white,b)
+			+r(950)
+				margin: 0 0 0 -371px
+				+arr(742,373,$white,b)
+			+r(768)
+				top: 50px
+				margin: 0 0 0 -320px
+				+arr(640,320,$white,b)
+		&__in
+			+r(768)
+				padding: 13px 15px 10px
+				color: $white
+				background: $black
 // top
 .top
 	padding-bottom: 56px
