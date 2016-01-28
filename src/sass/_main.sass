@@ -39,11 +39,16 @@
 			font-size: 60px
 	.popup
 		&__in
-			min-width: 90%
+			width: 90%
+			padding-top: 80px
+			max-width: 980px
 			height: 70%
+			+r(1024)
+				height: 60vw
 			+r(768)
 				width: 90%
 				padding: 20px
+				height: 60vw
 			iframe
 				height: 100% !important
 		&__wrap
@@ -386,14 +391,30 @@
 		.btn
 			margin-left: 35px
 			vertical-align: top
+			+r(960)
+				margin-left: 10px
 			+r(768)
 				margin-left: 20px
 	&__input
 		width: 203px
 		vertical-align: top
 		display: inline-block
+		+r(960)
+			width: 190px
 		+r(768)
 			width: 140px
+
+// open-map
+.open-map
+	color: inherit
+	line-height: 1.3
+	border-bottom: 1px solid
+	transition: border-color .2s
+	display: none
+	+r(768)
+		display: inline-block
+	&:hover
+		border-color: transparent
 
 // map
 .map
