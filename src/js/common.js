@@ -32,6 +32,10 @@ $(document).ready(function() {
 				menu.removeClass('is-white');
 			}
 		});
+		// menu active scroll
+		$('.js-menu-list').ddscrollSpy({ 
+			scrollduration: 500
+		});
 	};
 
 	// open login
@@ -210,6 +214,18 @@ $(document).ready(function() {
 	// add class to visiting
 	$('.js-visiting').on('click', function(){
 		$(this).toggleClass('is-checked');
+	});
+
+	$(".js-scroll-to").on('click', function(){
+		var page = $(this).attr("href");
+		$('html, body').animate({
+			scrollTop: $(page).offset().top + 20
+		}, 600);
+		return false;
+	});
+
+	$(window).on('scroll', function(){
+		
 	});
 
 });

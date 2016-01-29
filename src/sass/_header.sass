@@ -4,7 +4,7 @@
 	+clr
 	&.is-init
 		overflow: initial
-		z-index: 4
+		z-index: 5
 	&__menu
 		float: right
 		height: 46px
@@ -154,8 +154,6 @@
 				margin-left: calc(-35px / 2)
 		li
 			display: block
-			&.is-active
-				+lb
 			&:last-child
 				position: relative
 				&:after
@@ -172,7 +170,8 @@
 						display: block
 	a
 		transition: font-weight .2s, font-family .2s
-		&:hover
+		&:hover,
+		&.selected
 			+lb
 
 // lang

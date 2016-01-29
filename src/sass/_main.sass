@@ -1,12 +1,14 @@
 body.is-home
 	font-size: 19px
 	background: $dark-gray
+	+r(678)
+		font-size: 16px
 	.header
 		padding: 90px 0 320px
 		z-index: 3
 		&.is-init
 			overflow: initial
-			z-index: 4
+			z-index: 5
 		+r(768)
 			padding: 0 0 320px
 		&:before
@@ -48,7 +50,7 @@ body.is-home
 		padding: 0 30px
 		max-width: 790px
 		text-align: center
-		z-index: 3
+		z-index: 4
 		+r(768)
 			margin: 13.2% auto 0
 		+r(1400)
@@ -77,14 +79,13 @@ body.is-home
 	.popup
 		&__in
 			width: 90%
-			padding-top: 80px
+			padding: 0
 			max-width: 980px
 			height: 70%
 			+r(1024)
 				height: 60vw
 			+r(768)
 				width: 90%
-				padding: 20px
 				height: 60vw
 			iframe
 				height: 100% !important
@@ -327,7 +328,7 @@ body.is-home
 		+r(1200)
 			padding-right: 30px
 			padding: 0
-			width: 39%
+			width: 37%
 		+r(768)
 			width: 100%
 			font-size: 18px
@@ -338,7 +339,7 @@ body.is-home
 		width: 58%
 		text-align: left
 		+r(1200)
-			width: 61%
+			width: 60%
 		+r(768)
 			margin-top: 23px
 			padding: 0
@@ -368,17 +369,14 @@ body.is-home
 		top: 50%
 		margin-top: -30px
 		font-size: 0
-		opacity: .5
-		will-chenge: opacity
-		transition: opacity .2s
+		transition: color .2s
 		color: $white
 		background: transparent
 		+r(768)
 			margin-top: -13px
-		&:hover
-			opacity: 1
+		&:hover,
 		&:active
-			opacity: .5
+			color: $yellow
 		&.is-prev
 			left: 0
 		&.is-next
@@ -420,8 +418,12 @@ body.is-home
 		max-width: 510px
 		+r(1024)
 			padding-left: 105px
+		+r(960)
+			padding-left: 60px
 		+r(768)
 			padding: 53px 20px 26px 75px
+		+r(480)
+			padding: 53px 20px 26px 20px
 	&__form
 		margin: 15px 0 28px
 		font-size: 0

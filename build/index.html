@@ -266,7 +266,7 @@
 	</div>
 </div>
 <!-- BEGIN  out-->
-<div class="out"> 
+<div class="out" id="out"> 
 	<!-- top -->
 	<section class="top js-top">
 		<!-- header -->
@@ -313,7 +313,7 @@
 											<button class="btn" type="submit">ВОЙТИ</button>
 										</div>
 										<div class="popup__chenge">
-											<a href="#">Изменить пароль</a>
+											<a href="#">Забыл пароль</a>
 										</div>
 									</form>
 								</div>
@@ -329,13 +329,13 @@
 						<button class="menu__btn js-btn-menu">
 							<span>MENU</span>
 						</button>
-						<ul class="menu__list">
-							<li><a href="#">Цена</a></li>
-							<li class="is-active"><a href="#">Курс</a></li>
-							<li><a href="#">График</a></li>
-							<li><a href="#">Учебник</a></li>
-							<li><a href="#">Офис</a></li>
-							<li><a href="#">Контакты</a></li>
+						<ul class="menu__list js-menu-list">
+							<li><a href="#price">Цена</a></li>
+							<li class="is-active"><a href="#course">Курс</a></li>
+							<li><a href="#graph">График</a></li>
+							<li><a href="#textbook">Учебник</a></li>
+							<li><a href="#office">Офис</a></li>
+							<li><a href="#contacts">Контакты</a></li>
 						</ul>
 					</div>
 				</div>
@@ -373,7 +373,7 @@
 		</div>
 	</section>
 	<!-- price -->
-	<section class="price">
+	<section class="price" id="price">
 		<div class="price__in">
 			<h3 class="title">ЛУЧШАЯ <br>ЦЕНА</h3>
 			<!-- wrap -->
@@ -402,7 +402,7 @@
 		</div>
 	</section>
 	<!-- course -->
-	<section class="course">
+	<section class="course" id="course">
 		<div class="course__in">
 			<h3 class="title">ИНТЕНСИВНЫЙ <br>КУРС</h3>
 			<!-- wrap -->
@@ -435,7 +435,7 @@
 		</div>
 	</section>
 	<!-- graph -->
-	<section class="graph">
+	<section class="graph" id="graph">
 		<div class="graph__in">
 			<h3 class="title">СВОБОДНЫЙ <br>ГРАФИК</h3>
 			<!-- wrap -->
@@ -462,7 +462,7 @@
 	<!-- textbook -->
 	<section class="textbook">
 		<div class="textbook__in">
-			<div class="textbook__wrap">
+			<div class="textbook__wrap" id="textbook">
 				<h3 class="title">УНИКАЛЬНЫЙ <br>УЧЕБНИК</h3>
 				<!-- wrap -->
 				<div class="wrap">
@@ -478,7 +478,7 @@
 				<h3 class="title-small">Возьми английский с собой!</h3>
 			</div>
 			<!-- slider -->
-			<div class="slider">
+			<div class="slider" id="office">
 				<div class="slider__arr js-slider-arr"></div>
 				<div class="slider__wrap js-slider">
 					<div class="slider__slide"><img src="img/slider-img.png" alt="img"></div>
@@ -492,13 +492,13 @@
 					<p>Загляни и напиши тест!</p>
 				</div>
 				<div class="textbook__right">
-					<a href="#" class="btn btn_yellow">ЗАПИСАТЬСЯ НА ТЕСТ</a>
+					<a href="#contacts" class="btn btn_yellow js-scroll-to">ЗАПИСАТЬСЯ НА ТЕСТ</a>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- contacts -->
-	<section class="contacts">
+	<section class="contacts" id="contacts">
 		<div class="contacts__col">
 			<!-- map -->
 			<div class="map js-map" id="map"></div>
