@@ -9,9 +9,9 @@ $(document).ready(function() {
 
 	// mask
 	$('.js-input-phone').inputmask({
-		mask: '+999 (999) 999-99-99',
+		mask: '+999 (99) 999-99-99',
 		'autoUnmask': true
-	}).val('+380 (___) ___-__-__');
+	}).val('+380 (__) ___-__-__');
 
 	$('.js-input-password').inputmask({
 		mask: '9999999'
