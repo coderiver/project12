@@ -2112,6 +2112,40 @@ $(document).ready(function() {
 		$('.js-menu-list').ddscrollSpy({ 
 			scrollduration: 500
 		});
+
+		// add class
+		var yellow_block = $('.js-yellow'),
+			window_ = $(window);
+
+		function check_if_in_view() {
+			var window_height = window_.height(),
+				window_top_position = window_.scrollTop(),
+				lHeight = window_height - 90,
+				window_bottom_position = (window_top_position + (window_height - lHeight));
+			
+			$.each(yellow_block, function() {
+				var element = $(this),
+					element_height = element.outerHeight(),
+					element_top_position = element.offset().top,
+					element_bottom_position = (element_top_position + element_height);
+			
+				if (((element_bottom_position - 90) >= window_top_position) &&
+					((element_top_position - 50) <= window_bottom_position)) {
+					element.addClass('is-view');
+				} else {
+					element.removeClass('is-view');
+				}
+				if (yellow_block.hasClass('is-view')) {
+					$(".js-menu").removeClass('is-white');
+				}
+				else {
+					$(".js-menu").addClass('is-white');
+				}
+			});
+		}
+
+		window_.on('scroll resize', check_if_in_view);
+		window_.trigger('scroll');
 	};
 
 	// open login
@@ -2300,8 +2334,5 @@ $(document).ready(function() {
 		return false;
 	});
 
-	$(window).on('scroll', function(){
-		
-	});
 
 });
