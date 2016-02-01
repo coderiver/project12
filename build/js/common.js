@@ -59,6 +59,7 @@ $(document).ready(function() {
 				} else {
 					element.removeClass('is-view');
 				}
+				
 				if (yellow_block.hasClass('is-view')) {
 					$(".js-menu").removeClass('is-white');
 				}

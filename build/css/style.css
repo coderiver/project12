@@ -444,39 +444,57 @@ body.is-home .header:before { position: absolute; content: ""; top: 0; left: 50%
 
 .paralax { position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 1; overflow: hidden; *zoom: 1; }
 .paralax:after { content: " "; display: table; clear: both; }
-.paralax__left { float: left; position: relative; top: 0; left: 0; -webkit-transition: -webkit-transform 0.8s; transition: transform 0.8s; }
-.paralax__right { float: right; position: relative; top: 0; right: 0%; -webkit-transition: -webkit-transform 0.8s; transition: transform 0.8s; }
-.paralax__svg { position: relative; -webkit-animation: translate 40s infinite normal linear; animation: translate 40s infinite normal linear; }
-.paralax__svg g { -webkit-transform: translate3(0, 0, 0); -ms-transform: translate3(0, 0, 0); transform: translate3(0, 0, 0); -webkit-transform-origin: center center; -ms-transform-origin: center center; transform-origin: center center; -webkit-animation-name: rotate; animation-name: rotate; -webkit-animation-timing-function: linear; animation-timing-function: linear; -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite; -webkit-animation-duration: 4.8s; animation-duration: 4.8s; }
-.paralax__svg g:nth-child(1) { -webkit-animation-delay: 0s; animation-delay: 0s; }
-.paralax__svg g:nth-child(2) { -webkit-animation-delay: 0.2s; animation-delay: 0.2s; }
-.paralax__svg g:nth-child(3) { -webkit-animation-delay: 0.4s; animation-delay: 0.4s; }
-.paralax__svg g:nth-child(4) { -webkit-animation-delay: 0.6s; animation-delay: 0.6s; }
-.paralax__svg g:nth-child(5) { -webkit-animation-delay: 0.8s; animation-delay: 0.8s; }
-.paralax__svg g:nth-child(6) { -webkit-animation-delay: 1s; animation-delay: 1s; }
-.paralax__svg g:nth-child(7) { -webkit-animation-delay: 1.2s; animation-delay: 1.2s; }
-.paralax__svg g:nth-child(8) { -webkit-animation-delay: 1.4s; animation-delay: 1.4s; }
-.paralax__svg g:nth-child(9) { -webkit-animation-delay: 1.6s; animation-delay: 1.6s; }
-.paralax__svg g:nth-child(10) { -webkit-animation-delay: 1.8s; animation-delay: 1.8s; }
-.paralax__svg g:nth-child(11) { -webkit-animation-delay: 2.0s; animation-delay: 2.0s; }
-.paralax__svg g:nth-child(12) { -webkit-animation-delay: 2.2s; animation-delay: 2.2s; }
-.paralax__svg g:nth-child(13) { -webkit-animation-delay: 2.4s; animation-delay: 2.4s; }
-.paralax__svg g:nth-child(14) { -webkit-animation-delay: 2.6s; animation-delay: 2.6s; }
-.paralax__svg g:nth-child(15) { -webkit-animation-delay: 2.8s; animation-delay: 2.8s; }
-.paralax__svg g:nth-child(16) { -webkit-animation-delay: 3s; animation-delay: 3s; }
-.paralax__svg g:nth-child(17) { -webkit-animation-delay: 3.2s; animation-delay: 3.2s; }
-.paralax__svg g:nth-child(18) { -webkit-animation-delay: 3.4s; animation-delay: 3.4s; }
-.paralax__svg g:nth-child(19) { -webkit-animation-delay: 3.6s; animation-delay: 3.6s; }
-.paralax__svg g:nth-child(20) { -webkit-animation-delay: 3.8s; animation-delay: 3.8s; }
-.paralax__svg g:nth-child(21) { -webkit-animation-delay: 4s; animation-delay: 4s; }
-.paralax__svg g:nth-child(22) { -webkit-animation-delay: 4.2s; animation-delay: 4.2s; }
-.paralax__svg g:nth-child(23) { -webkit-animation-delay: 4.4s; animation-delay: 4.4s; }
-.paralax__svg g:nth-child(24) { -webkit-animation-delay: 4.6s; animation-delay: 4.6s; }
-.paralax__svg g:nth-child(25) { -webkit-animation-delay: 4.8s; animation-delay: 4.8s; }
-.paralax__svg g:nth-child(26) { -webkit-animation-delay: 5s; animation-delay: 5s; }
-.paralax__svg g:nth-child(27) { -webkit-animation-delay: 5.2s; animation-delay: 5.2s; }
-.paralax__svg g:nth-child(28) { -webkit-animation-delay: 5.4s; animation-delay: 5.4s; }
-.paralax__svg g:nth-child(29) { -webkit-animation-delay: 5.6s; animation-delay: 5.6s; }
+.paralax__left { float: left; position: relative; top: 0; left: 0; width: 318px; height: 100%; -webkit-transition: -webkit-transform 0.8s; transition: transform 0.8s; }
+.paralax__left .paralax__svg { width: 318px; }
+.paralax__right { float: right; position: relative; top: 0; right: 0%; width: 350px; height: 100%; -webkit-transition: -webkit-transform 0.8s; transition: transform 0.8s; }
+.paralax__right .paralax__svg { width: 350px; }
+.paralax__rotate { height: 100%; min-height: 100%; -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); }
+.paralax__svg { position: relative; min-height: 100%; -webkit-animation: translate 40s infinite normal linear; animation: translate 40s infinite normal linear; }
+.paralax__svg svg { -webkit-transform: translate3(0, 0, 0); -ms-transform: translate3(0, 0, 0); transform: translate3(0, 0, 0); -webkit-transform-origin: center center; -ms-transform-origin: center center; transform-origin: center center; -webkit-animation-name: rotate; animation-name: rotate; -webkit-animation-timing-function: linear; animation-timing-function: linear; -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite; -webkit-animation-duration: 4.8s; animation-duration: 4.8s; }
+.paralax__svg svg:nth-child(1) { -webkit-animation-delay: 0s; animation-delay: 0s; }
+.paralax__svg svg:nth-child(2) { -webkit-animation-delay: 0.2s; animation-delay: 0.2s; }
+.paralax__svg svg:nth-child(3) { -webkit-animation-delay: 0.4s; animation-delay: 0.4s; }
+.paralax__svg svg:nth-child(4) { -webkit-animation-delay: 0.6s; animation-delay: 0.6s; }
+.paralax__svg svg:nth-child(5) { -webkit-animation-delay: 0.8s; animation-delay: 0.8s; }
+.paralax__svg svg:nth-child(6) { -webkit-animation-delay: 1s; animation-delay: 1s; }
+.paralax__svg svg:nth-child(7) { -webkit-animation-delay: 1.2s; animation-delay: 1.2s; }
+.paralax__svg svg:nth-child(8) { -webkit-animation-delay: 1.4s; animation-delay: 1.4s; }
+.paralax__svg svg:nth-child(9) { -webkit-animation-delay: 1.6s; animation-delay: 1.6s; }
+.paralax__svg svg:nth-child(10) { -webkit-animation-delay: 1.8s; animation-delay: 1.8s; }
+.paralax__svg svg:nth-child(11) { -webkit-animation-delay: 2.0s; animation-delay: 2.0s; }
+.paralax__svg svg:nth-child(12) { -webkit-animation-delay: 2.2s; animation-delay: 2.2s; }
+.paralax__svg svg:nth-child(13) { -webkit-animation-delay: 2.4s; animation-delay: 2.4s; }
+.paralax__svg svg:nth-child(14) { -webkit-animation-delay: 2.6s; animation-delay: 2.6s; }
+.paralax__svg svg:nth-child(15) { -webkit-animation-delay: 2.8s; animation-delay: 2.8s; }
+.paralax__svg svg:nth-child(16) { -webkit-animation-delay: 3s; animation-delay: 3s; }
+.paralax__svg svg:nth-child(17) { -webkit-animation-delay: 3.2s; animation-delay: 3.2s; }
+.paralax__svg svg:nth-child(18) { -webkit-animation-delay: 3.4s; animation-delay: 3.4s; }
+.paralax__svg svg:nth-child(19) { -webkit-animation-delay: 3.6s; animation-delay: 3.6s; }
+.paralax__svg svg:nth-child(20) { -webkit-animation-delay: 3.8s; animation-delay: 3.8s; }
+.paralax__svg svg:nth-child(21) { -webkit-animation-delay: 4s; animation-delay: 4s; }
+.paralax__svg svg:nth-child(22) { -webkit-animation-delay: 4.2s; animation-delay: 4.2s; }
+.paralax__svg svg:nth-child(23) { -webkit-animation-delay: 4.4s; animation-delay: 4.4s; }
+.paralax__svg svg:nth-child(24) { -webkit-animation-delay: 4.6s; animation-delay: 4.6s; }
+.paralax__svg svg:nth-child(25) { -webkit-animation-delay: 4.8s; animation-delay: 4.8s; }
+.paralax__svg svg:nth-child(26) { -webkit-animation-delay: 5s; animation-delay: 5s; }
+.paralax__svg svg:nth-child(27) { -webkit-animation-delay: 5.2s; animation-delay: 5.2s; }
+.paralax__svg svg:nth-child(28) { -webkit-animation-delay: 5.4s; animation-delay: 5.4s; }
+.paralax__svg svg:nth-child(29) { -webkit-animation-delay: 5.6s; animation-delay: 5.6s; }
+.paralax [class^="svg-"] { position: absolute; }
+.paralax .svg-1 { top: 0; right: 28px; }
+.paralax .svg-2 { top: 59px; left: 51px; }
+.paralax .svg-3 { top: 140px; right: 22px; }
+.paralax .svg-4 { top: 240px; left: 100px; }
+.paralax .svg-5 { top: 310px; left: 35px; }
+.paralax .svg-6 { top: 385px; right: 75px; }
+.paralax .svg-7 { top: 558px; right: 98px; }
+.paralax .svg-8 { top: 734px; right: 128px; }
+.paralax .svg-9 { top: 834px; left: 228px; }
+.paralax .svg-10 { top: 914px; left: 38px; }
+.paralax .svg-11 { top: 994px; left: 97px; }
+.paralax .svg-12 { top: 1254px; left: 197px; }
+.paralax .svg-13 { top: 1414px; left: 80px; }
+.paralax .svg-14 { top: 1714px; left: 80px; }
 
 @-webkit-keyframes rotate { 0% { -webkit-transform: rotate(-180deg); transform: rotate(-180deg); }
   100% { -webkit-transform: rotate(180deg); transform: rotate(180deg); } }
