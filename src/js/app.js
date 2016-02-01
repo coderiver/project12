@@ -1,4 +1,5 @@
 //=include lib/jquery.js
+//=include lib/jquery-ui.min.js
 //=include lib/slick.min.js
 //=include lib/inputmask.js
 //=include lib/jquery.inputmask.js

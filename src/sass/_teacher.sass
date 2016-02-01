@@ -5,6 +5,7 @@ body.is-teacher
 
 // leftbar
 .rightbar
+	padding-top: 40px
 	height: 100%
 	width: 89%
 	vertical-align: top
@@ -17,8 +18,9 @@ body.is-teacher
 		padding: 0 88px 0 103px
 		max-width: 1150px
 	.l
-		padding-top: 40px
 		padding-bottom: 40px
+	.l-col2
+		padding-top: 40px
 
 // sidebar
 .sidebar
@@ -105,7 +107,9 @@ body.is-teacher
 
 // 
 .stat
+	margin-right: 40px
 	text-align: right
+	font-size: 12px
 	&__row
 		margin-top: 4px
 		&:first-child
@@ -115,6 +119,13 @@ body.is-teacher
 		vertical-align: middle
 		display: inline-block
 	&__numb
+		margin-left: 10px
 		padding: 0 3px
 		background: $yellow
 		display: inline-block
+
+// calendar
+.calendar
+	margin: 50px 0 55px
+	.ui-datepicker-inline
+		margin: 0 auto

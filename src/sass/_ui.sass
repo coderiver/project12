@@ -1,0 +1,59 @@
+div.ui-datepicker 
+	width: 18em
+	border: none
+	.ui-datepicker-header
+		padding: 0
+		border: none
+		background: transparent
+		+clr
+	.ui-datepicker-title
+		float: left
+		padding-right: 62px
+		margin: 0 
+		font-size: 18px
+		+lb
+	.ui-datepicker-prev, 
+	.ui-datepicker-next
+		top: 3px
+		cursor: pointer
+		&:hover
+			border: none
+	.ui-datepicker-prev
+		left: auto
+		right: 27px
+		.ui-icon
+			+svg(calendar-left,19,19)
+	.ui-datepicker-next
+		right: 2px
+		.ui-icon
+			+svg(calendar-right,19,19)
+	.ui-datepicker-year
+		display: none
+	.ui-state-default, 
+	.ui-widget-content .ui-state-default, 
+	.ui-widget-header .ui-state-default
+		height: 2.7em
+		+box
+		border-color: $yellow
+		background: $yellow
+	.ui-state-highlight
+		color: $black
+		border-color: $white
+		background: $white
+	table
+		color: $black
+		margin-top: 9px
+		font-size: 11px
+		+lb
+		span,
+		a
+			padding: 1em .2em .2em .2em
+			text-align: left
+	thead
+		text-transform: uppercase
+		font-size: 9px
+		+lb
+		border-bottom: 3px solid #fff
+		background: $yellow
+		th
+			padding: 0.56em .3em
