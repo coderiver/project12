@@ -560,7 +560,7 @@ div.ui-datepicker .ui-datepicker-header { padding: 0; border: none; background: 
 div.ui-datepicker .ui-datepicker-header:after { content: " "; display: table; clear: both; }
 div.ui-datepicker .ui-datepicker-title { float: left; padding-right: 62px; margin: 0; font-size: 18px; font-family: "Lato-Black", Arial, sans-serif; }
 div.ui-datepicker .ui-datepicker-prev, div.ui-datepicker .ui-datepicker-next { top: 3px; cursor: pointer; }
-div.ui-datepicker .ui-datepicker-prev:hover, div.ui-datepicker .ui-datepicker-next:hover { border: none; }
+div.ui-datepicker .ui-datepicker-prev:hover, div.ui-datepicker .ui-datepicker-next:hover { border: none; background: transparent; }
 div.ui-datepicker .ui-datepicker-prev { left: auto; right: 27px; }
 div.ui-datepicker .ui-datepicker-prev .ui-icon { background: url("../img/svg/calendar-left.svg") no-repeat 0 0; background-size: 19px 19px; width: 19px; height: 19px; display: inline-block; }
 div.ui-datepicker .ui-datepicker-next { right: 2px; }
