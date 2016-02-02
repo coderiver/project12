@@ -2221,6 +2221,8 @@ $(document).ready(function() {
 		.find('.js-popup')
 		.toggleClass('is-active');
 
+		$('body').addClass('is-hidden');
+
 		$(this).parents('.js-header').addClass('is-init');
 		$('.js-menu').removeClass('is-active');
 		return false;
@@ -2236,6 +2238,8 @@ $(document).ready(function() {
 		.toggleClass('is-active');
 
 		videoPause();
+
+		$('body').addClass('is-hidden');
 
 		return false;
 	});
@@ -2260,6 +2264,7 @@ $(document).ready(function() {
 		$('.js-popup').removeClass('is-active');
 		setTimeout(function() {
 			$('.js-header').removeClass('is-init');
+			$('body').removeClass('is-hidden');
 		}, 400);
 		videoPause();
 	});
@@ -2268,6 +2273,7 @@ $(document).ready(function() {
 		$(this).removeClass('is-active');
 		setTimeout(function() {
 			$('.js-header').removeClass('is-init');
+			$('body').removeClass('is-hidden');
 		}, 400);
 		videoPause();
 	});

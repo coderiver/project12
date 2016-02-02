@@ -6,6 +6,7 @@
 	right: 0
 	bottom: 0
 	z-index: 100
+	padding: 30px 0
 	color: $black
 	opacity: 0
 	visibility: hidden
@@ -14,6 +15,7 @@
 	will-chenge: opacity
 	background: rgba($black, .6)
 	+vertical
+	overflow-y: scroll
 	transition: opacity .4s ease-in, z-index .4s ease-in, visibility .4s ease-in
 	&.is-active
 		opacity: 1
@@ -23,7 +25,7 @@
 			transform: scale(1) 
 	&__in
 		position: relative
-		margin-top: 130px
+		margin-top: 100px
 		padding: 55px 80px 80px
 		width: 100%
 		max-width: 513px
@@ -81,5 +83,85 @@
 		margin-top: 50px
 		&:first-child
 			margin-top: 0
+	&__textleft
+		text-align: left
+	&__progress
+		padding: 70px 25px 0
+		text-align: left
+	&__indexes
+		position: absolute
+		top: 0
+		left: 100px
+		+clr
+		.group-name
+			float: left
+			padding: 40px 25px 10px
+			+rb
+			font-size: 30px
+			background: $yellow
+			& + .subgroup-name
+				margin-left: 20px
+		.subgroup-name
+			float: left
+			padding: 44px 7px 1px
+			+rb
+			font-size: 18px
+			background: $bg-subgroup
+	&__form
+		margin: 0 auto
+		width: 240px
+		.row
+			margin-top: 40px
+			&:first-child
+				margin-top: 0
+		.btn
+			padding: 8px 15px
+	.label
+		margin-bottom: 12px
+	.input
+		text-align: center
+		height: 42px
+		font-size: 18px
+		color: $black
+	.title-medium
+		margin: 35px 0 45px
+		&:first-child
+			margin-top: 0
+	.title-petty
+		margin: 35px 0 11px
 	// &__wrap
 	// 	width: 350px
+.progress-table
+	table-layout: fixed
+	border-bottom: 1px solid $yellow
+	&:last-child
+		border-bottom: none
+		tfoot
+			tr
+				&:first-child
+					td
+						padding-top: 0
+				&:last-child
+					td
+						padding-bottom: 0
+	td
+		padding: 4px 0
+		width: 33.3%
+		text-align: center
+		vertical-align: top
+		&:first-child
+			text-align: left
+		&:last-child
+			text-align: right
+	tfoot
+		td
+			width: 50%
+		tr
+			&:first-child
+				td
+					padding-top: 26px
+			&:last-child
+				td
+					padding-bottom: 30px
+	.date
+		+lb
