@@ -245,6 +245,13 @@ $(document).ready(function() {
 			block.slideDown(300);
 		}
 	});
+	acord.each(function(){
+		var accord = $(this),
+			accordBlock = accord.find(acordBlock);
+		if (accord.hasClass('is-active')) {
+			accordBlock.show();
+		};
+	});
 
 	// add class to visiting
 	$('.js-visiting').on('click', function(){

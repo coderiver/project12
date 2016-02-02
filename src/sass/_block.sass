@@ -8,6 +8,12 @@
 // l
 .l
 	+clr
+	&__in
+		+clr
+	.title-little
+		margin: 32px 0 12px
+		&:first-child
+			margin-top: 0
 .l-col1
 	float: left
 	width: 52%
@@ -15,8 +21,6 @@
 		line-height: 0.7
 	.title-large
 		color: $yellow
-	.title-little
-		margin: 32px 0 12px
 .l-col2
 	float: right
 	padding-left: 32px
@@ -216,6 +220,8 @@
 	font-size: 57px
 	line-height: 1
 	letter-spacing: 0.015em
+	&.is-yellow
+		color: $yellow
 
 .title-big
 	font-size: 72px
@@ -406,6 +412,33 @@ h1,
 .tabs
 	&__cont
 		display: none
+		+clr
+
+// tab
+.tab
+	margin: 50px 0
+	font-size: 0
+	+lb
+	li
+		margin-left: 35px
+		min-width: 172px
+		font-size: 12px
+		vertical-align: top
+		text-align: center
+		color: $c_hour
+		transition: background .2s, color .2s
+		text-transform: uppercase
+		background: $bg-tab
+		display: inline-block
+		&:first-child
+			margin-left: 0
+		&:hover,
+		&.is-active
+			color: $black
+			background: $yellow
+	a
+		padding: 7px 15px
+		display: block
 
 // table
 .table
@@ -448,7 +481,8 @@ h1,
 	&__name,
 	&__right,
 	&__time,
-	&__group
+	&__group,
+	&__point
 		display: table-cell
 	&__time,
 	&__group
@@ -463,6 +497,16 @@ h1,
 		& + .table__group
 			padding-left: 8px
 			width: 40px
+	&__point
+		width: 68%
+		font-size: 0
+		vertical-align: top
+		text-align: center
+	&__col
+		width: 33.3%
+		vertical-align: top
+		border-left: 1px solid $bd-table
+		display: inline-block
 	a
 		transition: border-color .2s
 		border-bottom: 1px solid transparent
@@ -471,6 +515,8 @@ h1,
 
 // accord
 .accord
+	& + .accord
+		margin-top: -2px
 	&.is-active,
 	&:hover
 		.accord__top
@@ -478,14 +524,23 @@ h1,
 			background: $yellow
 			&:before
 				+arr(15,7,$light-black,b)
+		& + .accord
+			.accord__top
+				border-top-color: $yellow
 	&.is-active
+		margin-top: 0
 		.accord__top
 			&:before
 				transform: rotate(180deg)
+		& + .accord
+			.accord__top
+				border-top-color: $bd-table
 	.table
 		margin: 0
 	.group-name
+		padding-right: 8px
 		width: 50px
+		text-align: center
 	.time
 		width: 100px
 	.theme
@@ -493,8 +548,12 @@ h1,
 		+lr
 	.group-name,
 	.time,
-	.theme
+	.theme,
+	.day
 		display: table-cell
+	.day
+		padding-left: 20px
+		text-transform: uppercase
 	&__top
 		position: relative
 		padding: 14px 50px 14px 14px
@@ -504,7 +563,6 @@ h1,
 		user-select: none
 		transition: border-color .2s, background .2s
 		border: 2px solid $bd-table
-		display: table
 		&:before
 			position: absolute
 			content: ''
@@ -513,5 +571,8 @@ h1,
 			margin-top: calc(-7px / 2)
 			transition: border-color .2s, transform .2s
 			+arr(15,7,$bd-table,b)
+	&__tabl
+		width: 100%
+		display: table
 	&__block
 		display: none
