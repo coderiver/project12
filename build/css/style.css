@@ -117,6 +117,7 @@ a { color: inherit; text-decoration: none; }
 .l:after { content: " "; display: table; clear: both; }
 .l__in { *zoom: 1; }
 .l__in:after { content: " "; display: table; clear: both; }
+.l__center { margin: 0 auto; max-width: 486px; }
 .l .title-little { margin: 32px 0 12px; }
 .l .title-little:first-child { margin-top: 0; }
 
@@ -187,6 +188,10 @@ h1, .title-middle { font-family: "Lato-Black", Arial, sans-serif; font-size: 36p
 .title-small { font-size: 24px; font-family: "Lato-Black", Arial, sans-serif; letter-spacing: 0.05em; }
 
 .title-little { font-size: 18px; font-family: "Lato-Black", Arial, sans-serif; line-height: 1.2; }
+
+.title-square { position: relative; padding: 10px 10px 10px 25px; font-family: "Lato-Black", Arial, sans-serif; font-size: 14px; line-height: 1; text-transform: uppercase; }
+.title-square:before { position: absolute; content: ""; top: 0; left: 0; width: 35px; height: 35px; background: #ffe94a; }
+.title-square span { position: relative; }
 
 .mouse { font-size: 0; vertical-align: top; display: inline-block; }
 .mouse:hover .icon { -webkit-animation: mouse 1s infinite linear; animation: mouse 1s infinite linear; }
@@ -283,6 +288,8 @@ h1, .title-middle { font-family: "Lato-Black", Arial, sans-serif; font-size: 36p
 .accord__top:before { position: absolute; content: ""; right: 25px; top: 50%; margin-top: -webkit-calc(-7px / 2); margin-top: calc(-7px / 2); -webkit-transition: border-color 0.2s, -webkit-transform 0.2s; transition: border-color 0.2s, transform 0.2s; width: 0px; height: 0px; border-style: solid; border-width: 7px 7.5px 0 7.5px; border-color: #dadada transparent transparent transparent; }
 .accord__tabl { width: 100%; display: table; }
 .accord__block { display: none; }
+
+.date.is-bold { font-family: "Lato-Black", Arial, sans-serif; }
 
 .header { position: relative; *zoom: 1; }
 .header:after { content: " "; display: table; clear: both; }
@@ -538,6 +545,13 @@ body.is-teacher .out { width: 100%; display: inline-table; }
 .rightbar { padding-top: 40px; height: 100%; width: 89%; vertical-align: top; display: table-cell; }
 .rightbar .l, .rightbar .header { margin: 0 auto; padding: 0 88px 0 103px; max-width: 1150px; }
 .rightbar .l { padding-bottom: 40px; }
+.rightbar .l__center { margin-top: 50px; }
+.rightbar .l__center .title-square { margin-top: 55px; }
+.rightbar .l__center .title-square + .date { margin-top: -12px; line-height: 1; }
+.rightbar .l__center .title-square:first-child { margin-top: 0; }
+.rightbar .l__center .date { text-align: right; display: block; }
+.rightbar .l__center .accord { margin-top: 20px; }
+.rightbar .l__center .accord:first-child { margin-top: 0; }
 .rightbar .stat { margin-top: 40px; }
 
 .sidebar { padding: 68px 20px 10px; width: 11%; height: 100%; color: #fff; text-align: center; vertical-align: top; display: table-cell; background: #2a2a2a; }

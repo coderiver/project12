@@ -10,6 +10,9 @@
 	+clr
 	&__in
 		+clr
+	&__center
+		margin: 0 auto
+		max-width: 486px
 	.title-little
 		margin: 32px 0 12px
 		&:first-child
@@ -248,6 +251,24 @@ h1,
 	font-size: 18px
 	+lb
 	line-height: 1.2
+
+.title-square
+	position: relative
+	padding: 10px 10px 10px 25px
+	+lb
+	font-size: 14px
+	line-height: 1
+	text-transform: uppercase
+	&:before
+		position: absolute
+		content: ''
+		top: 0
+		left: 0
+		width: 35px
+		height: 35px
+		background: $yellow
+	span
+		position: relative
 
 // mouse
 .mouse
@@ -576,3 +597,8 @@ h1,
 		display: table
 	&__block
 		display: none
+
+// date
+.date
+	&.is-bold
+		+lb
