@@ -36,13 +36,15 @@
 .logo
 	transform: translate3d(0,0,0)
 	+svg(logo,158,172)
+	+r(768)
+		+svg(logo,117,128)
 	&.is-teacher
 		+svg(logo-teacher,51,56)
 		+r(960)
 			float: left
 			+svg(logo_960,109,23)
-	+r(768)
-		+svg(logo,117,128)
+	&.is-student
+		+svg(logo-student,84,91)
 
 // input
 .input
