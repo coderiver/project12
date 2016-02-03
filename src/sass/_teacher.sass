@@ -2,6 +2,8 @@ body.is-teacher
 	.out
 		width: 100%
 		display: inline-table
+		+r(960)
+			display: block
 
 // leftbar
 .rightbar
@@ -12,11 +14,19 @@ body.is-teacher
 	display: table-cell
 	+r(1280)
 		width: calc(100% - 140px)
+	+r(960)
+		padding: 30px 0
+		width: 100%
+		display: block
 	.l,
 	.header
 		margin: 0 auto
 		padding: 0 88px 0 103px
 		max-width: 1150px
+		+r(1024)
+			padding: 0 30px
+		+r(768)
+			padding: 0 20px
 	.l
 		padding-bottom: 40px
 	.l__center
@@ -37,6 +47,14 @@ body.is-teacher
 				margin-top: 0
 	.stat
 		margin-top: 40px
+	.header
+		+r(960)
+			display: none
+	.l-col1,
+	.l-col2
+		+r(960)
+			padding-left: 0
+			width: 100%
 
 // sidebar
 .sidebar
@@ -48,17 +66,71 @@ body.is-teacher
 	vertical-align: top
 	display: table-cell
 	background: $dark-gray
+	+clr
 	+r(1280)
 		width: 140px
+	+r(960)
+		padding: 12px 45px
+		width: 100%
+		height: 50px
+		display: block
 	.nav
 		margin-top: 126px
+		+r(960)
+			margin: 80px 0 72px
 
+// nav-block
+.nav-block
+	+r(960)
+		position: absolute
+		top: 50px
+		left: 0
+		right: 0
+		bottom: 0
+		color: $black
+		visibility: hidden
+		z-index: -1
+		opacity: 0
+		overflow-y: auto
+		will-change: opacity
+		transform: translate3d(0,0,0)
+		transition: opacity .3s
+		background: $white
+		&.is-active
+			visibility: visible
+			opacity: 1
+			z-index: 4
+	
 // nav
 .nav
+	position: relative
 	font-size: 12px
+	&:before,
+	&:after
+		position: absolute
+		content: ''
+		left: 50%
+		margin-left: calc(-35px / 2)
+		width: 35px
+		height: 5px
+		background: $black
+		display: none
+		+r(960)
+			display: block
+	&:before
+		top: -5px
+	&:after
+		bottom: -5px
+	+r(960)
+		padding: 25px 60px
+		font-size: 30px
 	li
 		margin-top: 28px
 		display: block
+		+r(960)
+			margin-top: 15px
+			&:first-child
+				margin-top: 0
 		&:first-child
 			margin-top: 0
 		&.is-active
@@ -74,6 +146,33 @@ body.is-teacher
 		span
 			transition: border-color .2s
 			border-bottom: 1px solid transparent
+
+.nav-btn
+	float: right
+	position: relative
+	width: 30px
+	height: 25px
+	line-height: 1
+	background: transparent
+	display: none
+	+r(960)
+		display: block
+	&:before,
+	&:after,
+	span
+		position: absolute
+		content: ''
+		left: 0
+		right: 0
+		height: 5px
+		background: $white
+		transition: transform .3s
+	&:before
+		top: 0
+	&:after
+		bottom: 0
+	span
+		top: 10px
 
 // hours
 .hours
@@ -95,10 +194,14 @@ body.is-teacher
 	&:hover,
 	&.is-active
 		background: $yellow
+	+r(768)
+		font-size: 20px
 	a
-		padding: 6px 14px 6px 11px
+		padding: 6px 8px 6px 8px
 		display: block
 		+clr
+		+r(768)
+			padding: 6px 40px 6px 28px
 	.time
 		float: right
 		letter-spacing: 1px
@@ -126,6 +229,8 @@ body.is-teacher
 	margin-right: 40px
 	text-align: right
 	font-size: 12px
+	+r(960)
+		display: none
 	&__row
 		margin-top: 4px
 		&:first-child
@@ -143,6 +248,8 @@ body.is-teacher
 // calendar
 .calendar
 	margin: 50px 0 55px
+	+r(768)
+		margin: 25px 0 30px
 	.ui-datepicker-inline
 		margin: 0 auto
 
@@ -162,3 +269,33 @@ body.is-teacher
 // block-inf
 .block-inf
 	margin-top: 10px
+	+r(768)
+		margin-top: 30px
+		text-align: center
+
+.outlet
+	text-align: center
+	font-size: 16px
+	display: none
+	+clr
+	+r(960)
+		display: block
+	&__link
+		float: left
+		padding: 13px 48px
+		height: 70px
+		width: 50%
+		line-height: 44px
+		text-align: center
+		background: $bg-tab
+		border-left: 2px solid $white
+		transition: background .2s
+		display: block
+		&:active
+			background: darken($bg-tab, 20%)
+		&:first-child
+			border-left: none
+		span
+			line-height: 1.3
+			vertical-align: middle
+			display: inline-block

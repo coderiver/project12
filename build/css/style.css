@@ -247,6 +247,8 @@ h1, .title-middle { font-family: "Lato-Black", Arial, sans-serif; font-size: 36p
 
 .tabs__cont { display: none; *zoom: 1; }
 .tabs__cont:after { content: " "; display: table; clear: both; }
+.tabs__wrap .hour { margin: 12px 0 0; width: 100%; }
+.tabs__wrap .hour:first-child { margin-top: 0; }
 
 .tab { margin: 50px 0; font-size: 0; font-family: "Lato-Black", Arial, sans-serif; }
 .tab li { margin-left: 35px; min-width: 172px; font-size: 12px; vertical-align: top; text-align: center; color: #706f6f; -webkit-transition: background 0.2s, color 0.2s; transition: background 0.2s, color 0.2s; text-transform: uppercase; background: #c6c6c6; display: inline-block; }
@@ -272,6 +274,8 @@ h1, .title-middle { font-family: "Lato-Black", Arial, sans-serif; font-size: 36p
 .table__name + .table__group { padding-left: 8px; width: 40px; }
 .table__point { width: 68%; font-size: 0; vertical-align: top; text-align: center; }
 .table__col { width: 33.3%; vertical-align: top; border-left: 1px solid #dadada; display: inline-block; }
+.table__left { width: 100%; display: table; *zoom: 1; }
+.table__left:after { content: " "; display: table; clear: both; }
 .table a { -webkit-transition: border-color 0.2s; transition: border-color 0.2s; border-bottom: 1px solid transparent; }
 .table a:hover { border-color: #000; }
 
@@ -295,9 +299,13 @@ h1, .title-middle { font-family: "Lato-Black", Arial, sans-serif; font-size: 36p
 
 .date.is-bold { font-family: "Lato-Black", Arial, sans-serif; }
 
+.is-show-tablet { display: none; }
+
+.is-show-mobile { display: none !important; }
+
 .header { position: relative; *zoom: 1; }
 .header:after { content: " "; display: table; clear: both; }
-.header.is-init { overflow: initial; z-index: 5; }
+.header.is-init { position: fixed; overflow: initial; z-index: 5; left: 0; right: 0; }
 .header__menu { float: right; height: 46px; margin-right: 117px; *zoom: 1; }
 .header__menu:after { content: " "; display: table; clear: both; }
 .header .menu { position: fixed; top: 92px; float: right; }
@@ -586,10 +594,14 @@ body.is-teacher .out { width: 100%; display: inline-table; }
 .rightbar .l__center .accord:first-child { margin-top: 0; }
 .rightbar .stat { margin-top: 40px; }
 
-.sidebar { padding: 68px 20px 10px; width: 11%; height: 100%; color: #fff; text-align: center; vertical-align: top; display: table-cell; background: #2a2a2a; }
+.sidebar { padding: 68px 20px 10px; width: 11%; height: 100%; color: #fff; text-align: center; vertical-align: top; display: table-cell; background: #2a2a2a; *zoom: 1; }
+.sidebar:after { content: " "; display: table; clear: both; }
 .sidebar .nav { margin-top: 126px; }
 
-.nav { font-size: 12px; }
+.nav { position: relative; font-size: 12px; }
+.nav:before, .nav:after { position: absolute; content: ""; left: 50%; margin-left: -webkit-calc(-35px / 2); margin-left: calc(-35px / 2); width: 35px; height: 5px; background: #000; display: none; }
+.nav:before { top: -5px; }
+.nav:after { bottom: -5px; }
 .nav li { margin-top: 28px; display: block; }
 .nav li:first-child { margin-top: 0; }
 .nav li.is-active { font-family: "Lato-Black", Arial, sans-serif; }
@@ -598,12 +610,18 @@ body.is-teacher .out { width: 100%; display: inline-table; }
 .nav a:hover span { border-color: #fff; }
 .nav a span { -webkit-transition: border-color 0.2s; transition: border-color 0.2s; border-bottom: 1px solid transparent; }
 
+.nav-btn { float: right; position: relative; width: 30px; height: 25px; line-height: 1; background: transparent; display: none; }
+.nav-btn:before, .nav-btn:after, .nav-btn span { position: absolute; content: ""; left: 0; right: 0; height: 5px; background: #fff; -webkit-transition: -webkit-transform 0.3s; transition: transform 0.3s; }
+.nav-btn:before { top: 0; }
+.nav-btn:after { bottom: 0; }
+.nav-btn span { top: 10px; }
+
 .hours { overflow: hidden; font-size: 0; }
 .hours__in { margin: -2% -2% 0 0; }
 
 .hour { margin: 2% 2% 0 0; width: 31.3%; color: #706f6f; font-size: 12px; vertical-align: top; -webkit-transition: background 0.2s; transition: background 0.2s; background: #ddd; display: inline-block; }
 .hour:hover, .hour.is-active { background: #ffe94a; }
-.hour a { padding: 6px 14px 6px 11px; display: block; *zoom: 1; }
+.hour a { padding: 6px 8px 6px 8px; display: block; *zoom: 1; }
 .hour a:after { content: " "; display: table; clear: both; }
 .hour .time { float: right; letter-spacing: 1px; }
 .hour .group-name { font-family: "Lato-Black", Arial, sans-serif; }
@@ -626,6 +644,13 @@ body.is-teacher .out { width: 100%; display: inline-table; }
 .point.is-filled { color: #000; text-transform: uppercase; }
 
 .block-inf { margin-top: 10px; }
+
+.outlet { text-align: center; font-size: 16px; display: none; *zoom: 1; }
+.outlet:after { content: " "; display: table; clear: both; }
+.outlet__link { float: left; padding: 13px 48px; height: 70px; width: 50%; line-height: 44px; text-align: center; background: #c6c6c6; border-left: 2px solid #fff; -webkit-transition: background 0.2s; transition: background 0.2s; display: block; }
+.outlet__link:active { background: #939393; }
+.outlet__link:first-child { border-left: none; }
+.outlet__link span { line-height: 1.3; vertical-align: middle; display: inline-block; }
 
 div.ui-datepicker { width: 18em; border: none; }
 div.ui-datepicker .ui-datepicker-header { padding: 0; border: none; background: transparent; *zoom: 1; }
@@ -665,11 +690,33 @@ div.ui-datepicker thead th { padding: 0.56em 0.3em; }
  .top__in .video{ margin-top: 60px; }
  .video .popup__in{ height: 60vw; }
  .contacts__in{ padding-left: 105px; }
- .popup__in{ margin-top: 50px; } }
+ .popup__in{ margin-top: 50px; }
+ .rightbar .l, .rightbar .header{ padding: 0 30px; } }
 @media only screen and (max-width: 960px){
+ .l-col2.is-mod{ margin-top: 45px; }
+ .logo.is-teacher{ float: left; background: url("../img/svg/logo_960.svg") no-repeat 0 0; background-size: 109px 23px; width: 109px; height: 23px; display: inline-block; }
+ .table__time{ width: 70px; }
+ .accord .group-name{ width: 70px; }
+ .is-hide-tablet{ display: none !important; }
+ .is-show-tablet{ display: block; }
  .contacts__in{ padding-left: 60px; }
  .contacts__form .btn{ margin-left: 10px; }
- .contacts__input{ width: 190px; } }
+ .contacts__input{ width: 190px; }
+ body.is-teacher .out{ display: block; }
+ .rightbar{ padding: 30px 0; width: 100%; display: block; }
+ .rightbar .header{ display: none; }
+ .rightbar .l-col1, .rightbar .l-col2{ padding-left: 0; width: 100%; }
+ .sidebar{ padding: 12px 45px; width: 100%; height: 50px; display: block; }
+ .sidebar .nav{ margin: 80px 0 72px; }
+ .nav-block{ position: absolute; top: 50px; left: 0; right: 0; bottom: 0; color: #000; visibility: hidden; z-index: -1; opacity: 0; overflow-y: auto; will-change: opacity; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-transition: opacity 0.3s; transition: opacity 0.3s; background: #fff; }
+ .nav-block.is-active{ visibility: visible; opacity: 1; z-index: 4; }
+ .nav:before, .nav:after{ display: block; }
+ .nav{ padding: 25px 60px; font-size: 30px; }
+ .nav li{ margin-top: 15px; }
+ .nav li:first-child{ margin-top: 0; }
+ .nav-btn{ display: block; }
+ .stat{ display: none; }
+ .outlet{ display: block; } }
 @media only screen and (max-width: 950px){
  body.is-home .header:before{ margin: 0 0 0 -371px; width: 0px; height: 0px; border-style: solid; border-width: 373px 371px 0 371px; border-color: #fff transparent transparent transparent; } }
 @media only screen and (max-width: 769px){
@@ -684,8 +731,10 @@ div.ui-datepicker thead th { padding: 0.56em 0.3em; }
  .soc li{ margin-left: 25px; }
  .soc a{ width: 32px; height: 32px; line-height: 28px; }
  .title{ font-size: 28px; }
+ .title-large{ font-size: 40px; text-align: center; }
  h1, .title-middle{ font-size: 24px; }
  .title-small{ font-size: 18px; }
+ .title-little{ font-size: 24px; }
  .circle{ width: 120px; height: 120px; }
  .circle:before{ width: 80px; height: 80px; }
  .circle:after{ width: 160px; height: 160px; }
@@ -694,6 +743,29 @@ div.ui-datepicker thead th { padding: 0.56em 0.3em; }
  .col{ width: 100%; }
  .col:first-child{ width: 100%; text-align: left; }
  .col:first-child br{ display: none; }
+ .tabs__wrap .hour + .tabs__cont{ margin: 20px 0; }
+ .tabs__wrap .hour + .tabs__cont:last-child{ margin-bottom: 0; }
+ .tabs__wrap .hour + .tabs__cont .table{ margin: 0; }
+ .tab li{ margin: 20px 0 0; width: 100%; font-size: 18px; }
+ .tab li:first-child{ margin-top: 0; }
+ .table.is-numb .table__row{ padding-left: 50px; }
+ .table.is-numb .table__row:before{ width: 32px; }
+ .table.is-appraisal .table__row{ padding-left: 0; }
+ .table.is-appraisal .table__row:before{ display: none; }
+ .table.is-appraisal .table__row .table__name{ text-align: center; }
+ .table__name{ width: 100%; display: block; }
+ .table__point{ width: 100%; border-top: 1px solid #dadada; display: block; }
+ .table__col:first-child{ border-left: none; }
+ .table__left + .table__right .visiting{ line-height: 1; vertical-align: bottom; display: inline-block; }
+ .table__left .table__name, .table__left .table__time, .table__left .table__group{ display: inline-block; }
+ .table__left .table__name{ float: left; margin-top: -15px; width: 100%; }
+ .accord .group-name{ width: 35px; text-align: left; }
+ .accord .theme{ width: 100%; }
+ .accord .group-name, .accord .time, .accord .theme, .accord .day{ display: inline-block; }
+ .accord__top{ padding: 5px 50px 5px 14px; }
+ .group-name__subgroup{ display: none; }
+ .is-hide-mobile{ display: none !important; }
+ .is-show-mobile{ display: block !important; }
  .header__menu{ margin-right: 32px; height: auto; }
  .header .menu{ position: relative; top: auto; }
  .header .logo{ top: 96px; margin-left: -68px; }
@@ -752,7 +824,21 @@ div.ui-datepicker thead th { padding: 0.56em 0.3em; }
  .contacts__form .btn{ margin-left: 20px; }
  .contacts__input{ width: 140px; }
  .open-map{ display: inline-block; }
- .paralax{ display: none; } }
+ .popup__in{ padding: 45px 40px 40px; }
+ .popup__progress{ padding: 85px 0 0; }
+ .popup__indexes{ left: 45px; }
+ .paralax{ display: none; }
+ .rightbar .l, .rightbar .header{ padding: 0 20px; }
+ .hour{ font-size: 20px; }
+ .hour a{ padding: 6px 40px 6px 28px; }
+ .calendar{ margin: 25px 0 30px; }
+ .block-inf{ margin-top: 30px; text-align: center; }
+ div.ui-datepicker .ui-datepicker-title{ font-size: 24px; }
+ div.ui-datepicker .ui-datepicker-prev, div.ui-datepicker .ui-datepicker-next{ top: 6px; }
+ div.ui-datepicker .ui-datepicker-prev span.ui-icon, div.ui-datepicker .ui-datepicker-next span.ui-icon{ left: auto; top: auto; margin-left: 0; margin-top: 0; }
+ div.ui-datepicker .ui-datepicker-prev{ right: 43px; }
+ div.ui-datepicker .ui-datepicker-prev .ui-icon{ background: url("../img/svg/calendar-left.svg") no-repeat 0 0; background-size: 29px 29px; width: 29px; height: 29px; display: inline-block; }
+ div.ui-datepicker .ui-datepicker-next .ui-icon{ background: url("../img/svg/calendar-right.svg") no-repeat 0 0; background-size: 29px 29px; width: 29px; height: 29px; display: inline-block; } }
 @media only screen and (max-width: 766px){
  .course .title{ margin-bottom: 50px; } }
 @media only screen and (max-width: 678px){
@@ -762,7 +848,8 @@ div.ui-datepicker thead th { padding: 0.56em 0.3em; }
  .footer__in{ padding: 0 15px; text-align: center; }
  .footer .copy, .footer .dev{ float: none; margin-top: 10px; width: 100%; }
  .footer .copy:first-child, .footer .dev:first-child{ margin-top: 0; }
- .contacts__in{ padding: 53px 20px 26px 20px; } }
+ .contacts__in{ padding: 53px 20px 26px 20px; }
+ div.ui-datepicker{ position: relative; width: 17em; left: -3px; } }
 
 
 

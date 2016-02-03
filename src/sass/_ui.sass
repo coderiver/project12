@@ -1,6 +1,10 @@
 div.ui-datepicker 
 	width: 18em
 	border: none
+	+r(480)
+		position: relative
+		width: 17em
+		left: -3px
 	.ui-datepicker-header
 		padding: 0
 		border: none
@@ -12,22 +16,38 @@ div.ui-datepicker
 		margin: 0 
 		font-size: 18px
 		+lb
+		+r(768)
+			font-size: 24px
 	.ui-datepicker-prev, 
 	.ui-datepicker-next
 		top: 3px
 		cursor: pointer
+		+r(768)
+			top: 6px
 		&:hover
 			border: none
 			background: transparent
+		span.ui-icon
+			+r(768)
+				left: auto
+				top: auto
+				margin-left: 0
+				margin-top: 0
 	.ui-datepicker-prev
 		left: auto
 		right: 27px
+		+r(768)
+			right: 43px
 		.ui-icon
 			+svg(calendar-left,19,19)
+			+r(768)
+				+svg(calendar-left,29,29)
 	.ui-datepicker-next
 		right: 2px
 		.ui-icon
 			+svg(calendar-right,19,19)
+			+r(768)
+				+svg(calendar-right,29,29)
 	.ui-datepicker-year
 		display: none
 	.ui-state-default, 

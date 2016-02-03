@@ -2148,6 +2148,7 @@ $(document).ready(function() {
 		$('.js-login').removeClass('is-active');
 		$('body').removeClass('is-hidden');
 		$('.js-header').removeClass('is-init');
+		$('.js-nav').removeClass('is-active');
 	});
 
 	// open menu
@@ -2214,6 +2215,19 @@ $(document).ready(function() {
 		window_.on('scroll resize', check_if_in_view);
 		window_.trigger('scroll');
 	};
+
+	
+	$('.js-open-nav').on('click', function(event){
+		var this_ 	= $(this),
+			parent 	= $('.js-sidebar'),
+			nav 	= $('.js-nav');
+			
+		nav.toggleClass('is-active');
+		$('body').toggleClass('is-hidden');
+
+		event.stopPropagation();
+	});
+	
 
 	// open login
 	$('.js-btn-login').on('click', function(){

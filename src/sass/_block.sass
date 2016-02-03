@@ -28,6 +28,9 @@
 	float: right
 	padding-left: 32px
 	width: 48%
+	&.is-mod
+		+r(960)
+			margin-top: 45px
 
 // logo
 .logo
@@ -35,6 +38,9 @@
 	+svg(logo,158,172)
 	&.is-teacher
 		+svg(logo-teacher,51,56)
+		+r(960)
+			float: left
+			+svg(logo_960,109,23)
 	+r(768)
 		+svg(logo,117,128)
 
@@ -225,6 +231,9 @@
 	font-size: 57px
 	line-height: 1
 	letter-spacing: 0.015em
+	+r(768)
+		font-size: 40px
+		text-align: center
 	&.is-yellow
 		color: $yellow
 
@@ -258,6 +267,8 @@ h1,
 	font-size: 18px
 	+lb
 	line-height: 1.2
+	+r(768)
+		font-size: 24px
 
 .title-petty
 	font-size: 16px
@@ -445,6 +456,19 @@ h1,
 	&__cont
 		display: none
 		+clr
+	&__wrap
+		.hour
+			margin: 12px 0 0
+			width: 100%
+			& + .tabs__cont
+				+r(768)
+					margin: 20px 0
+					&:last-child
+						margin-bottom: 0
+					.table
+						margin: 0
+			&:first-child
+				margin-top: 0
 
 // tab
 .tab
@@ -468,6 +492,12 @@ h1,
 		&.is-active
 			color: $black
 			background: $yellow
+		+r(768)
+			margin: 20px 0 0
+			width: 100%
+			font-size: 18px
+			&:first-child
+				margin-top: 0
 	a
 		padding: 7px 15px
 		display: block
@@ -486,6 +516,8 @@ h1,
 		counter-reset: list
 		.table__row
 			padding-left: 65px
+			+r(768)
+				padding-left: 50px
 			&:before
 				position: absolute
 				counter-increment: list
@@ -497,9 +529,19 @@ h1,
 				+lbd
 				text-align: right
 				line-height: 37px
+				+r(768)
+					width: 32px
 	&.is-consult
 		.table__row
 			line-height: 45px
+	&.is-appraisal
+		.table__row
+			+r(768)
+				padding-left: 0
+				&:before
+					display: none
+				.table__name
+					text-align: center
 	&__row
 		position: relative
 		padding-left: 15px
@@ -525,7 +567,12 @@ h1,
 		border-left: 1px solid $bd-table
 	&__time
 		width: 87px
+		+r(960)
+			width: 70px
 	&__name
+		+r(768)
+			width: 100%
+			display: block
 		& + .table__group
 			padding-left: 8px
 			width: 40px
@@ -534,11 +581,38 @@ h1,
 		font-size: 0
 		vertical-align: top
 		text-align: center
+		+r(768)
+			width: 100%
+			border-top: 1px solid $bd-table
+			display: block
 	&__col
 		width: 33.3%
 		vertical-align: top
 		border-left: 1px solid $bd-table
 		display: inline-block
+		+r(768)
+			&:first-child
+				border-left: none
+	&__left
+		width: 100%
+		display: table
+		+clr
+		& + .table__right
+			.visiting
+				+r(768)
+					line-height: 1
+					vertical-align: bottom
+					display: inline-block
+		.table__name,
+		.table__time,
+		.table__group
+			+r(768) 
+				display: inline-block
+		.table__name
+			+r(768)
+				float: left
+				margin-top: -15px
+				width: 100%
 	a
 		transition: border-color .2s
 		border-bottom: 1px solid transparent
@@ -573,16 +647,25 @@ h1,
 		padding-right: 8px
 		width: 50px
 		text-align: center
+		+r(960)
+			width: 70px
+		+r(768)
+			width: 35px
+			text-align: left
 	.time
 		width: 100px
 	.theme
 		font-size: 12px
 		+lr
+		+r(768)
+			width: 100%
 	.group-name,
 	.time,
 	.theme,
 	.day
 		display: table-cell
+		+r(768)
+			display: inline-block
 	.day
 		padding-left: 20px
 		text-transform: uppercase
@@ -595,6 +678,8 @@ h1,
 		user-select: none
 		transition: border-color .2s, background .2s
 		border: 2px solid $bd-table
+		+r(768)
+			padding: 5px 50px 5px 14px
 		&:before
 			position: absolute
 			content: ''
@@ -609,7 +694,31 @@ h1,
 	&__block
 		display: none
 
+// group-name
+.group-name
+	&__subgroup
+		+r(768)
+			display: none
+
 // date
 .date
 	&.is-bold
 		+lb
+
+// tablet block
+.is-hide-tablet
+	+r(960)
+		display: none !important
+.is-show-tablet
+	display: none
+	+r(960)
+		display: block
+
+// mobile block
+.is-hide-mobile
+	+r(768)
+		display: none !important
+.is-show-mobile
+	display: none !important
+	+r(768)
+		display: block !important
