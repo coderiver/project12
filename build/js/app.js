@@ -2428,11 +2428,27 @@ $(document).ready(function() {
 		return false;
 	});
 
+	// datepicker
 	$('.js-calendar').datepicker({
 		dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
 		monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 
 			'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
 	});
 
+	// header-bg
+	function header_bg() {
+		var block = $('.js-header-bg'),
+			wWidth = $('.js-rightbar').width(),
+			hHeight = $('.js-header').height() + 70;
+	 	if (block.length){
+	 		block
+	 		.width(wWidth)
+	 		.height(hHeight);
+	 	}
+	}
+	header_bg();
+	$(window).resize(function(){
+		header_bg();
+	});
 
 });

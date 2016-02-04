@@ -41,6 +41,26 @@
 		@extend %in 
 	&__left
 		float: left
+	&__bg
+		position: absolute
+		top: 0
+		left: 0
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: 50% 0
+		&:before
+			position: absolute
+			content: ''
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background-color: rgba($dark-gray, .85)
+	&__row
+		margin-top: 25px
+		+clr
+		&:first-child
+			margin-top: 0
 	.logo
 		position: absolute
 		top: 0
@@ -271,6 +291,7 @@
 .logout
 	+rb
 	font-size: 18px
+	+clr
 	&:hover
 		.logout__link
 			.user-name

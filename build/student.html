@@ -25,9 +25,10 @@
 		</div>
 	</div>
 	<!-- rightbar -->
-	<div class="rightbar">
+	<div class="rightbar is-step1 js-rightbar">
 		<!-- header -->
-		<header class="header">
+		<header class="header js-header">
+			<div class="header__bg js-header-bg" style="background-image: url('/img/header_bg.png')"></div>
 			<div class="header__in">
 				<div class="header__row">
 					<!-- stud-name -->
@@ -38,10 +39,10 @@
 					<!-- logout -->
 					<div class="logout">
 						<!-- lang -->
-						<div class="lang">
+						<ul class="lang">
 							<li><a href="#">en</a></li>
-							<li class="ua"><a href="#">ua</a></li>
-						</div>
+							<li class="is-active"><a href="#">ua</a></li>
+						</ul>
 						<a href="#" class="logout__link">
 							<i class="icon icon-logout"></i>
 						</a>
@@ -50,7 +51,7 @@
 				<div class="header__row">
 					<!-- steps -->
 					<div class="steps">
-						<div class="step">
+						<div class="step is-active">
 							<date class="date">з 5.06.15 по 5.09.15</date>
 							<div class="progress">
 								<div class="progress__in" style="width:40%;"></div>
@@ -63,7 +64,7 @@
 						<div class="step">
 							<date class="date">з 5.06.15 по 5.09.15</date>
 							<div class="progress">
-								<div class="progress__in" style="width:40%;"></div>
+								<div class="progress__in" style="width:0;"></div>
 							</div>
 							<div class="step__bot">
 								<span>Степ 2</span> 
@@ -73,7 +74,7 @@
 						<div class="step">
 							<date class="date">з 5.06.15 по 5.09.15</date>
 							<div class="progress">
-								<div class="progress__in" style="width:40%;"></div>
+								<div class="progress__in" style="width:0;"></div>
 							</div>
 							<div class="step__bot">
 								<span>Степ 3</span> 
@@ -83,7 +84,7 @@
 						<div class="step">
 							<date class="date">з 5.06.15 по 5.09.15</date>
 							<div class="progress">
-								<div class="progress__in" style="width:40%;"></div>
+								<div class="progress__in" style="width:0;"></div>
 							</div>
 							<div class="step__bot">
 								<span>Степ 4</span> 
@@ -98,7 +99,136 @@
 		<div class="l">
 			<!-- l-col1 -->
 			<div class="l-col1">
-				
+				<!-- tract -->
+				<div class="tract">
+					<div class="tract__name"><span>Підручник</span></div>
+					<div class="tract__right">
+						<a href="#" class="btn btn_bord btn_little">ЧИТАТИ</a>
+					</div>
+				</div>
+				<!-- timesheet -->
+				<div class="timesheet">
+					<div class="timesheet__row">
+						<div class="timesheet__left">
+							<div class="timesheet__title">Розклад твоїх занять</div>
+						</div>
+						<div class="timesheet__right">
+							<a href="#" class="btn btn_bord btn_little">ЗМІНИТИ РОЗКЛАД</a>
+						</div>
+					</div>
+					<div class="timesheet__row">
+						<div class="timesheet__left">
+							<div class="timesheet__wrap">
+								<div class="timesheet__day">ПН</div>
+								<div class="timesheet__time">з 19:00 до 21:30</div>
+							</div>
+							<div class="timesheet__wrap">
+								<div class="timesheet__day">ЧТ</div>
+								<div class="timesheet__time">з 18:00 до 20:30</div>
+							</div>
+						</div>
+						<div class="timesheet__right">
+							<a href="#" class="btn btn_bord btn_little">ПЕРЕНЕСТИ 1 УРОК</a>
+						</div>
+					</div>
+				</div>
+				<!-- accord -->
+				<div class="accord js-accord">
+					<div class="accord__top js-accord-top">
+						<div class="accord__tabl">
+							<span class="theme">Перенесені заняття</span>
+						</div>
+					</div>
+					<div class="accord__block js-accord-block">
+						<div class="postponed">
+							<div class="row">
+								<div class="from">ПН, 12 червня</div>
+								<i class="icon icon-arr-right"></i>
+								<div class="to">СР, 14 червня, 18.00</div>
+								<a href="#" class="cancel">ВІДМІНИТИ</a>
+							</div>
+							<div class="row">
+								<div class="from">ПН, 12 червня</div>
+								<i class="icon icon-arr-right"></i>
+								<div class="to">СР, 14 червня, 18.00</div>
+								<a href="#" class="cancel">ВІДМІНИТИ</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- accord -->
+				<div class="accord js-accord">
+					<div class="accord__top js-accord-top">
+						<div class="accord__tabl">
+							<span class="theme">Консультація (25хв.)</span>
+						</div>
+					</div>
+					<div class="accord__block js-accord-block">
+						<div class="row">
+							<span class="bold">18 листопада, 19:00</span>
+							<a href="#" class="cancel">ВІДМІНИТИ</a>
+						</div>
+						<div class="row">
+							<span>У тебе лишилось ще 2 консультації </span>
+							<a href="#" class="btn btn_bord btn_little">ЗАПИСАТИСЬ</a>
+						</div>
+						<!-- alert -->
+						<div class="alert">
+							<div class="alert__ico">
+								<i class="icon "></i>
+							</div>
+							<div class="alert__wrap">Відмінити консультацію можна не пізніше, ніж за 12 годин до її початку.</div>
+						</div>
+					</div>
+				</div>
+				<!-- accord -->
+				<div class="accord js-accord">
+					<div class="accord__top js-accord-top">
+						<div class="accord__tabl">
+							<span class="theme">Додаткові заняття</span>
+						</div>
+					</div>
+					<div class="accord__block js-accord-block">
+						<div class="item">
+							<div class="row">
+								<span class="bold">СР, 14 червня, 18.00–19.00</span>
+								<div class="status">Йду</div>
+							</div>
+							<div class="row">
+								<span>Present perfect and present continuous</span>
+								<a href="#" class="cancel">ВІДМІНИТИ</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="row">
+								<span class="bold">СР, 14 червня, 18.00–19.00</span>
+								<div class="status">Йду</div>
+							</div>
+							<div class="row">
+								<span>Present perfect and present continuous</span>
+							</div>
+						</div>
+						<div class="item">
+							<div class="row">
+								<span class="bold">СР, 14 червня, 18.00–19.00</span>
+							</div>
+							<div class="row">
+								<span>Present perfect and present continuous</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- accord -->
+				<div class="accord js-accord">
+					<div class="accord__top js-accord-top">
+						<div class="accord__tabl">
+							<span class="theme">Пропущені заняття</span>
+						</div>
+					</div>
+					<div class="accord__block js-accord-block">
+						Lorem ipsum dolor sit amet.
+					</div>
+				</div>
 			</div>
 			<!-- l-col2 -->
 			<div class="l-col2">
