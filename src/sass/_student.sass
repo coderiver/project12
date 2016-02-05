@@ -2,6 +2,7 @@
 body.is-student
 	.out
 		width: 100%
+		height: 100%
 		display: inline-table
 		+r(960)
 			display: block
@@ -14,7 +15,10 @@ body.is-student
 		margin-left: -8px
 	.header
 		position: static
-		padding-bottom: 30px
+		padding: 0 138px 30px 103px
+		max-width: 1200px
+		&__in
+			padding: 0
 	.logout
 		color: $white
 		.logout__link
@@ -38,7 +42,12 @@ body.is-student
 			&:first-child
 				margin-top: 0
 	.l
-		padding-top: 35px
+		padding: 35px 138px 35px 103px
+		max-width: 1200px
+	.l-col1
+		width: 54%
+	.l-col2
+		width: 46%
 	.accord
 		font-size: 16px
 		&:hover + .accord .accord__top
@@ -46,49 +55,112 @@ body.is-student
 		& + .accord.is-active
 			margin-top: -2px
 		.accord__top
-			padding: 12px 30px
+			padding: 18px 30px
 			border-left: none
 			border-right: none
 			border-top-color: $white
 			border-bottom-color: $white
 			&:before
+				right: 35px
 				+arr(15,7,$white,b)
 		.accord__block
 			padding: 25px 30px
+			border: 2px solid 
+			border-top: none
 		.theme
 			font-size: 16px
+	.row
+		margin-top: 10px
+		+justify
+		&.is-mod
+			.btn
+				margin-top: -16px
+				vertical-align: top
+		&:first-child
+			margin-top: 0
+		span,
+		div
+			line-height: 1.3
+			font-size: 14px
+			display: inline-block
+	.item
+		margin: 0 -30px
+		padding: 25px 30px
+		border-top: 1px solid
+		&:first-child
+			margin-top: -25px
+		&:last-child
+			margin-bottom: -25px
+	.status
+		margin-top: -25px
+		padding: 5px 12px 19px
+		+lb
+		vertical-align: top
+		display: inline-block
+	.no-places
+		margin-top: -10px
+		+lb
+		text-transform: uppercase
+		font-size: 9px
+		vertical-align: top
+		opacity: .5
+	.lesson
+		min-width: 70px
+
+// mixin to step colors
+=step-colors($color)
+	.header,
+	.alert
+		color: $color
+	.tract,
+	.timesheet,
+	.alert__ico
+		background: $color
+	.accord
+		&.is-active 
+			&:hover
+				.accord__top
+					border-bottom-color: darken($color, 10%)
+			.accord__top
+				border-bottom-color: $color
+			& + .accord 
+				&:hover
+					.accord__top
+						border-top-color: darken($color, 10%)
+				.accord__top
+					border-top-color: $color
+		.accord__top
+			background: $color
+		.accord__block
+			border-color: $color
+		&:hover
+			.accord__top
+				background: darken($color, 10%)
+	.btn_bord
+		&:hover
+			color: $color
+	.icon-arr-right
+		color: $color
+	.item,
+	.appraisal
+		border-color: $color
+	.btn_color
+		border-color: $color
+		&:hover
+			color: $white 
+			background: $color
+	.status
+		background: $color
 
 .rightbar
 	&.is-step1
-		.header
-			color: $yellow-brown
-		.tract,
-		.timesheet
-			background: $yellow-brown
-		.accord
-			&.is-active 
-				&:hover
-					.accord__top
-						border-bottom-color: darken($yellow-brown, 10%)
-				.accord__top
-					border-bottom-color: $yellow-brown
-				& + .accord 
-					&:hover
-						.accord__top
-							border-top-color: darken($yellow-brown, 10%)
-					.accord__top
-						border-top-color: $yellow-brown
-			.accord__top
-				background: $yellow-brown
-			.accord__block
-				border: 2px solid $yellow-brown
-				border-top: none
-			&:hover
-				.accord__top
-					background: darken($yellow-brown, 10%)
-		.btn_bord
-			&:hover
-				color: $yellow-brown
+		+step-colors($yellow-brown)
+	&.is-step2
+		+step-colors($purple)
+	&.is-step3
+		+step-colors($light-green)
+	&.is-step4
+		+step-colors($light-green2)
 
 // numb-step
 .numb-step
@@ -113,7 +185,7 @@ body.is-student
 	+rb
 
 // steps
-.steps
+.strides
 	width: 100%
 	+clr
 	.step:last-child
@@ -200,6 +272,7 @@ body.is-student
 	&__title
 		+lb
 	&__day
+		min-width: 35px
 		+lbd
 		text-transform: uppercase
 	&__day,
@@ -207,3 +280,43 @@ body.is-student
 		display: inline-block
 	.btn
 		min-width: 136px
+
+// postponed
+.postponed
+	.from,
+	.to,
+	.cancel
+		line-height: 1.3
+		font-size: 14px
+		display: inline-block
+	.cancel
+		font-size: 9px
+	.icon-arr-right
+		font-size: 8px
+
+// to
+.to,
+.bold
+	+lb
+	display: inline-block
+
+// appraisal
+.appraisal
+	.progress-table
+		tfoot
+			td
+				padding-top: 25px
+		tfoot tr:first-child td
+			padding-top: 12px
+	.date
+		+lr
+	.test
+		opacity: .5
+
+// tile
+.tile
+	margin-top: 25px
+	height: 180px
+	background: $yellow
+	&:first-child
+		margin-top: 0

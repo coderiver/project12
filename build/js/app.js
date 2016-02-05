@@ -2406,6 +2406,8 @@ $(document).ready(function() {
 			parent.addClass('is-active');
 			block.slideDown(300);
 		}
+		setTimeout(function() {header_bg();}, 350);
+		return false;
 	});
 	acord.each(function(){
 		var accord = $(this),
@@ -2448,6 +2450,14 @@ $(document).ready(function() {
 	}
 	header_bg();
 	$(window).resize(function(){
+		header_bg();
+	});
+
+	$(document).on('mousemove keydown scroll', function(){
+		header_bg();
+	});
+	$('body').trigger("mousemove");
+	$('body').on('click', function(){
 		header_bg();
 	});
 

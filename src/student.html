@@ -2,10 +2,87 @@
 <body class="is-student">
 <!-- BEGIN  out-->
 <div class="out">
-	//=include partials/sidebar-student.html
+	<!-- sidebar -->
+	<div class="sidebar js-sidebar">
+		<!-- logo -->
+		<a href="#" class="logo is-student"></a>
+		<!-- numb-step -->
+		<div class="numb-step">
+			<div class="numb-step__text">степ</div>
+			<div class="numb-step__item">1</div>
+		</div>
+	</div>
 	<!-- rightbar -->
 	<div class="rightbar is-step1 js-rightbar">
-		//=include partials/header_student.html 
+		<!-- header -->
+		<header class="header js-header">
+			<div class="header__bg js-header-bg" style="background-image: url('/img/header_bg.png')"></div>
+			<div class="header__in">
+				<div class="header__row">
+					<!-- stud-name -->
+					<div class="stud-name">
+						<p>Давиденко</p>
+						<p>Максим</p>
+					</div>
+					<!-- logout -->
+					<div class="logout">
+						<!-- lang -->
+						<ul class="lang">
+							<li><a href="#">en</a></li>
+							<li class="is-active"><a href="#">ua</a></li>
+						</ul>
+						<a href="#" class="logout__link">
+							<i class="icon icon-logout"></i>
+						</a>
+					</div>
+				</div>
+				<div class="header__row">
+					<!-- strides -->
+					<div class="strides">
+						<div class="step is-active">
+							<date class="date">з 5.06.15 по 5.09.15</date>
+							<div class="progress">
+								<div class="progress__in" style="width:35%;"></div>
+							</div>
+							<div class="step__bot">
+								<span>Степ 1</span> 
+								<span class="step__stat">(зараз)</span>
+							</div>
+						</div>
+						<div class="step">
+							<date class="date">з 5.06.15 по 5.09.15</date>
+							<div class="progress">
+								<div class="progress__in" style="width:0;"></div>
+							</div>
+							<div class="step__bot">
+								<span>Степ 2</span> 
+								<span class="step__stat">(зараз)</span>
+							</div>
+						</div>
+						<div class="step">
+							<date class="date">з 5.06.15 по 5.09.15</date>
+							<div class="progress">
+								<div class="progress__in" style="width:0;"></div>
+							</div>
+							<div class="step__bot">
+								<span>Степ 3</span> 
+								<span class="step__stat">(зараз)</span>
+							</div>
+						</div>
+						<div class="step">
+							<date class="date">з 5.06.15 по 5.09.15</date>
+							<div class="progress">
+								<div class="progress__in" style="width:0;"></div>
+							</div>
+							<div class="step__bot">
+								<span>Степ 4</span> 
+								<span class="step__stat">(зараз)</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
 		<!-- l -->
 		<div class="l">
 			<!-- l-col1 -->
@@ -45,7 +122,7 @@
 				</div>
 				<!-- accord -->
 				<div class="accord js-accord">
-					<div class="accord__top js-accord-top">
+					<div class="accord__top js-accord-top"> 
 						<div class="accord__tabl">
 							<span class="theme">Перенесені заняття</span>
 						</div>
@@ -81,14 +158,16 @@
 						</div>
 						<div class="row">
 							<span>У тебе лишилось ще 2 консультації </span>
-							<a href="#" class="btn btn_bord btn_little">ЗАПИСАТИСЬ</a>
+							<a href="#" class="btn btn_bord btn_little btn_color">ЗАПИСАТИСЬ</a>
 						</div>
 						<!-- alert -->
 						<div class="alert">
-							<div class="alert__ico">
-								<i class="icon "></i>
+							<div class="alert__in">
+								<div class="alert__ico">
+									<i class="icon icon-exclamation"></i>
+								</div>
+								<div class="alert__wrap">Відмінити консультацію можна не пізніше, ніж за 12 годин до її початку.</div>
 							</div>
-							<div class="alert__wrap">Відмінити консультацію можна не пізніше, ніж за 12 годин до її початку.</div>
 						</div>
 					</div>
 				</div>
@@ -113,10 +192,10 @@
 						<div class="item">
 							<div class="row">
 								<span class="bold">СР, 14 червня, 18.00–19.00</span>
-								<div class="status">Йду</div>
 							</div>
-							<div class="row">
+							<div class="row is-mod"> 
 								<span>Present perfect and present continuous</span>
+								<a href="#" class="btn btn_bord btn_little btn_color">ХОЧУ ПІТИ</a>
 							</div>
 						</div>
 						<div class="item">
@@ -125,6 +204,16 @@
 							</div>
 							<div class="row">
 								<span>Present perfect and present continuous</span>
+								<span class="no-places">НЕМАЄ МІСЦЬ</span>
+							</div>
+							<!-- alert -->
+							<div class="alert">
+								<div class="alert__in">
+									<div class="alert__ico">
+										<i class="icon icon-exclamation"></i>
+									</div>
+									<div class="alert__wrap">Відмінити консультацію можна не пізніше, ніж за 12 годин до її початку.</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -137,13 +226,79 @@
 						</div>
 					</div>
 					<div class="accord__block js-accord-block">
-						Lorem ipsum dolor sit amet.
+						<div class="row">
+							<span>ПН, 12 червня</span>
+							<span class="lesson">Урок 1</span>
+						</div>
+						<div class="row">
+							<span>ВТ, 16 вересня</span>
+							<span class="lesson">Урок 9</span>
+						</div>
+						<div class="row">
+							<span>ПТ, 22 листопада</span>
+							<span class="lesson">Урок 10</span>
+						</div>
 					</div>
 				</div>
 			</div>
 			<!-- l-col2 -->
 			<div class="l-col2">
-				
+				<!-- appraisal -->
+				<div class="appraisal">
+					<table class="progress-table">
+						<thead>
+							<tr>
+								<th colspan="3">Успiшнiсть за степ 1</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<date class="date">27.10.15</date>
+								</td>
+								<td>
+									<span class="test">тест 1</span>
+								</td>
+								<td>
+									<span class="point is-filled">190 (А)</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<date class="date">28.11.15</date>
+								</td>
+								<td>
+									<span class="test">тест 2</span>
+								</td>
+								<td>
+									<span class="point is-filled">190 (А)</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<date class="date">26.12.15</date>
+								</td>
+								<td>
+									<span class="test">тест 3</span>
+								</td>
+								<td>
+									<span class="point is-filled">190 (А)</span>
+								</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td>Відвідуваність</td>
+								<td></td>
+								<td>
+									<span class="attendance">90%</span>
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+				<!-- tile -->
+				<div class="tile"></div>
 			</div>
 		</div>
 	</div>

@@ -3,7 +3,7 @@
 	position: relative
 	+clr
 	&.is-init
-		position: fixed
+		position: relative
 		overflow: initial
 		z-index: 5
 		left: 0
@@ -61,6 +61,15 @@
 		+clr
 		&:first-child
 			margin-top: 0
+	&__icons
+		position: absolute
+		top: -40px
+		left: 0
+		right: 67px
+		height: 56px
+		text-align: right
+		font-size: 0
+		overflow: hidden
 	.logo
 		position: absolute
 		top: 0
@@ -72,6 +81,21 @@
 			margin-left: -68px
 	.logout
 		float: right
+
+// step-ico
+.step-ico
+	margin: -50px 0 0 32px
+	padding-top: 58px
+	width: 105px
+	height: 105px
+	vertical-align: top
+	border-radius: 50%
+	overflow: hidden
+	text-align: center
+	background: $yellow
+	display: inline-block
+	&:first-child
+		margin-left: 0
 
 // menu
 .menu

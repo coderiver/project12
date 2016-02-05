@@ -1,18 +1,6 @@
-<!doctype html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Template</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="format-detection" content="telephone=no">
-	<meta name="theme-color" content="#fff">
-	<link rel="stylesheet" media="all" href="css/style.css" >
-	<link rel="stylesheet" media="all" href="css/jquery-ui.min.css" >
-	<script src="js/app.js"></script>
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3"></script>
-</head>
+//=include partials/head.html 
 <body class="is-student">
-<!-- BEGIN  out-->
+<!-- BEGIN  out--> 
 <div class="out">
 	<!-- sidebar -->
 	<div class="sidebar js-sidebar">
@@ -21,11 +9,11 @@
 		<!-- numb-step -->
 		<div class="numb-step">
 			<div class="numb-step__text">степ</div>
-			<div class="numb-step__item">1</div>
+			<div class="numb-step__item">2</div>
 		</div>
 	</div>
 	<!-- rightbar -->
-	<div class="rightbar is-step1 js-rightbar">
+	<div class="rightbar is-step2 js-rightbar">
 		<!-- header -->
 		<header class="header js-header">
 			<div class="header__bg js-header-bg" style="background-image: url('/img/header_bg.png')"></div>
@@ -51,20 +39,20 @@
 				<div class="header__row">
 					<!-- strides -->
 					<div class="strides">
-						<div class="step is-active">
+						<div class="step">
 							<date class="date">з 5.06.15 по 5.09.15</date>
 							<div class="progress">
-								<div class="progress__in" style="width:35%;"></div>
+								<div class="progress__in" style="width:100%;"></div>
 							</div>
 							<div class="step__bot">
 								<span>Степ 1</span> 
 								<span class="step__stat">(зараз)</span>
 							</div>
 						</div>
-						<div class="step">
+						<div class="step is-active">
 							<date class="date">з 5.06.15 по 5.09.15</date>
 							<div class="progress">
-								<div class="progress__in" style="width:0;"></div>
+								<div class="progress__in" style="width:35%;"></div>
 							</div>
 							<div class="step__bot">
 								<span>Степ 2</span> 
@@ -92,6 +80,13 @@
 							</div>
 						</div>
 					</div>
+				</div>
+				<div class="header__icons">
+					<a href="#" class="step-ico">
+						<div class="icon">
+							<img src="img/svg/step-icon1.svg" alt="img">
+						</div>
+					</a>
 				</div>
 			</div>
 		</header>
@@ -260,7 +255,7 @@
 					<table class="progress-table">
 						<thead>
 							<tr>
-								<th colspan="3">Успiшнiсть за степ 1</th>
+								<th colspan="3">Успiшнiсть за степ 2</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -306,6 +301,11 @@
 									<span class="attendance">90%</span>
 								</td>
 							</tr>
+							<tr>
+								<td colspan="3">
+									<a href="#" class="btn btn_bord btn_little btn_color">УСПІШНІСТЬ ЗА ПОПЕРЕДНІЙ СТЕП</a>
+								</td>
+							</tr>
 						</tfoot>
 					</table>
 				</div>
@@ -316,17 +316,6 @@
 	</div>
 </div>
 <!-- END out--> 
-<!-- footer -->
-<footer class="footer">
-	<div class="footer__in">
-		<!-- dev -->
-		<div class="dev">
-			<p>Дизайнер — Марта Гожа</p>
-			<p>Разработка —  UaMaster</p>
-		</div>
-		<!-- copy -->
-		<div class="copy">&copy; Project 12</div>
-	</div>
-</footer>
+//=include partials/footer.html 
 </body>
 </html>

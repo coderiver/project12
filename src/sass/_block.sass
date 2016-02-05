@@ -187,6 +187,27 @@
 	&_small
 		padding: 6px 17px
 
+// cancel
+.cancel
+	+lb
+	font-size: 9px
+	line-height: 1.3
+	text-transform: uppercase
+	will-change: opacity
+	transform: translate3d(0,0,0)
+	transition: opacity .2s
+	opacity: .5
+	border-bottom: 1px solid $black
+	display: inline-block
+	&:hover
+		opacity: 1
+
+.lesson
+	+lb
+	text-align: left
+	text-align-last: left
+	display: inline-block
+
 // field
 .field
 	margin-top: 23px
@@ -709,6 +730,50 @@ h1,
 		&:hover
 			border-color: $black
 
+// progress-table
+.progress-table
+	table-layout: fixed
+	border-bottom: 1px solid $yellow
+	&:last-child
+		border-bottom: none
+		tfoot
+			tr
+				&:first-child
+					td
+						padding-top: 0
+				&:last-child
+					td
+						padding-bottom: 0
+	td
+		padding: 4px 0
+		width: 33.3%
+		text-align: center
+		vertical-align: top
+		&:first-child
+			text-align: left
+		&:last-child
+			text-align: right
+	thead th
+		padding-bottom: 12px
+		+lb
+		font-size: 16px
+		text-align: left
+	tfoot
+		td
+			width: 50%
+		tr
+			&:first-child
+				td
+					padding-top: 26px
+			&:last-child
+				td
+					padding-bottom: 30px
+	.date
+		+lb
+	.btn
+		margin-top: -5px
+		width: 100%
+
 // accord
 .accord
 	& + .accord
@@ -794,6 +859,35 @@ h1,
 .date
 	&.is-bold
 		+lb
+
+// alert
+.alert
+	margin: 28px auto 0
+	max-width: 348px
+	font-size: 12px
+	&__in
+		width: 100%
+		border: 2px solid
+		display: table
+	&__ico
+		position: relative
+		width: 35px	
+		text-align: center
+		border-right: 2px solid
+		.icon
+			position: absolute
+			top: 50%
+			left: 50%
+			font-size: 24px
+			color: $white
+			transform: translate(-50%,-50%)
+	&__ico,
+	&__wrap
+		vertical-align: top
+		display: table-cell
+	&__wrap
+		padding: 8px 18px
+		color: $black
 
 // tablet block
 .is-hide-tablet
