@@ -23,6 +23,42 @@
 		z-index: 100
 		.popup__in
 			transform: scale(1) 
+	.popup__step
+		.title-medium
+			margin-bottom: 8px
+	.label
+		margin-bottom: 12px
+	.input
+		text-align: center
+		height: 42px
+		font-size: 18px
+		color: $black
+	.title-medium
+		margin: 35px 0 45px
+		&:first-child
+			margin-top: 0
+	.title-petty
+		margin: 35px 0 11px
+	// &__wrap
+	// 	width: 350px
+	.step-ico
+		padding-top: 30px
+		height: 153px
+		width: 153px
+		line-height: 88px
+	.soc
+		margin-top: 35px
+		a
+			color: $white
+			height: 31px
+			width: 31px
+			line-height: 28px
+			&:hover
+				color: $black
+			.icon
+				font-size: 18px
+			.icon-vk
+				font-size: 11px
 	&__in
 		position: relative
 		margin-top: 100px
@@ -122,18 +158,162 @@
 				margin-top: 0
 		.btn
 			padding: 8px 15px
-	.label
-		margin-bottom: 12px
-	.input
-		text-align: center
-		height: 42px
-		font-size: 18px
-		color: $black
-	.title-medium
+	&__gratters
+		margin: 0 auto
+		max-width: 232px
+		font-size: 16px
+	&__icon
 		margin: 35px 0 45px
+	&__rating
+		font-size: 18px
+		+lbd
+	&__calendar
+		.title-medium
+			margin-bottom: 25px
+		.calendar
+			margin: 35px 0 0
+	&__postpone
+		margin-top: 60px
+		display: none
+		.plan__wrap
+			&:before
+				display: none
+		.plan
+			margin-top: 32px
+	&__calendar + .notif,
+	&__postpone + .notif
+		margin-top: 68px
+		.title-wee
+			margin-bottom: 20px
+
+// plan
+.plan
+	font-size: 14px
+	text-align: left
+	.title-medium
+		margin-bottom: 20px
+		text-align: center
+	.title-bord
+		margin-bottom: 25px
+	.radiobutton
+		margin-top: 16px
+		display: block
 		&:first-child
 			margin-top: 0
-	.title-petty
-		margin: 35px 0 11px
-	// &__wrap
-	// 	width: 350px
+	.cancel
+		margin-left: 50px
+	.plan__butt
+		margin-top: 40px
+		text-align: right
+		.btn.btn_bord
+			border-width: 3px
+			border-radius: 5px
+			transition: border-color .2s
+			&:hover
+				color: $black
+				border-color: $yellow
+				background: transparent
+			&:disabled
+				&:hover
+					border-color: $black
+	&__wrap
+		position: relative
+		margin-top: 20px
+		+clr
+		&:before
+			position: absolute
+			content: ''
+			top: 0
+			bottom: 0
+			left: 50%
+			width: 1px
+			background: $yellow
+		.title-wee
+			min-height: 19px
+			margin-bottom: 15px
+	&__left
+		float: left
+		padding-right: 32px
+		width: 50%
+		.title-bord
+			text-align: right
+	&__right
+		float: right
+		padding-left: 32px
+		width: 50%
+	&__days
+		font-size: 0
+		+justify
+		li
+			+lb
+			font-size: 14px
+			line-height: 1.4
+			text-transform: uppercase
+			vertical-align: top
+			user-select: none
+			transition: background .2s
+			background: $bg-tab
+			display: inline-block
+			&:hover,
+			&.is-active
+				background: $yellow
+		a
+			padding: 8px 8px
+			display: block
+	&__block
+		position: relative
+		padding-top: 30px
+		display: none
+		+clr
+		&:before
+			position: absolute
+			content: ''
+			top: 0
+			bottom: 20px
+			left: 50%
+			width: 1px
+			background: $yellow
+		& + .plan__butt
+			display: none
+		&.is-active
+			display: block
+			& + .plan__butt
+				display: block
+		.plan__left
+			padding-right: 20px
+		.notif,
+		.notif__img,
+		.notif__text
+			width: 100%
+			display: block
+		.notif__img
+			padding-right: 0
+			text-align: center
+		.notif__text
+			padding-top: 28px
+
+// notif
+.notif
+	p + p
+		margin-top: 12px
+	&__wrap
+		width: 100%
+		display: table
+	&__img
+		position: relative
+		width: 100px
+		padding-right: 25px
+		vertical-align: top
+		display: table-cell
+		+vertical
+		text-align: left
+		img
+			display: block
+	&__icon
+		vertical-align: middle
+		display: inline-block
+	&__text
+		padding-top: 15px
+		text-align: left
+		vertical-align: top
+		display: table-cell

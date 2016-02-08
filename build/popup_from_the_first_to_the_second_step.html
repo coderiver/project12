@@ -11,8 +11,8 @@
 	<script src="js/app.js"></script>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3"></script>
 </head>
-<body class="is-student">
-<!-- BEGIN  out--> 
+<body class="is-student is-hidden">
+<!-- BEGIN  out-->
 <div class="out">
 	<!-- sidebar -->
 	<div class="sidebar js-sidebar">
@@ -21,11 +21,11 @@
 		<!-- numb-step -->
 		<div class="numb-step">
 			<div class="numb-step__text">степ</div>
-			<div class="numb-step__item">3</div>
+			<div class="numb-step__item">1</div>
 		</div>
 	</div>
 	<!-- rightbar -->
-	<div class="rightbar is-step3 js-rightbar">
+	<div class="rightbar is-step1 js-rightbar">
 		<!-- header -->
 		<header class="header js-header">
 			<div class="header__bg js-header-bg" style="background-image: url('/img/header_bg.png')"></div>
@@ -51,10 +51,10 @@
 				<div class="header__row">
 					<!-- strides -->
 					<div class="strides">
-						<div class="step">
+						<div class="step is-active">
 							<date class="date">з 5.06.15 по 5.09.15</date>
 							<div class="progress">
-								<div class="progress__in" style="width:100%;"></div>
+								<div class="progress__in" style="width:35%;"></div>
 							</div>
 							<div class="step__bot">
 								<span>Степ 1</span> 
@@ -64,17 +64,17 @@
 						<div class="step">
 							<date class="date">з 5.06.15 по 5.09.15</date>
 							<div class="progress">
-								<div class="progress__in" style="width:100%;"></div>
+								<div class="progress__in" style="width:0;"></div>
 							</div>
 							<div class="step__bot">
 								<span>Степ 2</span> 
 								<span class="step__stat">(зараз)</span>
 							</div>
 						</div>
-						<div class="step is-active">
+						<div class="step">
 							<date class="date">з 5.06.15 по 5.09.15</date>
 							<div class="progress">
-								<div class="progress__in" style="width:35%;"></div>
+								<div class="progress__in" style="width:0;"></div>
 							</div>
 							<div class="step__bot">
 								<span>Степ 3</span> 
@@ -92,18 +92,6 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="header__icons">
-					<a href="#" class="step-ico">
-						<div class="icon">
-							<img src="img/svg/step-icon1.svg" alt="img">
-						</div>
-					</a>
-					<a href="#" class="step-ico">
-						<div class="icon">
-							<img src="img/svg/step-icon2.svg" alt="img">
-						</div>
-					</a>
 				</div>
 			</div>
 		</header>
@@ -268,11 +256,11 @@
 			<!-- l-col2 -->
 			<div class="l-col2">
 				<!-- appraisal -->
-				<div class="appraisal js-appraisal">
+				<div class="appraisal">
 					<table class="progress-table">
 						<thead>
 							<tr>
-								<th colspan="3">Успiшнiсть за степ 3</th>
+								<th colspan="3">Успiшнiсть за степ 1</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -312,41 +300,14 @@
 						</tbody>
 						<tfoot>
 							<tr>
-								<td colspan="2">Відвідуваність</td>
+								<td>Відвідуваність</td>
+								<td></td>
 								<td>
 									<span class="attendance">90%</span>
 								</td>
 							</tr>
-							<tr>
-								<td colspan="3">
-									<a href="#" class="btn btn_bord btn_little btn_color js-open-success">УСПІШНІСТЬ ЗА ПОПЕРЕДНІЙ СТЕП</a>
-								</td>
-							</tr>
 						</tfoot>
 					</table>
-					<div class="appraisal__item js-appraisal-item">
-						<table class="progress-table">
-							<thead>
-								<tr>
-									<th colspan="3">Успiшнiсть за степ 2</th>
-								</tr>
-							</thead>
-							<tfoot>
-								<tr>
-									<td colspan="2">Оцінка за степ</td>
-									<td>
-										<span class="point is-filled">190 (A)</span>
-									</td>
-								</tr>
-								<tr>
-									<td colspan="2">Відвідуваність</td>
-									<td>
-										<span class="attendance">90%</span>
-									</td>
-								</tr>
-							</tfoot>
-						</table>
-					</div>
 				</div>
 				<!-- tile -->
 				<div class="tile">
@@ -369,5 +330,46 @@
 		<div class="copy">&copy; Project 12</div>
 	</div>
 </footer>
+<!-- popup -->
+<div class="popup is-active js-popup">
+	<div class="popup__in">
+		<button class="popup__close js-popup-close"><i class="icon icon-close"></i></button>
+		<div class="popup__step">
+			<h3 class="title-medium">Максим!</h3>
+			<div class="popup__gratters">Вітаємо, з успішним закінченням Степа 1! </div>
+			<div class="popup__icon">
+				<div class="step-ico">
+					<div class="icon">
+						<img src="img/svg/step-icon1_big.svg" alt="img">
+					</div>
+				</div>
+			</div>
+			<div class="popup__rating">
+				<p>The greatest step is out the door.</p>
+				<p>Оцінка за фінальный тест — А (190)</p>
+			</div>
+			<div class="soc">
+				<div class="soc__left">
+					<div class="soc__text">
+						Розкажи друзям 
+						<br>про свої досягнення:
+					</div>
+					<div class="soc__check">
+						<label class="checkbox is-right">
+							<input type="checkbox">
+							<span>Не вказувати оцінку у пості</span>
+						</label>
+					</div>
+				</div>
+				<div class="soc__right">
+					<ul>
+						<li><a href="#"><span class="icon icon-vk"></span></a></li>
+						<li><a href="#"><span class="icon icon-f"></span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 </body>
 </html>

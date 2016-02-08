@@ -151,6 +151,8 @@ body.is-student
 			background: $color
 	.status
 		background: $color
+	.appraisal__item
+		border-color: $color
 
 .rightbar
 	&.is-step1
@@ -303,20 +305,55 @@ body.is-student
 // appraisal
 .appraisal
 	.progress-table
+		border-bottom: none
+		thead + tfoot
+			tr
+				&:first-child
+					td
+						padding-top: 0
 		tfoot
 			td
 				padding-top: 25px
-		tfoot tr:first-child td
-			padding-top: 12px
+		tfoot tr
+			&:first-child td
+				padding-top: 12px
+			&:last-child td
+				padding-bottom: 0
 	.date
 		+lr
 	.test
 		opacity: .5
+	&__item
+		margin: 0 -50px
+		padding: 25px 50px 0
+		border-top: 1px solid
+		display: none
+		&:first-child
+			border-top: none
+		.progress-table
+			tfoot
+				td
+					padding-top: 12px
 
 // tile
 .tile
 	margin-top: 25px
-	height: 180px
-	background: $yellow
 	&:first-child
 		margin-top: 0
+	.thisban
+		height: 180px
+		background: $yellow
+
+// set
+.set
+	margin-top: 25px
+	padding: 25px 50px 30px
+	text-align: center
+	border: 5px solid $yellow
+	&:first-child
+		margin-top: 0
+	.btn
+		margin-top: 25px
+		width: 100%
+	.title-petty
+		margin-bottom: 5px

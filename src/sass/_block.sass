@@ -150,7 +150,7 @@
 	+lb
 	font-size: 11px
 	text-transform: uppercase
-	transition: background .2s, color .2s
+	transition: background .2s, color .2s, opacity .2s
 	border-radius: 4px
 	letter-spacing: .1em
 	line-height: 1.3
@@ -161,6 +161,9 @@
 	&:hover
 		color: $black
 		background: transparent
+	&:disabled
+		opacity: .5
+		cursor: default
 	&_yellow
 		color: $black
 		border-color: $yellow
@@ -178,6 +181,16 @@
 		&:hover
 			color: $white
 			background: $black
+		&:disabled
+			&:hover
+				color: $black !important
+				background: transparent !important
+	&_yellow-all
+		border-color: $yellow
+		background: $yellow
+		&:hover
+			color: $black !important
+			background: transparent
 	&_r6
 		border-radius: 6px
 	&_little
@@ -198,6 +211,7 @@
 	transition: opacity .2s
 	opacity: .5
 	border-bottom: 1px solid $black
+	background: transparent
 	display: inline-block
 	&:hover
 		opacity: 1
@@ -239,6 +253,7 @@
 // soc
 .soc
 	font-size: 0
+	+clr
 	.icon
 		font-size: 25px
 		vertical-align: middle
@@ -274,12 +289,43 @@
 		&:hover
 			color: $black
 			background: transparent
+	&__left
+		float: left
+		width: 50%
+		font-size: 14px
+		text-align: right
+	&__right
+		float: right
+		padding-left: 17px
+		width: 50%
+		text-align: left
+		ul
+			li
+				margin-left: 7px
+				&:first-child
+					margin-left: 0
+	&__check
+		margin-top: 15px
+		.checkbox
+			font-size: 10px
+	&__text
+		line-height: 1.2
 
 // checkbox
 .checkbox
 	position: relative
 	cursor: pointer
 	user-select: none
+	&.is-right
+		span
+			padding-left: 0
+			padding-right: 20px
+			&:before
+				left: auto
+				right: 0
+			&:after
+				left: auto
+				right: -2px
 	input,
 	span:before
 		position: absolute
@@ -308,6 +354,51 @@
 			top: 0
 			left: 2px
 			+svg(checkbox-arr, 10,7)
+			display: none
+
+// radiobutton
+.radiobutton
+	position: relative
+	user-select: none
+	cursor: pointer
+	input,
+	span:before
+		position: absolute
+		top: 2px
+		left: 0
+		width: 14px
+		height: 14px
+		border-radius: 50%
+	input
+		z-index: 2
+		opacity: 0
+		cursor: pointer
+		&:checked
+			& + span:after
+				transform: scale(1)
+	span
+		padding-left: 30px
+		display: block
+		&:before
+			content: ''
+			border: 1px solid $black
+		&:after
+			position: absolute
+			content: ''
+			top: 6px
+			left: 4px
+			width: 6px
+			height: 6px
+			transform: translate3d(0,0,0)
+			transform: scale(0)
+			transition: transform .2s
+			border-radius: 50%
+			background: $black
+	&__text
+		font-size: 11px
+		opacity: .5
+		&:before,
+		&:after
 			display: none
 
 
@@ -385,6 +476,10 @@ h1,
 	font-size: 16px
 	+lb
 
+.title-wee
+	font-size: 14px
+	+lb
+
 .title-square
 	position: relative
 	padding: 10px 10px 10px 25px
@@ -402,6 +497,12 @@ h1,
 		background: $yellow
 	span
 		position: relative
+
+.title-bord
+	padding-bottom: 8px
+	+lb
+	font-size: 14px
+	border-bottom: 5px solid $yellow
 
 // mouse
 .mouse
@@ -773,6 +874,22 @@ h1,
 	.btn
 		margin-top: -5px
 		width: 100%
+
+// step-ico
+.step-ico
+	width: 105px
+	height: 105px
+	line-height: 102px
+	vertical-align: top
+	border-radius: 50%
+	overflow: hidden
+	text-align: center
+	background: $yellow
+	display: inline-block
+	&:first-child
+		margin-left: 0
+	.icon
+		vertical-align: middle
 
 // accord
 .accord

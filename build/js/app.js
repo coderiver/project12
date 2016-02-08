@@ -2431,11 +2431,36 @@ $(document).ready(function() {
 	});
 
 	// datepicker
+	var eventDates = [[2016,02,25], [2016,02,27], [2016,02,28], [2016,02,21], [2016,02,14], [2016,02,07]];
 	$('.js-calendar').datepicker({
 		dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
 		monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 
-			'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
+			'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+		beforeShowDay: setDays,
+			onSelect: function(date) {
+				var thisEl = $(this);
+				setTimeout(function () {
+					var el = thisEl.find('.ui-state-active');
+					if (!el.parent().hasClass('is-select')) {
+						el.parents('.js-popup')
+						.find('.js-postpone-block')
+						.slideDown(300);
+					}
+				}, 1);
+			}
 	});
+
+	function setDays(date) {
+		for (i = 0; i < eventDates.length; i++) {
+			if (date.getFullYear() == eventDates[i][0]
+				&& date.getMonth() == eventDates[i][1] - 1
+				&& date.getDate() == eventDates[i][2]) {
+				return [true, 'is-select', eventDates[i][3]];
+			}
+		}
+		return [true, ''];
+	};
+
 
 	// header-bg
 	function header_bg() {
@@ -2460,5 +2485,54 @@ $(document).ready(function() {
 	$('body').on('click', function(){
 		header_bg();
 	});
+	$('.js-open-success').on('click', function(){
+		var this_ 	= $(this),
+			parent 	= this_.parents('.js-appraisal'),
+			item 	= parent.find('.js-appraisal-item');
+		this_.slideUp(300);
+		setTimeout(function() {
+			item.slideDown(400);
+		}, 600);
+		return false;
+	});
 
+	// plan form
+	$('.js-plan').each(function(){
+		var parent 	= $(this),
+			btn 	= parent.find('.js-plan-submit'),
+			input 	= parent.find('input[type="radio"]');
+		if (input.is('checked')){
+			btn.prop('disabled', false);
+		}
+		else {
+			btn.prop('disabled', true);
+
+		}
+	});
+
+	$('.js-plan input[type="radio"]').on('change', function(){
+		var input 		= $(this),
+			parent 		= input.parents('.js-plan'),
+			btn 		= parent.find('.js-plan-submit');
+		if (input.is(':checked')){
+			btn.prop('disabled', false);
+		}
+		else {
+			btn.prop('disabled', true);
+		}
+	});
+
+	$('.js-plan-cancel').on('click', function(){
+		var btn 		= $(this),
+			parent 		= btn.parents('.js-plan'),
+			submit 		= parent.find('.js-plan-submit'),
+			input 		= parent.find('input[type="radio"]');
+		submit.prop('disabled', true);
+		input.prop('checked', false);
+		if (!input.is(':checked')){
+			btn.parents('.js-postpone-block').slideUp(300);
+		}
+	});
+
+	
 });
