@@ -120,6 +120,9 @@
 			+svg(logo_960,109,23)
 	&.is-student
 		+svg(logo-student,84,91)
+		+r(960)
+			float: left
+			+svg(logo-student-small,109,23)
 
 // input
 .input
@@ -213,6 +216,8 @@
 	border-bottom: 1px solid $black
 	background: transparent
 	display: inline-block
+	+r(768)
+		font-size: 12px
 	&:hover
 		opacity: 1
 
@@ -294,14 +299,26 @@
 		width: 50%
 		font-size: 14px
 		text-align: right
+		+r(768)
+			width: 100%
+			text-align: center
 	&__right
 		float: right
 		padding-left: 17px
 		width: 50%
 		text-align: left
+		+r(768)
+			width: 100%
+			text-align: center
 		ul
+			+r(768)
+				margin-top: 40px
 			li
 				margin-left: 7px
+				+r(768)
+					margin-left: 35px
+					&:first-child
+						margin-left: 0
 				&:first-child
 					margin-left: 0
 	&__check
@@ -361,6 +378,9 @@
 	position: relative
 	user-select: none
 	cursor: pointer
+	+r(768)
+		font-size: 18px
+		display: block
 	input,
 	span:before
 		position: absolute
@@ -374,11 +394,27 @@
 		opacity: 0
 		cursor: pointer
 		&:checked
-			& + span:after
-				transform: scale(1)
-	span
+			& + span
+				+r(768)
+					+lb
+					background: $white
+					.radiobutton__text
+						+lr
+				&:after
+					transform: scale(1)
+	& > span
 		padding-left: 30px
 		display: block
+		+clr
+		+r(768)
+			padding: 15px 0
+			width: 100%
+			background: $bg-rad
+			display: table
+		&:before,
+		&:after
+			+r(768)
+				display: none
 		&:before
 			content: ''
 			border: 1px solid $black
@@ -394,6 +430,14 @@
 			transition: transform .2s
 			border-radius: 50%
 			background: $black
+		span
+			padding-left: 0
+			display: block
+			+r(768)
+				width: 50%
+				display: table-cell
+				&:first-child
+					padding-left: 10px
 	&__text
 		font-size: 11px
 		opacity: .5
@@ -479,6 +523,8 @@ h1,
 .title-wee
 	font-size: 14px
 	+lb
+	+r(768)
+		font-size: 24px
 
 .title-square
 	position: relative
@@ -503,6 +549,8 @@ h1,
 	+lb
 	font-size: 14px
 	border-bottom: 5px solid $yellow
+	+r(768)
+		font-size: 16px
 
 // mouse
 .mouse
@@ -886,10 +934,17 @@ h1,
 	text-align: center
 	background: $yellow
 	display: inline-block
+	+r(768)
+		width: 60px
+		height: 60px
+		line-height: 55px
 	&:first-child
 		margin-left: 0
 	.icon
 		vertical-align: middle
+		img
+			+r(768)
+				width: 80%
 
 // accord
 .accord
@@ -982,6 +1037,10 @@ h1,
 	margin: 28px auto 0
 	max-width: 348px
 	font-size: 12px
+	+r(768)
+		max-width: 100%
+		margin: 15px -20px 18px 0
+		font-size: 14px
 	&__in
 		width: 100%
 		border: 2px solid

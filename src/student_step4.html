@@ -6,6 +6,18 @@
 	<div class="sidebar js-sidebar">
 		<!-- logo -->
 		<a href="#" class="logo is-student"></a>
+		<button class="nav-btn js-open-nav" type="button"><span></span></button>
+		<div class="nav-block js-nav">
+			<!-- outlet -->
+			<div class="outlet">
+				<a href="#" class="outlet__link"><span>Вихід</span></a>
+				<a href="#" class="outlet__link"><span>Змінити пароль</span></a>
+			</div>
+			<ul class="lang">
+				<li><a href="#">en</a></li>
+				<li class="is-active"><a href="#">ua</a></li>
+			</ul>
+		</div>
 		<!-- numb-step -->
 		<div class="numb-step">
 			<div class="numb-step__text">степ</div>
@@ -81,7 +93,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="header__icons">
+				<div class="header__icons is-hide-mobile">
 					<a href="#" class="step-ico">
 						<div class="icon">
 							<img src="img/svg/step-icon1.svg" alt="img">
@@ -107,6 +119,28 @@
 		</header>
 		<!-- l -->
 		<div class="l">
+			<div class="step-icons">
+				<a href="#" class="step-ico">
+					<div class="icon">
+						<img src="img/svg/step-icon1.svg" alt="img">
+					</div>
+				</a>
+				<a href="#" class="step-ico is-step-ico-2">
+					<div class="icon">
+						<img src="img/svg/step-icon2.svg" alt="img">
+					</div>
+				</a>
+				<a href="#" class="step-ico is-step-ico-3">
+					<div class="icon">
+						<img src="img/svg/step-icon3.svg" alt="img">
+					</div>
+				</a>
+				<a href="#" class="step-ico">
+					<div class="icon">
+						<img src="img/svg/step-icon4.svg" alt="img">
+					</div>
+				</a>
+			</div>
 			<!-- l-col1 -->
 			<div class="l-col1">
 				<!-- tract -->
@@ -118,28 +152,20 @@
 				</div>
 				<!-- timesheet -->
 				<div class="timesheet">
-					<div class="timesheet__row">
-						<div class="timesheet__left">
-							<div class="timesheet__title">Розклад твоїх занять</div>
+					<div class="timesheet__left">
+						<div class="timesheet__title">Розклад твоїх занять</div>
+						<div class="timesheet__row">
+							<div class="timesheet__day">ПН</div>
+							<div class="timesheet__time">з 19:00 до 21:30</div>
 						</div>
-						<div class="timesheet__right">
-							<a href="#" class="btn btn_bord btn_little">ЗМІНИТИ РОЗКЛАД</a>
+						<div class="timesheet__row">
+							<div class="timesheet__day">ЧТ</div>
+							<div class="timesheet__time">з 18:00 до 20:30</div>
 						</div>
 					</div>
-					<div class="timesheet__row">
-						<div class="timesheet__left">
-							<div class="timesheet__wrap">
-								<div class="timesheet__day">ПН</div>
-								<div class="timesheet__time">з 19:00 до 21:30</div>
-							</div>
-							<div class="timesheet__wrap">
-								<div class="timesheet__day">ЧТ</div>
-								<div class="timesheet__time">з 18:00 до 20:30</div>
-							</div>
-						</div>
-						<div class="timesheet__right">
-							<a href="#" class="btn btn_bord btn_little">ПЕРЕНЕСТИ 1 УРОК</a>
-						</div>
+					<div class="timesheet__right">
+						<a href="#" class="btn btn_bord btn_little">ЗМІНИТИ РОЗКЛАД</a>
+						<a href="#" class="btn btn_bord btn_little">ПЕРЕНЕСТИ 1 УРОК</a>
 					</div>
 				</div>
 				<!-- accord -->
@@ -179,7 +205,7 @@
 							<a href="#" class="cancel">ВІДМІНИТИ</a>
 						</div>
 						<div class="row">
-							<span>У тебе лишилось ще 2 консультації </span>
+							<span class="remained-cons">У тебе лишилось ще 2 консультації </span>
 							<a href="#" class="btn btn_bord btn_little btn_color">ЗАПИСАТИСЬ</a>
 						</div>
 						<!-- alert -->
@@ -204,10 +230,11 @@
 						<div class="item">
 							<div class="row">
 								<span class="bold">СР, 14 червня, 18.00–19.00</span>
-								<div class="status">Йду</div>
+								<div class="status is-hide-mobile">Йду</div>
 							</div>
 							<div class="row">
 								<span>Present perfect and present continuous</span>
+								<div class="status is-show-mobile">Йду</div>
 								<a href="#" class="cancel">ВІДМІНИТИ</a>
 							</div>
 						</div>

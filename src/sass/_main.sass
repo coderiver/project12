@@ -304,8 +304,10 @@ body.is-home
 			margin-bottom: 50px
 	.title-small
 		margin-top: 75px
-		+r(768)
+		+r(1400)
 			margin-top: 40px
+		// +r(768)
+		// 	margin-top: 40px
 	&__in
 		position: relative
 		@extend %in
@@ -315,7 +317,7 @@ body.is-home
 	&__bot
 		margin-top: 80px
 		+clr
-		+r(768)
+		+r(1400)
 			margin-top: 30px
 	&__left
 		float: left
@@ -345,6 +347,10 @@ body.is-home
 			padding: 0
 			width: 100%
 			text-align: center
+	
+// #office
+#office
+	margin-bottom: -20px
 
 // slider
 .slider
@@ -352,6 +358,8 @@ body.is-home
 	margin: 93px auto 0
 	padding: 0 88px
 	max-width: 1192px
+	+r(1400)
+		margin-top: 30px
 	+r(768)
 		margin-top: 30px
 		padding: 0 15px

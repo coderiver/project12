@@ -4,13 +4,14 @@ body.is-teacher
 		height: 100%
 		display: inline-table
 		+r(960)
+			height: auto
 			display: block
 
 
 // nav-block
 .nav-block
 	+r(960)
-		position: absolute
+		position: fixed
 		top: 50px
 		left: 0
 		right: 0
@@ -85,6 +86,15 @@ body.is-teacher
 	display: none
 	+r(960)
 		display: block
+	&.is-active
+		&:before
+			transform: translateY(8px) rotate(45deg)
+		&:after
+			transform: translateY(-12px) rotate(-45deg)
+		span
+			transform: translate3d(0,0,0)
+			transform: scale(0)
+			opacity: 0
 	&:before,
 	&:after,
 	span

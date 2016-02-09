@@ -5,20 +5,52 @@ body.is-student
 		height: 100%
 		display: inline-table
 		+r(960)
+			height: auto
 			display: block
 	.sidebar
 		padding-top: 40px
 		background: $yellow
+		+r(960)
+			padding: 12px 42px
+			text-align: left
+		.lang
+			float: none
+			margin-top: 80px
+			text-align: center
+			display: none
+			+r(960)
+				display: block
+			li
+				margin: 0 0 0 45px
+				font-size: 21px
+				display: inline-block
+				&:first-child
+					margin-left: 0
+	.nav-btn
+		&:before,
+		&:after,
+		span
+			background: $black
 	.rightbar
 		position: relative
+		+r(768)
+			padding-top: 60px
 	.logo
 		margin-left: -8px
 	.header
 		position: static
 		padding: 0 138px 30px 103px
 		max-width: 1200px
+		+r(1200)
+			padding: 0 35px 30px 35px
+		+r(960)
+			text-align: center
+			display: block
 		&__in
 			padding: 0
+		.logout
+			+r(960)
+				display: none
 	.logout
 		color: $white
 		.logout__link
@@ -44,10 +76,21 @@ body.is-student
 	.l
 		padding: 35px 138px 35px 103px
 		max-width: 1200px
+		+r(1200)
+			padding: 35px 35px 35px 35px
+		+r(960)
+			padding: 72px 22px 45px
+		+r(768)
+			padding-top: 50px
 	.l-col1
 		width: 54%
+		+r(960)
+			width: 100%
 	.l-col2
 		width: 46%
+		+r(960)
+			margin-top: 48px
+			width: 100%
 	.accord
 		font-size: 16px
 		&:hover + .accord .accord__top
@@ -67,8 +110,21 @@ body.is-student
 			padding: 25px 30px
 			border: 2px solid 
 			border-top: none
+			+r(768)
+				padding: 15px 18px
 		.theme
 			font-size: 16px
+			+r(768)
+				font-size: 18px
+
+		.row
+			+r(768)
+				margin: 0 -18px
+				padding: 28px 18px 18px
+				border-top: 1px solid 
+				&:first-child
+					padding-top: 13px
+					border-top: none
 	.row
 		margin-top: 10px
 		+justify
@@ -76,6 +132,8 @@ body.is-student
 			.btn
 				margin-top: -16px
 				vertical-align: top
+				+r(768)
+					margin-top: 20px
 		&:first-child
 			margin-top: 0
 		span,
@@ -83,20 +141,50 @@ body.is-student
 			line-height: 1.3
 			font-size: 14px
 			display: inline-block
+			+r(768)
+				font-size: 16px
 	.item
 		margin: 0 -30px
 		padding: 25px 30px
 		border-top: 1px solid
+		+clr
+		+r(768)
+			margin: 0 -20px
+			padding: 22px 18px
 		&:first-child
 			margin-top: -25px
 		&:last-child
 			margin-bottom: -25px
+		+r(768)
+			.row
+				margin: 0
+				padding: 9px 0 0
+				text-align: center
+				border-top: none 
+				&:first-child
+					padding-top: 9px
+		span
+			+r(768)
+				text-align: center
+				text-align-last: center
+				display: block
+		.alert
+			margin-top: 30px
 	.status
 		margin-top: -25px
 		padding: 5px 12px 19px
 		+lb
 		vertical-align: top
 		display: inline-block
+		+r(768)
+			float: left
+			margin: 18px 0 0 -18px
+			padding: 10px 15px
+			width: 50%
+			text-align: right
+			text-align-last: right
+			& + .cancel
+				margin-top: 30px
 	.no-places
 		margin-top: -10px
 		+lb
@@ -104,8 +192,37 @@ body.is-student
 		font-size: 9px
 		vertical-align: top
 		opacity: .5
+		+r(768)
+			margin-top: 25px
 	.lesson
 		min-width: 70px
+	.nav-block
+		padding: 126px 58px
+		+r(400)
+			padding: 80px 30px
+	.outlet__link
+		margin-top: 57px
+		padding: 26px 48px
+		width: 100%
+		height: auto
+		font-size: 24px
+		line-height: 1.3
+		border-left: none
+		&:first-child
+			margin-top: 0
+	.remained-cons	
+		+r(768)
+			text-align: left
+			text-align-last: initial
+			width: 50%
+			& + .btn
+				vertical-align: bottom
+	.appraisal
+		padding: 22px 30px
+		.btn.btn_color
+			+r(768)
+				padding: 10px 6px
+
 
 // mixin to step colors
 =step-colors($color)
@@ -151,7 +268,8 @@ body.is-student
 			background: $color
 	.status
 		background: $color
-	.appraisal__item
+	.appraisal__item,
+	.accord .row
 		border-color: $color
 
 .rightbar
@@ -171,6 +289,8 @@ body.is-student
 	right: 0
 	bottom: 0
 	+rb
+	+r(960)
+		display: none
 	&__item
 		font-size: 165px
 		line-height: .78
@@ -185,6 +305,8 @@ body.is-student
 	line-height: 1.3
 	color: $white
 	+rb
+	+r(960)
+		float: none
 
 // steps
 .strides
@@ -208,12 +330,24 @@ body.is-student
 	+lb
 	font-size: 16px
 	text-align: center
+	+clr
+	+r(768)
+		float: none
+		width: 100%
+		font-size: 18px
+		display: none
+	+r(400)
+		font-size: 15px
 	&.is-active
+		+r(768)
+			display: block
 		.date
 			opacity: 1
 			z-index: 1
 		.step__stat
 			display: inline
+			+r(768)
+				display: none
 		.step__bot
 			opacity: 1
 	&:first-child
@@ -222,9 +356,16 @@ body.is-student
 		color: inherit
 		opacity: 0
 		z-index: -1
+		+r(768)
+			float: right
+	.progress
+		+r(768)
+			display: none
 	&__bot
 		color: $white
 		opacity: .6
+		+r(768)
+			float: left
 	&__stat
 		display: none
 
@@ -258,6 +399,7 @@ body.is-student
 	margin-top: 14px
 	padding: 30px 35px
 	font-size: 16px
+	+clr
 	&:first-child
 		margin-top: 0
 	&__row
@@ -267,11 +409,20 @@ body.is-student
 			margin-top: 0
 	&__left
 		float: left
+		width: calc(100% - 136px)
+		+r(479)
+			width: 100%
 	&__right
 		float: right
+		width: 136px
+		+r(479)
+			margin-top: 18px
+			width: 100%
+			text-align: center
 		.btn
-			margin-top: 5px
+			margin-top: 15px
 	&__title
+		margin-bottom: 20px
 		+lb
 	&__day
 		min-width: 35px
@@ -293,8 +444,35 @@ body.is-student
 		display: inline-block
 	.cancel
 		font-size: 9px
+		line-height: 1.2
+		+r(768)
+			font-size: 12px
+		+r(480)
+			order: 2
+			flex: 1 auto
+	.from
+		+r(480)
+			order: 1
+			flex: 100 auto
+	.to
+		+r(480)
+			margin-top: 8px
+			order: 4
+			width: 100%
 	.icon-arr-right
 		font-size: 8px
+		+r(480)
+			display: none
+	.row
+		+r(480)
+			-moz-text-align-last: initial !important
+			text-align-last: initial !important
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-flow: row wrap
 
 // to
 .to,
@@ -328,6 +506,9 @@ body.is-student
 		padding: 25px 50px 0
 		border-top: 1px solid
 		display: none
+		+r(768)
+			padding: 25px 30px 0
+			margin: 0 -30px
 		&:first-child
 			border-top: none
 		.progress-table
@@ -338,6 +519,8 @@ body.is-student
 // tile
 .tile
 	margin-top: 25px
+	+r(768)
+		margin-top: 40px
 	&:first-child
 		margin-top: 0
 	.thisban
@@ -350,10 +533,34 @@ body.is-student
 	padding: 25px 50px 30px
 	text-align: center
 	border: 5px solid $yellow
+	+r(768)
+		padding: 25px 10px 30px
 	&:first-child
 		margin-top: 0
 	.btn
 		margin-top: 25px
 		width: 100%
+		+r(768)
+			margin: 25px 30px 0
+			width: auto
+			display: block
 	.title-petty
 		margin-bottom: 5px
+
+// step-icons
+.step-icons
+	margin: -48px 0 13px
+	text-align: right
+	display: none
+	+r(768)
+		display: block
+	.step-ico
+		margin-left: 7px
+		&:first-child
+			margin-left: 0
+		&.is-step-ico-2
+			padding-top: 10px
+			img
+				width: 85%
+		&.is-step-ico-3
+			padding-top: 6px

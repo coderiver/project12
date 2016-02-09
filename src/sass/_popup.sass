@@ -46,6 +46,9 @@
 		height: 153px
 		width: 153px
 		line-height: 88px
+		+r(768)
+			img
+				width: auto
 	.soc
 		margin-top: 35px
 		a
@@ -53,12 +56,20 @@
 			height: 31px
 			width: 31px
 			line-height: 28px
+			+r(768)
+				width: 57px
+				height: 57px
+				line-height: 55px
 			&:hover
 				color: $black
 			.icon
 				font-size: 18px
+				+r(768)
+					font-size: 36px
 			.icon-vk
 				font-size: 11px
+				+r(768)
+					font-size: 19px
 	&__in
 		position: relative
 		margin-top: 100px
@@ -76,6 +87,8 @@
 			margin-top: 50px
 		+r(768)
 			padding: 45px 40px 40px
+		+r(480)
+			padding: 45px 30px 40px
 	&__close
 		position: absolute
 		top: -38px
@@ -172,6 +185,13 @@
 			margin-bottom: 25px
 		.calendar
 			margin: 35px 0 0
+		.title-wee
+			+r(768)
+				font-size: 16px
+		div.ui-datepicker .ui-datepicker-prev span.ui-icon, 
+		div.ui-datepicker .ui-datepicker-next span.ui-icon
+			+r(768)
+				left: 0
 	&__postpone
 		margin-top: 60px
 		display: none
@@ -180,6 +200,9 @@
 				display: none
 		.plan
 			margin-top: 32px
+		.plan__right
+			+r(768)
+				margin-top: 2px
 	&__calendar + .notif,
 	&__postpone + .notif
 		margin-top: 68px
@@ -190,14 +213,32 @@
 .plan
 	font-size: 14px
 	text-align: left
+	+r(768)
+		margin: 0 -40px
+		text-align: center
 	.title-medium
 		margin-bottom: 20px
 		text-align: center
+		+r(768)
+			padding: 0 10px
+			font-size: 36px
+			& + .plan__wrap 
+				& > .plan__left
+					& > .title-bord
+						&:first-child
+							margin-top: 30px
 	.title-bord
 		margin-bottom: 25px
+		+r(768)
+			margin-bottom: 20px
+			display: inline-block
 	.radiobutton
 		margin-top: 16px
 		display: block
+		+r(768)
+			margin-top: 2px
+			&:first-child
+				margin-top: 0
 		&:first-child
 			margin-top: 0
 	.cancel
@@ -205,10 +246,14 @@
 	.plan__butt
 		margin-top: 40px
 		text-align: right
+		+r(768)
+			text-align: center
 		.btn.btn_bord
 			border-width: 3px
 			border-radius: 5px
 			transition: border-color .2s
+			+r(768)
+				margin: 0 50px
 			&:hover
 				color: $black
 				border-color: $yellow
@@ -216,6 +261,9 @@
 			&:disabled
 				&:hover
 					border-color: $black
+		.cancel
+			+r(768)
+				margin: 36px 50px 0
 	&__wrap
 		position: relative
 		margin-top: 20px
@@ -228,22 +276,42 @@
 			left: 50%
 			width: 1px
 			background: $yellow
+			+r(768)
+				display: none
 		.title-wee
 			min-height: 19px
-			margin-bottom: 15px
+			margin: 35px 0 15px
+			+r(768)
+				margin-bottom: 22px
 	&__left
 		float: left
 		padding-right: 32px
 		width: 50%
+		+r(768)
+			float: none
+			padding: 0
+			width: 100%
 		.title-bord
 			text-align: right
 	&__right
 		float: right
 		padding-left: 32px
 		width: 50%
+		+r(768)
+			float: none
+			margin-top: 54px
+			padding: 0
+			width: 100%
 	&__days
 		font-size: 0
 		+justify
+		+r(768)
+			margin-bottom: 60px
+			padding: 0 70px
+		& + .plan__block
+			+r(768)
+				margin-top: 0
+				padding-top: 0
 		li
 			+lb
 			font-size: 14px
@@ -265,14 +333,18 @@
 		padding-top: 30px
 		display: none
 		+clr
-		&:before
-			position: absolute
-			content: ''
-			top: 0
-			bottom: 20px
-			left: 50%
-			width: 1px
-			background: $yellow
+		+r(768)
+			margin-top: 20px
+		// &:before
+		// 	position: absolute
+		// 	content: ''
+		// 	top: 0
+		// 	bottom: 20px
+		// 	left: 50%
+		// 	width: 1px
+		// 	background: $yellow
+		// 	+r(768)
+		// 		display: none
 		& + .plan__butt
 			display: none
 		&.is-active
@@ -291,6 +363,14 @@
 			text-align: center
 		.notif__text
 			padding-top: 28px
+			+r(768)
+				margin-top: 55px
+				padding-top: 0
+				font-size: 16px
+				text-align: center
+		.notif
+			+r(768)
+				padding: 0 30px
 
 // notif
 .notif
@@ -299,6 +379,8 @@
 	&__wrap
 		width: 100%
 		display: table
+		+r(768)
+			display: block
 	&__img
 		position: relative
 		width: 100px
@@ -307,6 +389,11 @@
 		display: table-cell
 		+vertical
 		text-align: left
+		+r(768)
+			padding-right: 0
+			width: 100%
+			text-align: center
+			display: block
 		img
 			display: block
 	&__icon
@@ -317,3 +404,6 @@
 		text-align: left
 		vertical-align: top
 		display: table-cell
+		+r(768)
+			text-align: center
+			display: block

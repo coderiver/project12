@@ -7,6 +7,7 @@ $(document).ready(function() {
 		$('body').removeClass('is-hidden');
 		$('.js-header').removeClass('is-init');
 		$('.js-nav').removeClass('is-active');
+		$('.js-open-nav').removeClass('is-active');
 	});
 
 	// open menu
@@ -24,7 +25,7 @@ $(document).ready(function() {
 	if ($('.js-menu').length) {
 		$(document).scroll(function() {    
 			var scroll 	= $(this).scrollTop(),
-				hWind 	= $(window).height() - 46,
+				hWind 	= $(window).height() - 16,
 				menu 	= $('.js-menu');
 			if (scroll >= hWind) {
 				menu.addClass('is-white');
@@ -79,7 +80,8 @@ $(document).ready(function() {
 		var this_ 	= $(this),
 			parent 	= $('.js-sidebar'),
 			nav 	= $('.js-nav');
-			
+		
+		this_.toggleClass('is-active');
 		nav.toggleClass('is-active');
 		$('body').toggleClass('is-hidden');
 

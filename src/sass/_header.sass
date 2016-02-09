@@ -14,9 +14,8 @@
 		margin-right: 117px
 		+clr
 		+r(1024)
-			margin-right: 60px
+			margin-right: 30px
 		+r(768)
-			margin-right: 32px
 			height: auto
 	.menu
 		position: fixed
@@ -74,6 +73,10 @@
 	&__row
 		margin-top: 25px
 		+clr
+		+r(768)
+			margin-top: 40px
+			&:first-child
+				margin-top: 0
 		&:first-child
 			margin-top: 0
 	&__icons
@@ -159,7 +162,9 @@
 		+lr
 		font-size: 24px
 		+r(1024)
+			left: -70px
 			font-size: 21px
+			text-align: right
 		+r(768)
 			position: fixed
 			top: 50px
@@ -183,7 +188,11 @@
 			width: 35px
 			height: 5px
 			background: $black
+			+r(1024)
+				left: auto
+				right: 0
 			+r(768)
+				right: auto
 				left: 50%
 				top: 135px
 				bottom: auto
@@ -206,9 +215,11 @@
 						display: block
 	a
 		transition: font-weight .2s, font-family .2s
-		&:hover,
 		&.selected
 			+lb
+		&:hover
+			+rm(1024)
+				+lb
 
 // lang
 .lang
