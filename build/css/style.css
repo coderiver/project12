@@ -1010,8 +1010,8 @@ div.ui-datepicker thead th { padding: 0.56em 0.3em; }
  .rightbar{ width: -webkit-calc(100% - 140px); width: calc(100% - 140px); }
  .sidebar{ width: 140px; } }
 @media only screen and (max-width: 1200px){
- .textbook__left{ padding-right: 30px; padding: 0; width: 37%; }
- .textbook__right{ width: 60%; }
+ .textbook__left{ padding-right: 30px; padding: 0; width: 38%; }
+ .textbook__right{ width: 59%; }
  body.is-student .header{ padding: 0 35px 30px 35px; }
  body.is-student .l{ padding: 35px 35px 35px 35px; } }
 @media only screen and (max-width: 1024px){
