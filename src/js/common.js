@@ -94,6 +94,7 @@ $(document).ready(function() {
 		$(this).parents('.js-login')
 		.find('.js-popup')
 		.toggleClass('is-active');
+		$('.js-chenge-password').removeClass('is-active');
 
 		$('body').addClass('is-hidden');
 
@@ -104,6 +105,19 @@ $(document).ready(function() {
 	$('.js-login').on('click', function(event){
 		event.stopPropagation();
 	});
+
+	$('.js-forgot-password').on('click', function() {
+		var this_ = $(this),
+			parent = this_.parents('.js-popup'),
+			parents = this_.parents('.js-login'),
+			popup = parents.find('.js-chenge-password');
+		parent.removeClass('is-active');
+		setTimeout(function() {
+			popup.addClass('is-active'); 
+		}, 400);
+		return false;
+	});
+
 
 	// open video
 	$('.js-btn-video').on('click', function(){
@@ -393,6 +407,5 @@ $(document).ready(function() {
 			btn.parents('.js-postpone-block').slideUp(300);
 		}
 	});
-
 	
 });

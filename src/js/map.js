@@ -376,5 +376,17 @@ $(document).ready(function() {
             ]
         
     });
+
+    function mapheight() {
+            var body = $('body'),
+                wHeight = $(window).height();
+        if (body.hasClass('is-map')) {
+            body.find('#map').height(wHeight);
+        }
+    } mapheight();
+
+    $(window).resize(function(){
+        mapheight();
+    });
     
 });

@@ -104,8 +104,9 @@
 					transform: translateY(-10px) rotate(-45deg)
 			span
 				transform: translate3d(0,0,0)
-				transform: scale(0)
 				opacity: 0
+				&:before
+					transform: scale(0)
 		.menu__list
 			visibility: visible
 			opacity: 1
@@ -116,8 +117,11 @@
 		padding-top: 35px
 		width: 35px
 		+lb
+		font-size: 11px
 		line-height: 1
 		background: transparent
+		-webkit-font-smoothing: antialiased
+		font-smoothing: antialiased
 		+r(769)
 			padding-top: 25px
 			width: 30px
