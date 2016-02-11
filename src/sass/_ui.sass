@@ -69,6 +69,7 @@ div.ui-datepicker
 		span,
 		a
 			padding: 1em .2em .2em .2em
+			transition: background .2s, border-color .2s
 			text-align: left
 		td
 			&.is-select
@@ -76,6 +77,9 @@ div.ui-datepicker
 				a
 					cursor: default
 					color: $white
+			.ui-state-hover
+				background: $white 
+				border-color: transparent 
 	thead
 		text-transform: uppercase
 		font-size: 9px

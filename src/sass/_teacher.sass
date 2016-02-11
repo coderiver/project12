@@ -197,9 +197,20 @@ body.is-teacher
 
 // poin
 .point
+	width: 100%
 	font-size: 14px
-	color: $c_point
+	color: $black
+	text-align: center
+	text-transform: uppercase
 	+lb
+	vertical-align: middle
+	display: inline-block
+	&:focus
+		&::placeholder
+			font-size: 0
+	&::placeholder
+		color: $c_point
+		text-transform: lowercase
 	&.is-filled
 		color: $black
 		text-transform: uppercase

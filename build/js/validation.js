@@ -14,6 +14,7 @@ $(document).ready(function() {
 	}).val('+380 (__) ___-__-__');
 
 	$('.js-input-password').inputmask({
-		mask: '9999999'
+		mask: '9999999',
+		showMaskOnHover: false
 	});
 });
