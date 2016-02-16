@@ -1084,3 +1084,40 @@ h1,
 	display: none !important
 	+r(768)
 		display: block !important
+
+// 
+.text
+	position: relative
+	display: inline-block
+	width: 600px
+	height: 40px
+	font-family: 'Open Sans', sans-serif
+	font-weight: 600
+	font-size: 40px
+	z-index: 200
+
+	p
+		display: inline-block
+		vertical-align: top
+		margin: 0
+
+.word
+	position: absolute
+	width: auto
+	opacity: 0
+
+.letter
+	display: inline-block
+	position: relative
+	float: left
+	padding: 0
+	transform: translateZ(25px)
+	transform-origin: 50% 50% 25px
+	&.outs
+		transform: rotateX(90deg)
+		transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+	&.behind
+		transform: rotateX(-90deg)
+	&.in
+		transform: rotateX(0deg)
+		transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275)

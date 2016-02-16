@@ -399,6 +399,16 @@ h1, .title-middle { font-family: "Lato-Black", Arial, sans-serif; font-size: 36p
 
 .is-show-mobile { display: none !important; }
 
+.text { position: relative; display: inline-block; width: 600px; height: 40px; font-family: "Open Sans", sans-serif; font-weight: 600; font-size: 40px; z-index: 200; }
+.text p { display: inline-block; vertical-align: top; margin: 0; }
+
+.word { position: absolute; width: auto; opacity: 0; }
+
+.letter { display: inline-block; position: relative; float: left; padding: 0; -webkit-transform: translateZ(25px); transform: translateZ(25px); -webkit-transform-origin: 50% 50% 25px; -ms-transform-origin: 50% 50% 25px; transform-origin: 50% 50% 25px; }
+.letter.outs { -webkit-transform: rotateX(90deg); transform: rotateX(90deg); -webkit-transition: -webkit-transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19); transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+.letter.behind { -webkit-transform: rotateX(-90deg); transform: rotateX(-90deg); }
+.letter.in, .letter.header__in, .letter.footer__in, .letter.textbook__in { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); -webkit-transition: -webkit-transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275); transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+
 .header { position: relative; *zoom: 1; }
 .header:after { content: " "; display: table; clear: both; }
 .header.is-init { position: relative; overflow: initial; z-index: 5; left: 0; right: 0; }
@@ -489,6 +499,8 @@ body.is-home .header:before { position: absolute; content: ""; top: 0; left: 50%
 .top__in { position: relative; margin: 4.2% auto 0; padding: 0 30px; max-width: 790px; text-align: center; z-index: 4; }
 
 .top__in .video { margin-top: 60px; }
+
+.top__text { width: 1200px; }
 
 .video__btn { font-size: 0; -webkit-transition: -webkit-transform 0.2s, color 0.2s; transition: transform 0.2s, color 0.2s; background: transparent; }
 .video__btn:hover { color: #fff; }
