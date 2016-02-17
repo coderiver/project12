@@ -2236,21 +2236,21 @@ $(window).load(function() {
 	}
 
 
-	// setTimeout(function() {
-	// 	var tl = new TimelineMax({ repeat: 0 })
-	// 		.addLabel('row1:word1')
-	// 		.add(ruWordAnim(row1.find('.ru').find('.word:first').find('.char'), dur), 'row1:word1')
-	// 		.add(enWordAnim(row1.find('.en').find('.word:first').find('.char'), dur), 'row1:word1+=' + delay2)
-	// 		.addLabel('row1:word2', '+=' + pause)
-	// 		.add(ruWordAnim(row1.find('.ru').find('.word:last').find('.char'), dur2), 'row1:word2')
-	// 		.add(enWordAnim(row1.find('.en').find('.word:last').find('.char'), dur2), 'row1:word2+=' + delay2)
-	// 		.addLabel('row2:word1')
-	// 		.add(ruWordAnim(row2.find('.ru').find('.word:first').find('.char'), dur), 'row2:word1')
-	// 		.add(enWordAnim(row2.find('.en').find('.word:first').find('.char'), dur), 'row2:word1+=' + delay2)
-	// 		.addLabel('row2:word2')
-	// 		.add(ruWordAnim(row2.find('.ru').find('.word:last').find('.char'), dur2), 'row2:word2')
-	// 		.add(enWordAnim(row2.find('.en').find('.word:last').find('.char'), dur2), 'row2:word2+=' + delay2)
-	// }, 2000);
+	setTimeout(function() {
+		var tl = new TimelineMax({ repeat: 0 })
+			.addLabel('row1:word1')
+			.add(ruWordAnim(row1.find('.ru').find('.word:first').find('.char'), dur), 'row1:word1')
+			.add(enWordAnim(row1.find('.en').find('.word:first').find('.char'), dur), 'row1:word1+=' + delay2)
+			.addLabel('row1:word2', '+=' + pause)
+			.add(ruWordAnim(row1.find('.ru').find('.word:last').find('.char'), dur2), 'row1:word2')
+			.add(enWordAnim(row1.find('.en').find('.word:last').find('.char'), dur2), 'row1:word2+=' + delay2)
+			.addLabel('row2:word1')
+			.add(ruWordAnim(row2.find('.ru').find('.word:first').find('.char'), dur), 'row2:word1')
+			.add(enWordAnim(row2.find('.en').find('.word:first').find('.char'), dur), 'row2:word1+=' + delay2)
+			.addLabel('row2:word2')
+			.add(ruWordAnim(row2.find('.ru').find('.word:last').find('.char'), dur2), 'row2:word2')
+			.add(enWordAnim(row2.find('.en').find('.word:last').find('.char'), dur2), 'row2:word2+=' + delay2)
+	}, 2000);
 
 	
 });
