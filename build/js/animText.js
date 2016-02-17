@@ -56,54 +56,23 @@ $(window).load(function() {
 			opacity: 1
 		}, delay);
 	}
-	// function ruWordAnim2(chars, dur) {
-	// 	return TweenMax.staggerFromTo(chars, dur, {
-	// 		rotationX: -90,
-	// 		opacity: 0
-	// 	}, {
-	// 		rotationX: 0,
-	// 		opacity: 1
-	// 	}, delay);
-	// }
 
-	// function enWordAnim2(chars, dur) {
-	// 	return TweenMax.staggerFromTo(chars, dur, {
-	// 		rotationX: 0,
-	// 		opacity: 1
-	// 	}, {
-	// 		rotationX: 90,
-	// 		opacity: 0
-	// 	}, delay);
-	// }
 
-	setTimeout(function() {
-		var tl = new TimelineMax({ repeat: 0 })
-			.addLabel('row1:word1')
-			.add(ruWordAnim(row1.find('.ru').find('.word:first').find('.char'), dur), 'row1:word1')
-			.add(enWordAnim(row1.find('.en').find('.word:first').find('.char'), dur), 'row1:word1+=' + delay2)
-			.addLabel('row1:word2', '+=' + pause)
-			.add(ruWordAnim(row1.find('.ru').find('.word:last').find('.char'), dur2), 'row1:word2')
-			.add(enWordAnim(row1.find('.en').find('.word:last').find('.char'), dur2), 'row1:word2+=' + delay2)
-			.addLabel('row2:word1')
-			.add(ruWordAnim(row2.find('.ru').find('.word:first').find('.char'), dur), 'row2:word1')
-			.add(enWordAnim(row2.find('.en').find('.word:first').find('.char'), dur), 'row2:word1+=' + delay2)
-			.addLabel('row2:word2')
-			.add(ruWordAnim(row2.find('.ru').find('.word:last').find('.char'), dur2), 'row2:word2')
-			.add(enWordAnim(row2.find('.en').find('.word:last').find('.char'), dur2), 'row2:word2+=' + delay2)
-
-			// .addLabel('row1:word1')
-			// .add(ruWordAnim2(row1.find('.ru').find('.word:first').find('.char'), dur2), 'row1:word1')
-			// .add(enWordAnim2(row1.find('.en').find('.word:first').find('.char'), dur2), 'row1:word1+=' + delay2)
-			// .addLabel('row1:word2', '+=' + pause)
-			// .add(ruWordAnim2(row1.find('.ru').find('.word:last').find('.char'), dur), 'row1:word2')
-			// .add(enWordAnim2(row1.find('.en').find('.word:last').find('.char'), dur), 'row1:word2+=' + delay2)
-			// .addLabel('row2:word1')
-			// .add(ruWordAnim2(row2.find('.ru').find('.word:first').find('.char'), dur), 'row2:word1')
-			// .add(enWordAnim2(row2.find('.en').find('.word:first').find('.char'), dur), 'row2:word1+=' + delay2)
-			// .addLabel('row2:word2')
-			// .add(ruWordAnim2(row2.find('.ru').find('.word:last').find('.char'), dur), 'row2:word2')
-			// .add(enWordAnim2(row2.find('.en').find('.word:last').find('.char'), dur), 'row2:word2+=' + delay2);
-	}, 2000);
+	// setTimeout(function() {
+	// 	var tl = new TimelineMax({ repeat: 0 })
+	// 		.addLabel('row1:word1')
+	// 		.add(ruWordAnim(row1.find('.ru').find('.word:first').find('.char'), dur), 'row1:word1')
+	// 		.add(enWordAnim(row1.find('.en').find('.word:first').find('.char'), dur), 'row1:word1+=' + delay2)
+	// 		.addLabel('row1:word2', '+=' + pause)
+	// 		.add(ruWordAnim(row1.find('.ru').find('.word:last').find('.char'), dur2), 'row1:word2')
+	// 		.add(enWordAnim(row1.find('.en').find('.word:last').find('.char'), dur2), 'row1:word2+=' + delay2)
+	// 		.addLabel('row2:word1')
+	// 		.add(ruWordAnim(row2.find('.ru').find('.word:first').find('.char'), dur), 'row2:word1')
+	// 		.add(enWordAnim(row2.find('.en').find('.word:first').find('.char'), dur), 'row2:word1+=' + delay2)
+	// 		.addLabel('row2:word2')
+	// 		.add(ruWordAnim(row2.find('.ru').find('.word:last').find('.char'), dur2), 'row2:word2')
+	// 		.add(enWordAnim(row2.find('.en').find('.word:last').find('.char'), dur2), 'row2:word2+=' + delay2)
+	// }, 2000);
 
 	
 });

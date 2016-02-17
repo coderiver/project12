@@ -1121,31 +1121,3 @@ h1,
 // 	&.in
 // 		transform: rotateX(0deg)
 // 		transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275)
-
-.text
-	position: relative
-	text-transform: uppercase
-	text-align: left
-	&:first-child
-		right: -40px
-	.char 
-		font-size: 36px
-		+lb
-		min-width: 10px
-		display: inline-block
-		backface-visibility: hidden
-		transform-style: preserve-3d
-		transform-origin: 50% 50% -15px
-	.word
-		perspective: 900px
-		vertical-align: top
-		display: inline-block
-	.row 
-		position: relative
-		margin: 0
-		&.en 
-			position: absolute
-			&:first-child
-				.char 
-					position: relative
-					transform: rotateX(-90deg)

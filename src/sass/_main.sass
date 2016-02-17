@@ -53,6 +53,7 @@ body.is-home
 		z-index: 4
 		+r(768)
 			margin: 13.2% auto 0
+			padding: 0 15px
 		+r(1400)
 			+rh(775)
 				margin-top: -.20%
@@ -68,6 +69,43 @@ body.is-home
 	&__text
 		display: inline-block
 		transform: translateX(30px)
+		+r(768)
+			transform: translateX(20px)
+		+r(380)
+			transform: translateX(0)
+
+// text
+.text
+	position: relative
+	text-transform: uppercase
+	text-align: left
+	&:first-child
+		right: -40px
+		+r(768)
+			right: -20px
+	.char 
+		font-size: 36px
+		+lb
+		min-width: 10px
+		display: inline-block
+		backface-visibility: hidden
+		transform-style: preserve-3d
+		transform-origin: 50% 50% -15px
+		+r(768)
+			font-size: 24px
+	.word
+		perspective: 900px
+		vertical-align: top
+		display: inline-block
+	.row 
+		position: relative
+		margin: 0
+		&.en 
+			position: absolute
+			&:first-child
+				.char 
+					position: relative
+					transform: rotateX(-90deg)
 
 // video
 .video
