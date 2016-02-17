@@ -6,6 +6,8 @@
 //=include lib/jquery.inputmask.js
 //=include lib/jquery.form-validator.min.js
 //=include lib/ddscrollspy.js
+//=include lib/TimelineMax.min.js
 //=include map.js
 //=include validation.js
+//=include animText.js
 //=include common.js

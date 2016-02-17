@@ -399,15 +399,13 @@ h1, .title-middle { font-family: "Lato-Black", Arial, sans-serif; font-size: 36p
 
 .is-show-mobile { display: none !important; }
 
-.text { position: relative; display: inline-block; width: 600px; height: 40px; font-family: "Open Sans", sans-serif; font-weight: 600; font-size: 40px; z-index: 200; }
-.text p { display: inline-block; vertical-align: top; margin: 0; }
-
-.word { position: absolute; width: auto; opacity: 0; }
-
-.letter { display: inline-block; position: relative; float: left; padding: 0; -webkit-transform: translateZ(25px); transform: translateZ(25px); -webkit-transform-origin: 50% 50% 25px; -ms-transform-origin: 50% 50% 25px; transform-origin: 50% 50% 25px; }
-.letter.outs { -webkit-transform: rotateX(90deg); transform: rotateX(90deg); -webkit-transition: -webkit-transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19); transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
-.letter.behind { -webkit-transform: rotateX(-90deg); transform: rotateX(-90deg); }
-.letter.in, .letter.header__in, .letter.footer__in, .letter.textbook__in { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); -webkit-transition: -webkit-transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275); transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+.text { position: relative; text-transform: uppercase; text-align: left; }
+.text:first-child { right: -40px; }
+.text .char { font-size: 36px; font-family: "Lato-Black", Arial, sans-serif; min-width: 10px; display: inline-block; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; -webkit-transform-origin: 50% 50% -15px; -ms-transform-origin: 50% 50% -15px; transform-origin: 50% 50% -15px; }
+.text .word { -webkit-perspective: 900px; perspective: 900px; vertical-align: top; display: inline-block; }
+.text .row { position: relative; margin: 0; }
+.text .row.en { position: absolute; }
+.text .row.en:first-child .char { position: relative; -webkit-transform: rotateX(-90deg); transform: rotateX(-90deg); }
 
 .header { position: relative; *zoom: 1; }
 .header:after { content: " "; display: table; clear: both; }
@@ -500,7 +498,7 @@ body.is-home .header:before { position: absolute; content: ""; top: 0; left: 50%
 
 .top__in .video { margin-top: 60px; }
 
-.top__text { width: 1200px; }
+.top__text { display: inline-block; -webkit-transform: translateX(30px); -ms-transform: translateX(30px); transform: translateX(30px); }
 
 .video__btn { font-size: 0; -webkit-transition: -webkit-transform 0.2s, color 0.2s; transition: transform 0.2s, color 0.2s; background: transparent; }
 .video__btn:hover { color: #fff; }
