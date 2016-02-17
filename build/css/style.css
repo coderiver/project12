@@ -414,7 +414,7 @@ h1, .title-middle { font-family: "Lato-Black", Arial, sans-serif; font-size: 36p
 .header .step-ico { margin: -50px 0 0 32px; padding-top: 58px; line-height: 1; }
 .header__in { position: relative; }
 .header__left { float: left; }
-.header__bg { position: absolute; top: 0; left: 0; background-repeat: no-repeat; background-size: cover; background-position: 50% 0; }
+.header__bg { position: absolute; top: 0; right: 0; background-repeat: no-repeat; background-size: cover; background-position: 50% 0; }
 .header__bg:before { position: absolute; content: ""; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(42, 42, 42, 0.85); }
 .header__row { margin-top: 25px; *zoom: 1; }
 .header__row:after { content: " "; display: table; clear: both; }
@@ -858,6 +858,7 @@ body.is-student .nav-block { padding: 126px 58px; }
 body.is-student .outlet__link { margin-top: 57px; padding: 26px 48px; width: 100%; height: auto; font-size: 24px; line-height: 1.3; border-left: none; }
 body.is-student .outlet__link:first-child { margin-top: 0; }
 body.is-student .appraisal { padding: 22px 30px; }
+body.is-student .footer { position: relative; margin-top: -60px; }
 
 .rightbar.is-step1 .header, .rightbar.is-step1 .alert { color: #ffe6a9; }
 .rightbar.is-step1 .tract, .rightbar.is-step1 .timesheet, .rightbar.is-step1 .alert__ico { background: #ffe6a9; }
@@ -924,7 +925,7 @@ body.is-student .appraisal { padding: 22px 30px; }
 .rightbar.is-step4 .status { background: #a8e2bb; }
 .rightbar.is-step4 .appraisal__item, .rightbar.is-step4 .accord .row { border-color: #a8e2bb; }
 
-.numb-step { position: absolute; left: 0; right: 0; bottom: 0; font-family: "RobotoSlab-Bold", Arial, sans-serif; }
+.numb-step { position: absolute; left: 0; right: 0; bottom: 60px; font-family: "RobotoSlab-Bold", Arial, sans-serif; }
 .numb-step__item { font-size: 165px; line-height: 0.78; }
 .numb-step__text { font-size: 36px; }
 

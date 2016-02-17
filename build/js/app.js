@@ -2235,7 +2235,6 @@ $(window).load(function() {
 		}, delay);
 	}
 
-
 	setTimeout(function() {
 		var tl = new TimelineMax({ repeat: 0 })
 			.addLabel('row1:word1')
@@ -2252,7 +2251,6 @@ $(window).load(function() {
 			.add(enWordAnim(row2.find('.en').find('.word:last').find('.char'), dur2), 'row2:word2+=' + delay2)
 	}, 2000);
 
-	
 });
 $(document).ready(function() {
 
