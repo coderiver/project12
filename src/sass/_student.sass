@@ -8,6 +8,7 @@ body.is-student
 			height: auto
 			display: block
 	.sidebar
+		position: relative
 		padding-top: 40px
 		background: $yellow
 		+r(960)
@@ -33,6 +34,8 @@ body.is-student
 			background: $black
 	.rightbar
 		position: relative
+		+r(1280)
+			padding-left: 0
 		+r(768)
 			padding-top: 60px
 	.logo
@@ -222,9 +225,9 @@ body.is-student
 		.btn.btn_color
 			+r(768)
 				padding: 10px 6px
-	.footer 
-		position: relative
-		margin-top: -60px
+	// .footer 
+	// 	position: relative
+	// 	margin-top: -60px
 
 
 // mixin to step colors
@@ -290,7 +293,7 @@ body.is-student
 	position: absolute
 	left: 0
 	right: 0
-	bottom: 60px
+	bottom: 0
 	+rb
 	+r(960)
 		display: none
@@ -505,8 +508,8 @@ body.is-student
 	.test
 		opacity: .5
 	&__item
-		margin: 0 -50px
-		padding: 25px 50px 0
+		margin: 0 -30px
+		padding: 25px 30px 0
 		border-top: 1px solid
 		display: none
 		+r(768)
