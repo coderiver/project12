@@ -343,8 +343,13 @@ $(document).ready(function() {
 			hHeight = $('.js-header').height() + 70;
 	 	if (block.length){
 	 		block
-	 		.width(wWidth)
+	 		.width(wWidth + 18)
 	 		.height(hHeight);
+	 		if (wWidth < 960) {
+	 			block
+	 			.width(wWidth)
+	 			.height(hHeight);
+	 		}
 	 	}
 	}
 	header_bg();
