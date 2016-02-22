@@ -2529,8 +2529,8 @@ $(document).ready(function() {
 			block.slideUp(300);
 		}
 		else {
-			acord.removeClass('is-active');
-			acordBlock.slideUp(300);
+			// acord.removeClass('is-active');
+			// acordBlock.slideUp(300);
 			parent.addClass('is-active');
 			block.slideDown(300);
 		}
@@ -2562,8 +2562,8 @@ $(document).ready(function() {
 	var eventDates = [[2016,02,25], [2016,02,27], [2016,02,28], [2016,02,21], [2016,02,14], [2016,02,07]];
 	$('.js-calendar').datepicker({
 		dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
-		monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 
-			'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+		monthNames: ['Січень', 'Лютий', 'Березень', 'Квітень', 'Травень', 'Червень', 
+			'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень'],
 		beforeShowDay: setDays,
 			onSelect: function(date) {
 				var thisEl = $(this);

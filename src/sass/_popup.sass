@@ -38,6 +38,7 @@
 		color: $black
 	.title-medium
 		margin: 35px 0 45px
+		+rb
 		&:first-child
 			margin-top: 0
 	.title-petty
@@ -73,6 +74,11 @@
 				font-size: 11px
 				+r(768)
 					font-size: 19px
+	.progress-table
+		td
+			&:last-child
+				.point
+					text-align: right
 	&__in
 		position: relative
 		margin-top: 100px

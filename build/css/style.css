@@ -591,7 +591,7 @@ body.is-home .header:before { position: absolute; content: ""; top: 0; left: 50%
 .popup .popup__step .title-medium { margin-bottom: 8px; }
 .popup .label { margin-bottom: 12px; }
 .popup .input { text-align: center; height: 42px; font-size: 18px; color: #000; }
-.popup .title-medium { margin: 35px 0 45px; }
+.popup .title-medium { margin: 35px 0 45px; font-family: "RobotoSlab-Bold", Arial, sans-serif; }
 .popup .title-medium:first-child { margin-top: 0; }
 .popup .title-petty { margin: 35px 0 11px; }
 .popup .step-ico { padding-top: 30px; height: 153px; width: 153px; line-height: 88px; }
@@ -600,6 +600,7 @@ body.is-home .header:before { position: absolute; content: ""; top: 0; left: 50%
 .popup .soc a:hover { color: #000; }
 .popup .soc a .icon { font-size: 18px; }
 .popup .soc a .icon-vk { font-size: 11px; }
+.popup .progress-table td:last-child .point { text-align: right; }
 .popup__in { position: relative; margin-top: 100px; padding: 55px 80px 80px; width: 100%; max-width: 513px; font-size: 14px; vertical-align: top; display: inline-block; background: #fff; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-transition: -webkit-transform 0.4s; transition: transform 0.4s; -webkit-transform: scale(0.4); -ms-transform: scale(0.4); transform: scale(0.4); }
 .popup__close { position: absolute; top: -38px; right: 0; color: #fff; font-size: 0; will-chenge: opacity; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-transition: opacity 0.2s; transition: opacity 0.2s; background: transparent; }
 .popup__close:hover { opacity: 0.7; }
@@ -747,6 +748,7 @@ body.is-home .header:before { position: absolute; content: ""; top: 0; left: 50%
   75% { -webkit-transform: translateY(5%); transform: translateY(5%); }
   100% { -webkit-transform: translateY(0); transform: translateY(0); } }
 body.is-teacher .out { width: 100%; height: 100%; display: inline-table; }
+body.is-teacher .l > .title-large { text-transform: uppercase; }
 
 .nav { position: relative; font-size: 12px; }
 .nav:before, .nav:after { position: absolute; content: ""; left: 50%; margin-left: -webkit-calc(-35px / 2); margin-left: calc(-35px / 2); width: 35px; height: 5px; background: #000; display: none; }
@@ -963,7 +965,7 @@ body.is-student .appraisal { padding: 22px 30px; }
 .timesheet__row:first-child { margin-top: 0; }
 .timesheet__left { float: left; width: -webkit-calc(100% - 136px); width: calc(100% - 136px); }
 .timesheet__right { float: right; width: 136px; }
-.timesheet__right .btn { margin-top: 15px; }
+.timesheet__right .btn { margin-top: 8px; }
 .timesheet__title { margin-bottom: 20px; font-family: "Lato-Black", Arial, sans-serif; }
 .timesheet__day { min-width: 35px; font-family: "Lato-Bold", Arial, sans-serif; text-transform: uppercase; }
 .timesheet__day, .timesheet__time { display: inline-block; }
@@ -980,6 +982,7 @@ body.is-student .appraisal { padding: 22px 30px; }
 .appraisal .progress-table tfoot td { padding-top: 25px; }
 .appraisal .progress-table tfoot tr:first-child td { padding-top: 12px; }
 .appraisal .progress-table tfoot tr:last-child td { padding-bottom: 0; }
+.appraisal .progress-table td:last-child .point { text-align: right; }
 .appraisal .date { font-family: "Lato", Arial, sans-serif; }
 .appraisal .test { opacity: 0.5; }
 .appraisal__item { margin: 0 -30px; padding: 25px 30px 0; border-top: 1px solid; display: none; }
