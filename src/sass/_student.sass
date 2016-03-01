@@ -8,11 +8,15 @@ body.is-student
 			height: auto
 			display: block
 	.sidebar
-		position: relative
+		position: fixed
+		top: 0
+		left: 0
+		bottom: 0
 		padding-top: 40px
-		z-index: 2 
+		z-index: 3
 		background: $yellow
 		+r(960)
+			position: relative
 			padding: 12px 42px
 			text-align: left
 		.lang
@@ -25,7 +29,7 @@ body.is-student
 			li
 				margin: 0 0 0 45px
 				font-size: 21px
-				display: inline-block
+				display: inline-block 
 				&:first-child
 					margin-left: 0
 	.nav-btn
@@ -33,12 +37,12 @@ body.is-student
 		&:after,
 		span
 			background: $black
-	.rightbar
-		position: relative
-		+r(1280)
-			padding-left: 0
-		+r(768)
-			padding-top: 60px
+	// .rightbar
+	// 	position: relative
+	// 	+r(1280)
+	// 		padding-left: 0
+	// 	+r(768)
+	// 		padding-top: 60px
 	.logo
 		margin-left: -8px
 	.header
@@ -52,6 +56,9 @@ body.is-student
 			display: block
 		&__in
 			padding: 0
+		&__bg
+			+r(960)
+				top: 30px
 		.logout
 			+r(960)
 				display: none
@@ -147,6 +154,10 @@ body.is-student
 			display: inline-block
 			+r(768)
 				font-size: 16px
+		.no-places
+			font-size: 9px 
+			+r(768)
+				font-size: 16px
 	.item
 		margin: 0 -30px
 		padding: 25px 30px
@@ -226,9 +237,15 @@ body.is-student
 		.btn.btn_color
 			+r(768)
 				padding: 10px 6px
-	// .footer 
-	// 	position: relative
-	// 	margin-top: -60px
+	.footer__in
+		+r(1300)
+			padding-left: 175px
+		+r(960)
+			padding-left: 123px
+		+r(768)
+			padding-left: 85px
+		+r(480)
+			padding-left: 15px
 
 
 // mixin to step colors
@@ -271,7 +288,7 @@ body.is-student
 	.btn_color
 		border-color: $color
 		&:hover
-			color: $white 
+			color: $black
 			background: $color
 	.status
 		background: $color

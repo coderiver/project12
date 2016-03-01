@@ -58,7 +58,7 @@ $(window).load(function() {
 	}
 
 	setTimeout(function() {
-		var tl = new TimelineMax({ repeat: 0 })
+		var tl = new TimelineMax({ repeat: 1000, yoyo: true })
 			.addLabel('row1:word1')
 			.add(ruWordAnim(row1.find('.ru').find('.word:first').find('.char'), dur), 'row1:word1')
 			.add(enWordAnim(row1.find('.en').find('.word:first').find('.char'), dur), 'row1:word1+=' + delay2)
