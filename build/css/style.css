@@ -364,9 +364,10 @@ h1, .title-middle { font-family: "Lato-Black", Arial, sans-serif; font-size: 36p
 .progress-table .date { font-family: "Lato-Black", Arial, sans-serif; }
 .progress-table .btn { margin-top: -5px; width: 100%; }
 
-.step-ico { width: 105px; height: 105px; line-height: 102px; vertical-align: top; -webkit-border-radius: 50%; border-radius: 50%; overflow: hidden; text-align: center; background: #ffe94a; display: inline-block; }
+.step-ico { width: 104px; height: 104px; vertical-align: top; -webkit-border-radius: 50%; border-radius: 50%; overflow: hidden; font-size: 0; text-align: center; background: #fff; display: inline-block; }
 .step-ico:first-child { margin-left: 0; }
-.step-ico .icon { vertical-align: middle; }
+.step-ico .icon { vertical-align: top; }
+.step-ico .icon img { display: block; }
 
 .accord + .accord { margin-top: -2px; }
 .accord + .accord .table, .accord:first-of-type .table { border-top: none; border-bottom: none; }
@@ -414,7 +415,7 @@ h1, .title-middle { font-family: "Lato-Black", Arial, sans-serif; font-size: 36p
 .header .menu.is-white .menu__list:before { background: #fff; }
 .header .logo { position: absolute; top: 0; left: 50%; margin-left: -92px; z-index: 1; }
 .header .logout { float: right; }
-.header .step-ico { margin: -50px 0 0 32px; padding-top: 58px; line-height: 1; }
+.header .step-ico { margin: -53px 0 0 32px; padding-top: 53px; line-height: 1; }
 .header__in { position: relative; }
 .header__left { float: left; }
 .header__bg { position: absolute; top: 0; right: 0; background-repeat: no-repeat; background-size: cover; background-position: 50% 0; }
@@ -1001,12 +1002,9 @@ body.is-student .appraisal { padding: 22px 30px; }
 .set .btn { margin-top: 25px; width: 100%; }
 .set .title-petty { margin-bottom: 5px; }
 
-.step-icons { margin: -48px 0 13px; text-align: right; display: none; }
-.step-icons .step-ico { margin-left: 7px; }
+.step-icons { margin: -59px 0 13px; text-align: right; display: none; }
+.step-icons .step-ico { margin-left: 6px; width: auto; height: auto; }
 .step-icons .step-ico:first-child { margin-left: 0; }
-.step-icons .step-ico.is-step-ico-2 { padding-top: 10px; }
-.step-icons .step-ico.is-step-ico-2 img { width: 85%; }
-.step-icons .step-ico.is-step-ico-3 { padding-top: 6px; }
 
 div.ui-datepicker { width: 18em; border: none; }
 div.ui-datepicker .ui-datepicker-header { padding: 0; border: none; background: transparent; *zoom: 1; }
@@ -1076,6 +1074,7 @@ div.ui-datepicker thead th { padding: 0.56em 0.3em; }
  .accord .group-name{ width: 70px; }
  .is-hide-tablet{ display: none !important; }
  .is-show-tablet{ display: block; }
+ .header__icons{ display: none; }
  .contacts__in{ padding-left: 60px; }
  .contacts__form .btn{ margin-left: 10px; }
  .contacts__input{ width: 190px; }
@@ -1100,7 +1099,8 @@ div.ui-datepicker thead th { padding: 0.56em 0.3em; }
  body.is-student .l-col2{ margin-top: 48px; width: 100%; }
  body.is-student .footer__in{ padding-left: 123px; }
  .numb-step{ display: none; }
- .stud-name{ float: none; } }
+ .stud-name{ float: none; }
+ .step-icons{ display: block; } }
 @media only screen and (max-width: 950px){
  body.is-home .header:before{ margin: 0 0 0 -371px; width: 0px; height: 0px; border-style: solid; border-width: 373px 371px 0 371px; border-color: #fff transparent transparent transparent; } }
 @media only screen and (max-width: 769px){
@@ -1159,8 +1159,6 @@ div.ui-datepicker thead th { padding: 0.56em 0.3em; }
  .table__left + .table__right .visiting{ line-height: 1; vertical-align: bottom; display: inline-block; }
  .table__left .table__name, .table__left .table__time, .table__left .table__group{ display: inline-block; }
  .table__left .table__name{ float: left; margin-top: -15px; width: 100%; }
- .step-ico{ width: 60px; height: 60px; line-height: 55px; }
- .step-ico .icon img{ width: 80%; }
  .accord .group-name{ width: 35px; text-align: left; }
  .accord .theme{ width: 100%; }
  .accord .group-name, .accord .time, .accord .theme, .accord .day{ display: inline-block; }
@@ -1298,7 +1296,7 @@ div.ui-datepicker thead th { padding: 0.56em 0.3em; }
  .tile{ margin-top: 40px; }
  .set{ padding: 25px 10px 30px; }
  .set .btn{ margin: 25px 30px 0; width: auto; display: block; }
- .step-icons{ display: block; }
+ .step-icons{ margin-top: -37px; }
  div.ui-datepicker .ui-datepicker-title{ font-size: 24px; }
  div.ui-datepicker .ui-datepicker-prev, div.ui-datepicker .ui-datepicker-next{ top: 6px; }
  div.ui-datepicker .ui-datepicker-prev span.ui-icon, div.ui-datepicker .ui-datepicker-next span.ui-icon{ left: auto; top: auto; margin-left: 0; margin-top: 0; }
