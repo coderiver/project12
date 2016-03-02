@@ -110,7 +110,11 @@ $(window).load(function() {
 				.add(ruWordAnimBack(row2.find('.ru').find('.word:last').find('.char'), dur3), 'row2:word2')
 				.add(enWordAnimBack(row2.find('.en').find('.word:last').find('.char'), dur3), 'row2:word2+=' + delay)
 		}, 10000);
-	} animText();
+	} 
+	setTimeout(function() {
+		animText();
+	}, 10);
+	
 
 	setInterval(animText, 16000)
 
