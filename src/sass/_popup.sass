@@ -17,6 +17,30 @@
 	+vertical
 	overflow-y: scroll
 	transition: opacity .4s ease-in, z-index .4s ease-in, visibility .4s ease-in
+	&:before
+		+r(768)
+			position: fixed
+			content: ""
+			top: 50px
+			left: 0
+			right: 0
+			bottom: 0 
+			width: auto
+			z-index: -1
+			display: block
+			background: $white 
+	&:after
+		position: absolute
+		content: ""
+		top: 0
+		left: 0
+		right: 0
+		height: 50px
+		z-index: -1
+		background: $black
+		display: none
+		+r(768)  
+			display: block
 	+r(768)
 		padding: 5px 0
 	&.is-active
@@ -51,10 +75,14 @@
 		padding-top: 30px
 		height: 153px
 		width: 153px
+		border-radius: 50%
 		line-height: 88px
+		background: $yellow 
 		+r(768)
 			img
 				width: auto
+		.icon_mod
+			margin-top: 10px
 	.soc
 		margin-top: 35px
 		a

@@ -364,8 +364,8 @@ body.is-home
 		margin-top: 75px
 		+r(1400)
 			margin-top: 40px
-		// +r(768)
-		// 	margin-top: 40px
+		+r(768)
+			margin: 40px -15px 0
 	&__in
 		position: relative
 		@extend %in
@@ -409,6 +409,8 @@ body.is-home
 // #office
 #office
 	margin-bottom: -42px
+	+r(1400)
+		margin-bottom: 0
 
 
 // slider
@@ -418,10 +420,10 @@ body.is-home
 	padding: 0 88px
 	max-width: 1192px
 	+r(1400)
-		margin-top: 30px
+		margin: 30px -15px 0
 	+r(768)
 		margin-top: 30px
-		padding: 0 15px
+		padding: 0
 	&__arr
 		position: absolute
 		top: 0
@@ -429,8 +431,7 @@ body.is-home
 		right: 15px
 		bottom: 0
 		+r(768)
-			left: -5px
-			right: -5px
+			display: none
 	&__btn
 		position: absolute
 		top: 50%
@@ -464,6 +465,9 @@ body.is-home
 		+r(768)
 			margin-left: -75px
 			text-align: center
+		+r(480)
+			margin-left: 0
+			text-align: left
 	.label
 		margin-top: 22px
 	.title-small
@@ -490,7 +494,7 @@ body.is-home
 		+r(768)
 			padding: 53px 20px 26px 75px
 		+r(480)
-			padding: 53px 20px 26px 20px
+			padding: 53px 20px 26px 57px
 	&__form
 		margin: 15px 0 28px
 		font-size: 0
