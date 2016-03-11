@@ -96,7 +96,7 @@
 			margin-top: 0
 .l-col1
 	float: left
-	width: calc(50% - 31px)
+	width: calc(50% - 32px)
 	& > .title-large
 		line-height: 0.7
 	.title-large
@@ -104,7 +104,7 @@
 .l-col2
 	float: right
 	padding-left: 32px
-	width: calc(50% + 31px)
+	width: 50%
 	&.is-mod
 		+r(960)
 			margin-top: 45px
@@ -837,6 +837,7 @@ h1,
 	&__time,
 	&__group,
 	&__point
+		vertical-align: top
 		display: table-cell
 	&__time,
 	&__group
@@ -850,12 +851,20 @@ h1,
 		+r(960)
 			width: 45px
 	&__name
+		margin-right: -1px
+		padding-right: 5px
+		max-width: 122px
+		word-break: break-all
+		// word-wrap: break-word
+		border-right: 1px solid #DADADA 
 		+r(768)
 			width: 100%
 			display: block
 		& + .table__group
 			padding-left: 8px
 			width: 40px
+		a
+			margin: 8px 0
 	&__point
 		width: 68%
 		font-size: 0
@@ -865,14 +874,15 @@ h1,
 			width: 100%
 			border-top: 1px solid $bd-table
 			display: block
+		.table__col
+			height: 100%
 	&__col
 		width: 33.3%
 		vertical-align: top
 		border-left: 1px solid $bd-table
 		display: inline-block
-		+r(768)
-			&:first-child
-				border-left: none
+		&:first-child
+			border-left: none
 	&__left
 		width: 100%
 		display: table
@@ -894,8 +904,10 @@ h1,
 				margin-top: -15px
 				width: 100%
 	a
+		line-height: 1.4
 		transition: border-color .2s
 		border-bottom: 1px solid transparent
+		display: inline-block
 		&:hover
 			border-color: $black
 
