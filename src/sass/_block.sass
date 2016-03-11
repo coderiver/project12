@@ -104,6 +104,10 @@
 		line-height: 0.7
 	&.is-w65
 		width: 75%
+		.table__point
+			width: 55%
+			+r(768)
+				width: 100%
 	.title-large
 		color: $yellow
 .l-col2
@@ -863,6 +867,7 @@ h1,
 		// word-wrap: break-word
 		+r(768)
 			width: 100%
+			max-width: 100% 
 			display: block
 		& + .table__group
 			padding-left: 8px

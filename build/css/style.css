@@ -155,6 +155,7 @@ a { color: inherit; text-decoration: none; }
 .l-col1 { float: left; width: -webkit-calc(50% - 32px); width: calc(50% - 32px); }
 .l-col1 > .title-large { line-height: 0.7; }
 .l-col1.is-w65 { width: 75%; }
+.l-col1.is-w65 .table__point { width: 55%; }
 .l-col1 .title-large { color: #ffe94a; }
 
 .l-col2 { float: right; padding-left: 32px; width: 50%; }
@@ -1119,6 +1120,7 @@ div.ui-datepicker thead th { padding: 0.56em 0.3em; }
 @media only screen and (max-width: 768px){
  body{ font-size: 16px; }
  .rightbar .l, .rightbar .header{ padding: 0 20px; }
+ .l-col1.is-w65 .table__point{ width: 100%; }
  .logo{ background: url("../img/svg/logo.svg") no-repeat 0 0; background-size: 117px 128px; width: 117px; height: 128px; display: inline-block; }
  .input{ padding: 0 10px; font-size: 12px; }
  .cancel{ font-size: 12px; }
@@ -1165,7 +1167,7 @@ div.ui-datepicker thead th { padding: 0.56em 0.3em; }
  .table.is-appraisal .table__row{ padding-left: 0; }
  .table.is-appraisal .table__row:before{ display: none; }
  .table.is-appraisal .table__row .table__name{ text-align: center; }
- .table__name{ width: 100%; display: block; }
+ .table__name{ width: 100%; max-width: 100%; display: block; }
  .table__point{ width: 100%; border-top: 1px solid #dadada; display: block; }
  .table__col:first-child{ border-left: none; }
  .table__left + .table__right .visiting{ line-height: 1; vertical-align: bottom; display: inline-block; }
