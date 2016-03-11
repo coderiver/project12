@@ -54,8 +54,11 @@
 	.l-col1,
 	.l-col2
 		+r(960)
+			margin-top: 30px
 			padding-left: 0
 			width: 100%
+			&:first-child
+				margin-top: 0
 
 // sidebar
 .sidebar
@@ -856,7 +859,6 @@ h1,
 		max-width: 122px
 		word-break: break-all
 		// word-wrap: break-word
-		border-right: 1px solid #DADADA 
 		+r(768)
 			width: 100%
 			display: block
@@ -881,8 +883,9 @@ h1,
 		vertical-align: top
 		border-left: 1px solid $bd-table
 		display: inline-block
-		&:first-child
-			border-left: none
+		+r(768)
+			&:first-child
+				border-left: none
 	&__left
 		width: 100%
 		display: table

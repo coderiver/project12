@@ -343,13 +343,12 @@ h1, .title-middle { font-family: "Lato-Black", Arial, sans-serif; font-size: 36p
 .table__time, .table__group { font-family: "Lato-Black", Arial, sans-serif; }
 .table__right { width: 60px; text-align: center; border-left: 1px solid #dadada; }
 .table__time { width: 87px; }
-.table__name { margin-right: -1px; padding-right: 5px; max-width: 122px; word-break: break-all; border-right: 1px solid #DADADA; }
+.table__name { margin-right: -1px; padding-right: 5px; max-width: 122px; word-break: break-all; }
 .table__name + .table__group { padding-left: 8px; width: 40px; }
 .table__name a { margin: 8px 0; }
 .table__point { width: 68%; font-size: 0; vertical-align: top; text-align: center; }
 .table__point .table__col { height: 100%; }
 .table__col { width: 33.3%; vertical-align: top; border-left: 1px solid #dadada; display: inline-block; }
-.table__col:first-child { border-left: none; }
 .table__left { width: 100%; display: table; *zoom: 1; }
 .table__left:after { content: " "; display: table; clear: both; }
 .table a { line-height: 1.4; -webkit-transition: border-color 0.2s; transition: border-color 0.2s; border-bottom: 1px solid transparent; display: inline-block; }
@@ -1073,7 +1072,8 @@ div.ui-datepicker thead th { padding: 0.56em 0.3em; }
 @media only screen and (max-width: 960px){
  .rightbar{ padding: 30px 0; width: 100%; display: block; }
  .rightbar .header{ display: none; }
- .rightbar .l-col1, .rightbar .l-col2{ padding-left: 0; width: 100%; }
+ .rightbar .l-col1, .rightbar .l-col2{ margin-top: 30px; padding-left: 0; width: 100%; }
+ .rightbar .l-col1:first-child, .rightbar .l-col2:first-child{ margin-top: 0; }
  .sidebar{ position: relative; padding: 12px 45px; width: 100%; height: 50px; display: block; }
  .sidebar .nav{ margin: 80px 0 72px; }
  .l-col2.is-mod{ margin-top: 45px; }
@@ -1166,6 +1166,7 @@ div.ui-datepicker thead th { padding: 0.56em 0.3em; }
  .table.is-appraisal .table__row .table__name{ text-align: center; }
  .table__name{ width: 100%; display: block; }
  .table__point{ width: 100%; border-top: 1px solid #dadada; display: block; }
+ .table__col:first-child{ border-left: none; }
  .table__left + .table__right .visiting{ line-height: 1; vertical-align: bottom; display: inline-block; }
  .table__left .table__name, .table__left .table__time, .table__left .table__group{ display: inline-block; }
  .table__left .table__name{ float: left; margin-top: -15px; width: 100%; }
