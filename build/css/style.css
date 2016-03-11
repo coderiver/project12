@@ -154,6 +154,7 @@ a { color: inherit; text-decoration: none; }
 
 .l-col1 { float: left; width: -webkit-calc(50% - 32px); width: calc(50% - 32px); }
 .l-col1 > .title-large { line-height: 0.7; }
+.l-col1.is-w65 { width: 75%; }
 .l-col1 .title-large { color: #ffe94a; }
 
 .l-col2 { float: right; padding-left: 32px; width: 50%; }
