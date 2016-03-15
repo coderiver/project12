@@ -1204,7 +1204,7 @@ div.ui-datepicker thead th { padding: 0.56em 0.3em; }
  body.is-home .header__in{ padding: 13px 15px 10px; color: #fff; background: #000; }
  .top{ overflow: hidden; }
  .top__in{ margin: 13.2% auto 0; padding: 0 15px; }
- .top__text{ -webkit-transform: translateX(20px); -ms-transform: translateX(20px); transform: translateX(20px); }
+ .top__text{ -webkit-transform: translateX(0); -ms-transform: translateX(0); transform: translateX(0); }
  .text:first-child{ margin: 0; right: auto; }
  .text .char{ font-size: 24px; }
  .text .row{ text-align: center; }
@@ -1357,7 +1357,6 @@ div.ui-datepicker thead th { padding: 0.56em 0.3em; }
  body.is-student .nav-block{ padding: 80px 30px; }
  .step{ font-size: 15px; } }
 @media only screen and (max-width: 380px){
- .top__text{ -webkit-transform: translateX(0); -ms-transform: translateX(0); transform: translateX(0); }
  .text{ margin: 0 -5px; }
  .text .char{ margin-left: 0; }
  .text .word{ margin-left: 2px; } }
