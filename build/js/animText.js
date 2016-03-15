@@ -102,8 +102,17 @@ $(document).ready(function() {
 			.addLabel('row2:word4')
 			.add(ruWordAnimBack(row2.find('.ru').find('.word:last').find('.char'), dur3), 'row2:word4')
 			.add(enWordAnimBack(row2.find('.en').find('.word:last').find('.char'), dur3), 'row2:word4+=' + delay)
-			
-		setTimeout(function() {tl.play()}, 2000);
+
+		var mq = window.matchMedia('(max-width: 768px)');
+
+		mq.addListener(function(e) {
+			if (e.matches) {
+				tl.progress(0).pause();
+			}
+			else {
+				setTimeout(function() {tl.play()}, 2000);
+			}
+		});
 	} 
 	animText();
 	

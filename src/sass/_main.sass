@@ -85,7 +85,10 @@ body.is-home
 	&:first-child
 		right: -40px
 		+r(768)
-			right: -20px
+			margin: 0
+			right: auto
+	&:last-child
+		margin: 0
 	.char 
 		margin-left: 3px
 		font-size: 36px
@@ -115,6 +118,8 @@ body.is-home
 	.row 
 		position: relative
 		margin: 0
+		+r(768)
+			text-align: center
 		&.en 
 			position: absolute
 			&:first-child

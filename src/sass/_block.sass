@@ -987,11 +987,13 @@ h1,
 .accord
 	& + .accord
 		margin-top: -2px
-	& + .accord,
-	&:first-of-type
+	& + .accord
 		.table
 			border-top: none
 			border-bottom: none
+	&:first-of-type
+		.table
+			border-top: none
 	&:last-of-type
 		.table
 			border-bottom: 2px solid #dadada 
@@ -1021,6 +1023,7 @@ h1,
 				border-top-color: $bd-table
 	.table
 		margin: 0
+		border-top: none
 	.group-name
 		padding-right: 8px
 		width: 50px

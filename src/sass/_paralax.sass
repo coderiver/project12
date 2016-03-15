@@ -8,8 +8,6 @@
 	z-index: 1
 	overflow: hidden
 	+clr
-	+r(768)
-		display: none
 	&__left
 		float: left
 		position: relative
@@ -20,6 +18,8 @@
 		transition: transform .8s
 		.paralax__svg
 			width: 318px
+			+r(768)
+				left: -180px 
 	&__right
 		float: right
 		position: relative
@@ -30,6 +30,8 @@
 		transition: transform .8s
 		.paralax__svg
 			width: 350px
+			+r(768)
+				left: -120px 
 	&__rotate
 		height: 100%
 		min-height: 100%
@@ -38,6 +40,8 @@
 		position: relative
 		min-height: 100%
 		animation: translate 40s infinite normal linear
+		+r(768)
+			animation: none
 		svg
 			transform: translate3(0,0,0)
 			transform-origin: center center
@@ -47,6 +51,8 @@
 			animation-iteration-count: infinite
 			$animation-delay: 0s
 			animation-duration: 4.8s
+			+r(768)
+				animation: none
 			@for $i from 1 through 29
 				&:nth-child(#{$i}) 
 					animation-delay: $animation-delay

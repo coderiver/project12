@@ -204,7 +204,15 @@ $(document).ready(function() {
 	// });
 	
 	$(window).on('scroll',function(e){
-	    parallaxScroll();
+	    var mq = window.matchMedia('(max-width: 768px)');
+		mq.addListener(function(e) {
+			if (e.matches) {
+				tl.progress(0).pause();
+			}
+			else {
+				parallaxScroll();
+			}
+		});
 	});
 	 
 	function parallaxScroll(){
@@ -225,7 +233,7 @@ $(document).ready(function() {
 				this_.height('auto');
 			}
 		});
-	} heightTop();
+	} 
 
 	$(window).resize(function() {
 		heightTop();
