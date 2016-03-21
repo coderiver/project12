@@ -23,13 +23,13 @@
 									<label for="phone" class="field__label">
 										<i class="icon icon-phone"></i>
 									</label>
-									<input type="text" name="phone" id="phone" class="input js-input-phone" data-validation="required" data-validation-length="min40">
+									<input type="text" name="phone" id="phone" class="input js-input-phone" data-validation="required">
 								</div>
 								<div class="field">
 									<label for="password" class="field__label">
 										<i class="icon icon-key"></i>
 									</label>
-									<input type="password" name="password" id="password" class="input js-input-password" placeholder="_______" data-validation="required" data-validation-length="min20">
+									<input type="password" name="password" id="password" class="input js-input-password" data-validation="required" minlength="6">
 								</div>
 								<div class="popup__check">
 									<label class="checkbox">
@@ -56,12 +56,12 @@
 							<h3 class="title-medium">Змінити <br>пароль</h3>
 							<form action="">
 								<div class="row">
-									<label for="phone" class="label">Старий (номер телефону)</label>
-									<input type="text" name="phone" id="phone" class="input js-input-phone">
+									<label for="passwod1" class="label">Введіть новий пароль</label>
+									<input type="password" name="passwod1" id="passwod1" class="input js-input-password" minlength="6">
 								</div>
 								<div class="row">
-									<label for="password" class="label">Новий пароль</label>
-									<input type="passwod" name="password" id="password" class="input js-input-password" placeholder="_______">
+									<label for="password2" class="label">Підтвердіть новий пароль</label>
+									<input type="password" name="password2" id="password2" class="input js-input-password" minlength="6">
 								</div>
 								<div class="row">
 									<button class="btn" type="submit">ЗМІНИТИ</button>

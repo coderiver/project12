@@ -1,20 +1,31 @@
 $(document).ready(function() {
 
-	// $.validate({
-	// 	form : '#js-popup-form',
-	// 	validateOnBlur: false, 
-	// 	errorMessagePosition: 'top',
-	// 	scrollToTopOnError: false 
-	// });
+	$.validate({
+		form : '#js-popup-form',
+		validateOnBlur: false, 
+		errorMessagePosition: 'top',
+		scrollToTopOnError: false 
+	});
 
 	// mask
 	$('.js-input-phone').inputmask({
-		mask: '+999 (99) 999-99-99',
-		'autoUnmask': true
-	}).val('+380 (__) ___-__-__');
+		mask: '+380 (99) 999-99-99',
+		'autoUnmask': true,
+		'clearMaskOnLostFocus': false
+	}).val(' (__) ___-__-__');
 
-	$('.js-input-password').inputmask({
-		mask: '9999999',
-		showMaskOnHover: false
-	});
+
+	Inputmask("(9999999)|(i{+})", {
+		definitions: {
+			"i": {
+				validator: ".",
+				cardinality: 1,
+				definitionSymbol: "*"
+			}
+		},
+		staticDefinitionSymbol: "*",
+		'clearMaskOnLostFocus': false,
+	}).mask($('.js-input-password'));
+
+
 });

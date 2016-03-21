@@ -604,7 +604,7 @@ body.is-home .header:before { position: absolute; content: ""; top: 0; left: 50%
 .popup.is-active-popup > .popup__in { -webkit-transform: scale(0); -ms-transform: scale(0); transform: scale(0); }
 .popup .popup__step .title-medium { margin-bottom: 8px; }
 .popup .label { margin-bottom: 12px; }
-.popup .input { text-align: center; height: 42px; font-size: 18px; color: #000; }
+.popup .input { text-align: center; height: 43px; font-size: 18px; color: #000; }
 .popup .title-medium { margin: 35px 0 45px; font-family: "RobotoSlab-Bold", Arial, sans-serif; }
 .popup .title-medium:first-child { margin-top: 0; }
 .popup .title-petty { margin: 35px 0 11px; }
